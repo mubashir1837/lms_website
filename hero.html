@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
+    <style>
+        .dark .dark\:bg-gray-800 {
+            background-color: #2d3748;
+        }
+
+        .dark .dark\:bg-gray-700 {
+            background-color: #4a5568;
+        }
+        .dark .dark\:bg-gray-900 {
+            background-color: #4a5568;
+        }
+        
+        .dark .dark\:text-gray-200 {
+            color: #edf2f7;
+        }
+
+        .dark .dark\:text-gray-300 {
+            color: #e2e8f0;
+        }
+
+        .dark .dark\:text-gray-400 {
+            color: #cbd5e0;
+        }
+        .dark .dark\:text-white {
+            color: #ffffff;
+        }
+        @keyframes blink-caret {
+            from,
+            to {
+                border-color: transparent;
+            }
+
+            50% {
+                border-color: black;
+            }
+        }
+
+        #typing-effect::after {
+            content: '';
+            border-right: 0.1em solid black;
+            animation: blink-caret 0.7s step-end infinite;
+        }
+
+        .dark #typing-effect::after {
+            border-right: 0.1em solid white;
+        }
+    </style>
+    <title>Home Page</title>
+</head>
+
+<body class="bg-gray-100 dark:bg-gray-900">
+    <!-- Navigation -->
+    <nav class="bg-white dark:bg-gray-800 shadow fixed w-full z-10">
+        <div class="container mx-auto px-6 py-3 flex flex-wrap items-center justify-between">
+            <div class="flex items-center justify-between w-full lg:w-auto">
+                <div class="text-purple-700 text-xl font-bold">
+                    <a href="/" class="mr-10">&lt;/&gt; CodeWithHarry</a>
+                </div>
+                <button id="nav-toggle"
+                    class="flex items-center px-3 py-2 border rounded text-gray-800 dark:text-gray-200 border-gray-600 dark:border-gray-400 lg:hidden">
+                    <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <title>Menu</title>
+                        <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+                    </svg>
+                </button>
+            </div>
+            <div class="flex items-end mt-4 lg:mt-0 order-last lg:order-none lg:px-11">
+                <div id="darkModeToggle"
+                    class="inline-block text-sm px-4 py-2 leading-none border rounded bg-gray-300  text-gray-800 dark:text-gray-200 border-gray-800 dark:border-gray-200 cursor-pointer mr-4">
+                    🌙</div>
+                <a href="/login.html" target="_blank"
+                    class="bg-purple-700 text-white inline-block text-sm px-4 py-2 leading-none border rounded dark:text-gray-200 border-purple-700 dark:border-gray-200 mr-4">Login</a>
+                
+            </div>
+            <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden" id="nav-content">
+                <div class="text-sm lg:flex-grow text-center">
+                    <a href="/hero.html"
+                        class="block mt-4 lg:inline-block lg:mt-0 text-gray-800 dark:text-gray-200 mr-4">Home</a>
+                    <a href="/courses"
+                        class="block mt-4 lg:inline-block lg:mt-0 text-gray-800 dark:text-gray-200 mr-4">Courses</a>
+                    <a href="/tutorial"
+                        class="block mt-4 lg:inline-block lg:mt-0 text-gray-800 dark:text-gray-200 mr-4">Tutorial</a>
+                    <a href="/blog"
+                        class="block mt-4 lg:inline-block lg:mt-0 text-gray-800 dark:text-gray-200 mr-4">Blog</a>
+                    <a href="/notes"
+                        class="block mt-4 lg:inline-block lg:mt-0 text-gray-800 dark:text-gray-200 mr-4">Notes</a>
+                    <a href="/contact.html" target="_blank"
+                        class="block mt-4 lg:inline-block lg:mt-0 text-gray-800 dark:text-gray-200 mr-4">Contact</a>
+                    <a href="/my-gear"
+                        class="block mt-4 lg:inline-block lg:mt-0 text-gray-800 dark:text-gray-200 mr-4">My Gear</a>
+                    <a href="/work-with-us"
+                        class="block mt-4 lg:inline-block lg:mt-0 text-gray-800 dark:text-gray-200 mr-4">Work With
+                        Us</a>
+                </div>
+            </div>
+        </div>
+        <div class="bg-gray-100 dark:bg-gray-700 py-2  text-center flex items-center justify-center">
+            <div class="container flex flex-wrap justify-center lg:justify-around">
+                <a href="/html" class="block mt-4 lg:inline-block lg:mt-0 text-purple-400 mx-2">HTML</a>
+                <a href="/css" class="block mt-4 lg:inline-block lg:mt-0 text-purple-400 mx-2">CSS</a>
+                <a href="/js" class="block mt-4 lg:inline-block lg:mt-0 text-purple-400 mx-2">JS</a>
+                <a href="/c" class="block mt-4 lg:inline-block lg:mt-0 text-purple-400 mx-2">C</a>
+                <a href="/cpp" class="block mt-4 lg:inline-block lg:mt-0 text-purple-400 mx-2">C++</a>
+                <a href="/java" class="block mt-4 lg:inline-block lg:mt-0 text-purple-400 mx-2">JAVA</a>
+                <a href="/python" class="block mt-4 lg:inline-block lg:mt-0 text-purple-400 mx-2">PYTHON</a>
+                <a href="/php" class="block mt-4 lg:inline-block lg:mt-0 text-purple-400 mx-2">PHP</a>
+                <a href="/react" class="block mt-4 lg:inline-block lg:mt-0 text-purple-400 mx-2">REACT JS</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="bg-white dark:bg-gray-800 py-12 pt-32"> <!-- Adjusted top padding -->
+        <div class="container mx-auto flex flex-col lg:flex-row items-center mt-24">
+            <div class="lg:w-1/2">
+                <h1 class="text-4xl font-bold ml-2 dark:text-white">Welcome to <span
+                        class="text-purple-700 text-2xl lg:text-4xl">CodeWithBismiAllah</span></h1>
+                <h2 class="text-2xl text-gray-700 ml-2 dark:text-gray-300 mt-2">Learn <span class="text-purple-700"
+                        id="typing-effect">Java!</span></h2>
+                <p class="text-gray-600 ml-3 dark:text-gray-400 mt-4">Confused on which course to take? I have got you
+                    covered. Browse courses and find out the best course for you. It's free! Code With Harry is my
+                    attempt to teach basics and those coding techniques to people in short time which took me ages to
+                    learn.</p>
+                <div class="mt-6 ml-3">
+                    <a href="#" class="px-4 py-2 bg-purple-700 text-white rounded-lg shadow-lg font-bold mr-4">Free
+                        Courses</a>
+                    <a href="#"
+                        class="px-4 py-2 bg-purple-700 dark:bg-gray-600 text-white dark:text-gray-200 font-bold rounded-lg shadow-lg">Explore
+                        Blog</a>
+                </div>
+            </div>
+            <div class="lg:w-1/2 mt-8 lg:mt-0 flex justify-center">
+                <img src="img/pro.jpg" alt="Hero Image" class="rounded-lg shadow-lg w-150 h-100">
+            </div>
+        </div>
+    </div>
+
+    <!-- Recommended Courses Section -->
+    <section class="bg-gray-100 dark:bg-gray-900 py-12 mt-24 ">
+        <div class="container mx-auto ">
+            <h2 class="text-3xl font-bold text-center text-gray-900 dark:text-gray-200">Recommended Courses</h2>
+            <div class="flex flex-wrap justify-center mt-8 ">
+                <!-- Course 1 -->
+                <div class="w-full md:w-1/3 lg:w-1/4 p-4">
+                    <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6">
+                        <img src="img/pro.jpg" alt="Course 1" class="rounded-lg mb-4">
+                        <h3 class="text-lg font-bold text-gray-900 dark:text-gray-200 mb-2">Python Tutorial for
+                            Beginners</h3>
+                        <p class="text-gray-600 dark:text-gray-400 mb-4">Master Python with this comprehensive course
+                            designed for beginners.</p>
+                        <a href="#"
+                            class="bg-purple-700 text-white py-2 px-4 rounded-lg font-bold">View Course</a>
+                    </div>
+                </div>
+                <!-- Course 2 -->
+                <div class="w-full md:w-1/3 lg:w-1/4 p-4">
+                    <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6">
+                        <img src="img/pro.jpg" alt="Course 2" class="rounded-lg mb-4">
+                        <h3 class="text-lg font-bold text-gray-900 dark:text-gray-200 mb-2">Web Development Bootcamp</h3>
+                        <p class="text-gray-600 dark:text-gray-400 mb-4">Become a full-stack web developer with our
+                            intensive bootcamp.</p>
+                        <a href="#"
+                            class="bg-purple-700 text-white py-2 px-4 rounded-lg font-bold">View Course</a>
+                    </div>
+                </div>
+                <!-- Course 3 -->
+                <div class="w-full md:w-1/3 lg:w-1/4 p-4">
+                    <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6">
+                        <img src="img/pro.jpg" alt="Course 3" class="rounded-lg mb-4">
+                        <h3 class="text-lg font-bold text-gray-900 dark:text-gray-200 mb-2">JavaScript Essentials</h3>
+                        <p class="text-gray-600 dark:text-gray-400 mb-4">Learn the fundamentals of JavaScript with this
+                            beginner-friendly course.</p>
+                        <a href="#"
+                            class="bg-purple-700 text-white py-2 px-4 rounded-lg font-bold">View Course</a>
+                    </div>
+                </div>
+                <!-- Course 4 -->
+                <div class="w-full md:w-1/3 lg:w-1/4 p-4">
+                    <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6">
+                        <img src="img/pro.jpg" alt="Course 4" class="rounded-lg mb-4">
+                        <h3 class="text-lg font-bold text-gray-900 dark:text-gray-200 mb-2">Data Science with Python</h3>
+                        <p class="text-gray-600 dark:text-gray-400 mb-4">Dive into data science with Python and learn
+                            how to analyze data effectively.</p>
+                        <a href="#"
+                            class="bg-purple-700 text-white py-2 px-4 rounded-lg font-bold">View Course</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="bg-white dark:bg-gray-800 py-12 mt-24">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center text-gray-900 dark:text-gray-200">What Our Students Say</h2>
+            <div class="flex flex-wrap justify-center mt-8">
+                <!-- Testimonial 1 -->
+                <div class="w-full md:w-1/3 lg:w-1/4 p-4">
+                    <div class="bg-gray-100 dark:bg-gray-700 rounded-lg shadow-lg p-6">
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">"The best online courses I've ever taken!
+                            Comprehensive and easy to follow."</p>
+                        <p class="font-bold text-gray-900 dark:text-gray-200">John Doe</p>
+                    </div>
+                </div>
+                <!-- Testimonial 2 -->
+                <div class="w-full md:w-1/3 lg:w-1/4 p-4">
+                    <div class="bg-gray-100 dark:bg-gray-700 rounded-lg shadow-lg p-6">
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">"Amazing content and great instructors. Highly
+                            recommend to anyone looking to learn coding."</p>
+                        <p class="font-bold text-gray-900 dark:text-gray-200">Jane Smith</p>
+                    </div>
+                </div>
+                <!-- Testimonial 3 -->
+                <div class="w-full md:w-1/3 lg:w-1/4 p-4">
+                    <div class="bg-gray-100 dark:bg-gray-700 rounded-lg shadow-lg p-6">
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">"The courses are very well structured and
+                            cover all the important topics in depth."</p>
+                        <p class="font-bold text-gray-900 dark:text-gray-200">Michael Brown</p>
+                    </div>
+                </div>
+                <!-- Testimonial 4 -->
+                <div class="w-full md:w-1/3 lg:w-1/4 p-4">
+                    <div class="bg-gray-100 dark:bg-gray-700 rounded-lg shadow-lg p-6">
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">"I've learned so much in such a short time.
+                            Thank you for the great courses!"</p>
+                        <p class="font-bold text-gray-900 dark:text-gray-200">Emily Johnson</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Follow Us Section -->
+    <section class="bg-gray-100 dark:bg-gray-700 py-12">
+        <div class="container mx-auto ">
+            <h2 class="text-3xl font-bold text-center text-gray-900 dark:text-gray-200">Follow Us</h2>
+            <ul class="flex justify-center mt-8 space-x-6">
+                <li>
+                    <a href="https://www.youtube.com/@codewithharry" target="_blank"
+                        class=" dark:text-gray-200 text-red-600">
+                        <i class="fab fa-youtube fa-3x"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/codewithharry/" target="_blank"
+                        class=" dark:text-gray-200 text-pink-600">
+                        <i class="fab fa-instagram fa-3x"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.facebook.com/codewithharry" target="_blank"
+                        class=" dark:text-gray-200 text-blue-600">
+                        <i class="fab fa-facebook fa-3x"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://twitter.com/codewithharry" target="_blank"
+                        class=" dark:text-gray-200 text-blue-400">
+                        <i class="fab fa-twitter fa-3x"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/CodeWithHarry" target="_blank"
+                        class="text-gray-800 dark:text-gray-200 hover:text-gray-600">
+                        <i class="fab fa-github fa-3x"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 dark:bg-gray-900 text-white py-4">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2024 CodeWithHarry. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Dark Mode Toggle Script
+        document.getElementById('darkModeToggle').addEventListener('click', function () {
+            document.body.classList.toggle('dark');
+        });
+
+        // Mobile Menu Toggle Script
+        document.getElementById('nav-toggle').addEventListener('click', function () {
+            document.getElementById('nav-content').classList.toggle('hidden');
+        });
+
+        // Typing effect
+        const words = ["Java!", "Python!", "C++!", "JavaScript!", "Web Development!"];
+        let i = 0;
+        let j = 0;
+        let currentWord = "";
+        let isDeleting = false;
+        const typingEffectElement = document.getElementById("typing-effect");
+
+        function type() {
+            if (i < words.length) {
+                if (!isDeleting && j <= words[i].length) {
+                    currentWord = words[i].substring(0, j);
+                    typingEffectElement.innerHTML = currentWord;
+                    j++;
+                }
+
+                if (isDeleting && j <= words[i].length) {
+                    currentWord = words[i].substring(0, j);
+                    typingEffectElement.innerHTML = currentWord;
+                    j--;
+                }
+
+                if (j == words[i].length) {
+                    isDeleting = true;
+                }
+
+                if (isDeleting && j === 0) {
+                    currentWord = "";
+                    isDeleting = false;
+                    i++;
+                }
+
+                if (i === words.length) {
+                    i = 0;
+                }
+            }
+            const speed = isDeleting ? 50 : 150;
+            setTimeout(type, speed);
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            if (typingEffectElement) {
+                type();
+            }
+        });
+    </script>
+</body>
+
+</html>
