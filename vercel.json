@@ -1,9 +1,17 @@
-{
-    "rewrites": [
-      { "source": "/hero.html", "destination": "/hero.html" },
-      { "source": "/contact.html", "destination": "/contact.html" },
-      { "source": "/login.html", "destination": "/login.html" },
-      { "source": "/signup.html", "destination": "/signup.html" }
+
+  {
+    "version": 2,
+    "builds": [
+      {
+        "src": "**/*",
+        "use": "@vercel/static"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "/index.html"
+      }
     ]
   }
   
