@@ -7,6 +7,8 @@ document.getElementById('nav-toggle').addEventListener('click', function () {
     document.getElementById('nav-content').classList.toggle('hidden');
 });
 
+
+
 // Typing effect
 const words = ["Java!", "Python!", "C++!", "JavaScript!", "Web Development!"];
 let i = 0;
