@@ -32,12 +32,14 @@
                 switch (index) {
                     case 0:
                         content = `
-                           <h1 class="text-3xl sm:text-lg text-purple-400 font-extrabold font-sans">Introduction to HTML</h1>
-                         HTML (HyperText Markup Language) is the standard markup language used to create and design documents on the World Wide Web. It structures web content and tells the browser how to display various elements like text, images, links, and other multimedia.
-
-                            Basic Structure of an HTML Document
+                           <h1 class="text-2xl lg:text-3xl text-purple-400 font-extrabold font-sans">Introduction to HTML</h1>
+                         
+                        <p>HTML (HyperText Markup Language) is the standard markup language used to create and design documents on the World Wide Web. It structures web content and tells the browser how to display various elements like text, images, links, and other multimedia.</p>
+                        </br>
+                           <h1 class=text-lg font-extrabold>Structure of an HTML Document</h1>
                          <h1 class="text-xl font-bold text-purple-400">Boilerplate in HTML:</h1>
-                         <pre class="bg-black text-blue-400 whitespace-pre-wrap overflow-x-auto mx-auto max-w-lg"><code class="language-html">&lt;!DOCTYPE html&gt;
+                         </br>
+                         <pre class=" bg-black text-blue-400 whitespace-pre-wrap overflow-x-auto mx-auto max-w-lg"><code class="language-html">&lt;!DOCTYPE html&gt;
   &lt;html lang="en"&gt;
 
   &lt;head&gt;
@@ -56,24 +58,33 @@
   &lt;/html&gt;
   </code></pre>
 
-                          The structure of a basic HTML document includes several essential elements:
+                        <p> The structure of a basic HTML document includes several essential elements:
 
-                        <!DOCTYPE html>: This declaration defines the document type and version of HTML. It ensures that the document will be interpreted correctly by modern web browsers.
-                        <html lang="en">: This tag encompasses the entire HTML document. The lang attribute specifies the language of the document, which is helpful for accessibility and search engines.
-                         <head>: This section contains meta-information about the document, such as its title and links to CSS files and scripts.
-                        <meta charset="UTF-8">: Specifies the character encoding for the document, ensuring it can display a wide range of characters.
-                        <meta name="viewport" content="width=device-width, initial-scale=1.0">: Ensures the webpage is responsive and renders well on different devices.
+                       <h1 class="text-purple-400 font-bold">&lt;!DOCTYPE html&gt;</h1>
+
+                       <p>This declaration defines the document type and version of HTML. It ensures that the document will be interpreted correctly by modern web browsers.</p>
+
+                      <h1 class='text-purple-400 font-bold'>&lt;html lang="en"&gt;</h1>
+
+                      <p>This tag encompasses the entire HTML document. The lang attribute specifies the language of the document, which is helpful for accessibility and search engines.</p>
+
+                         <h1 class="text-purple-400 font-bold">&lt;head&gt;</h1> 
+                         <p>This section contains meta-information about the document, such as its title and links to CSS files and scripts.</p>
+
+                        <h1 class="text-purple-400 font-bold">&lt;meta charset="UTF-8"&gt;</h1> 
+                        <p>Specifies the character encoding for the document, ensuring it can display a wide range of characters.</p>
+                        <h1 class="text-purple-400 font-bold">&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</h1> 
+                        <p>Ensures the webpage is responsive and renders well on different devices.</p>
                          <title>: Sets the title of the document, which appears in the browser tab.
-                         <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">: Links to an external CSS file, in this case, Bootstrap, to style the document.
-                        <body>: Contains the content of the document that is visible to users.
-                         <header>: Typically contains introductory content or navigational links.
-                        <main>: Represents the main content of the document.
-                       <footer>: Contains footer content, such as contact information or copyright details.
+                          <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">: Links to an external CSS file, in this case, Bootstrap, to style the document.
+                        <body>: Contains the content of the document that is visible to users. The content typically includes text, images, links, and other elements that make up the webpage.
+                        <header>: Typically contains introductory content or navigational links.
+                         <main>: Represents the main content of the document.
                         `;
                         break;
                     case 1:
                         content = `
-                            <h2 class="text-3xl font-bold mb-4">HTML Working</h2>
+                            <h2 class="text-2xl lg:text-3xl text-purple-400 font-extrabold font-sans">HTML Working</h2>
                             <p class="mb-4">HTML (HyperText Markup Language) was created by Tim Berners-Lee in 1991 as a standard for creating web pages. It's a markup language used to structure content on the web, defining elements like headings, paragraphs, links, and images. HTML forms the backbone of web content. In layman's terms, HTML is like the skeleton of a website. It's a set of instructions that tells a web browser how to display text, images, videos, and other elements on a webpage. Think of it as the building blocks that create the structure and look of a website, similar to how bricks and mortar are used to build a house. In a nutshell:</p>
                             <ul class="list-disc list-inside mb-4">
                                 <li>HTML is the language of the web, used to create websites.</li>
@@ -95,7 +106,6 @@
                             </ul>
                             <video controls class="mb-4">
                                 <source src="/img/vscode.mp4" type="video/mp4">
-                                Your browser does not support the video tag.
                             </video>
                         `;
                         break;
@@ -103,8 +113,8 @@
                         content = `
                             <h2 class="text-3xl font-bold mb-4">HTML Execution</h2>
                             <p class="mb-4">Executing HTML code is simple. You just need to write your HTML code in a text editor, save the file with a .html extension, and open it in a web browser. Here's a video to help you understand:</p>
-                            <video controls class="mb-4">
-                                <source src="your-video-file-path.mp4" type="video/mp4">
+                            <video controls class="mb-4 w-[50%] h-[50%]">
+                                <source src="/img/vscode.mp4" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
                         `;
@@ -172,6 +182,8 @@
 
 <body class="bg-gray-900 text-gray-100">
     <!-- Main Content Section -->
+
+    
     <main class="flex flex-col lg:flex-row min-h-screen">
         <!-- Sidebar -->
         <aside class="w-full lg:w-1/4 bg-gray-800 p-6 hidden lg:block">
@@ -185,14 +197,22 @@
                 <li><a href="#" class="text-lg text-gray-300 hover:text-white">HTML Tags</a></li>
                 <li><a href="#" class="text-lg text-gray-300 hover:text-white">HTML Elements</a></li>
                 <li><a href="#" class="text-lg text-gray-300 hover:text-white">HTML Attributes</a></li>
+                <li><a href="#" class="text-lg text-gray-300 hover:text-white">Skeleton Tags</a></li>
+                <li><a href="#" class="text-lg text-gray-300 hover:text-white">Heading Tags</a></li>
+                <li><a href="#" class="text-lg text-gray-300 hover:text-white">Paragraph Tag</a></li>
+                <li><a href="#" class="text-lg text-gray-300 hover:text-white">Horizontal Line Tag</a></li>
+                <li><a href="#" class="text-lg text-gray-300 hover:text-white">Line Break Tag</a></li>
+                <li><a href="#" class="text-lg text-gray-300 hover:text-white">Anchor Tag</a></li>
             </ul>
         </aside>
         <!-- Main Content -->
         <section class="flex-1 p-6">
             <div id="main-content" class="prose lg:prose-xl"></div>
             <div class="mt-8 flex justify-between">
-                <button id="previous" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Previous</button>
-                <button id="next" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Next</button>
+                <button id="previous"
+                    class="bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded">Previous</button>
+                <button id="next"
+                    class="bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded">Next</button>
             </div>
         </section>
     </main>
