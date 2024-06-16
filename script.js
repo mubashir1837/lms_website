@@ -7,6 +7,13 @@ document.getElementById('nav-toggle').addEventListener('click', function () {
     document.getElementById('nav-content').classList.toggle('hidden');
 });
 
+//  Mobile Menu Toggle Script
+document.getElementById('side-toggle').addEventListener('click', function (){
+    document.getElementById('side-content').classList.toggle('hidden');
+});
+
+
+
 
 
 // Typing effect
@@ -54,3 +61,8 @@ document.addEventListener("DOMContentLoaded", function () {
         type();
     }
 });
+
+
+
+//html
+
