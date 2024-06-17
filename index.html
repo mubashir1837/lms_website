@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
     <link rel="stylesheet" href="input.css">
+    <link rel="stylesheet" href="script.js">
     <link rel="icon" type="image/x-icon" href="/img/pro-.jpg">
     <title>Code With Mubashir</title>
 </head>
@@ -32,18 +33,17 @@
                 <div class="text-sm lg:flex-grow text-center">
                     <a href="index.html"
                         class="block mt-4 lg:inline-block lg:mt-0 text-gray-800 dark:text-gray-200 mr-4">Home</a>
-                    <a href="courses.html"
-                        class="block mt-4 lg:inline-block lg:mt-0 text-gray-800 dark:text-gray-200 mr-4">Courses</a>
+                    <a href="#courses"
+                        class="block mt-4 lg:inline-block lg:mt-0 text-gray-800 dark:text-gray-200 mr-4">Tutorial</a>
                     <a href="docs.html"
                         class="block mt-4 lg:inline-block lg:mt-0 text-gray-800 dark:text-gray-200 mr-4">Docs</a>
-
+                    <a href="excercise.html"
+                        class="block mt-4 lg:inline-block lg:mt-0 text-gray-800 dark:text-gray-200 mr-4">Exercise</a>
+<!-- 
                     <a href="notes.html"
-                        class="block mt-4 lg:inline-block lg:mt-0 text-gray-800 dark:text-gray-200 mr-4">Notes</a>
+                        class="block mt-4 lg:inline-block lg:mt-0 text-gray-800 dark:text-gray-200 mr-4">Notes</a> -->
                     <a href="contact.html" target="_blank"
                         class="block mt-4 lg:inline-block lg:mt-0 text-gray-800 dark:text-gray-200 mr-4">Contact</a>
-                    <a href="work.html"
-                        class="block mt-4 lg:inline-block lg:mt-0 text-gray-800 dark:text-gray-200 mr-4">Work With
-                        Us</a>
                 </div>
             </div>
             <div class="flex items-end mt-4 lg:mt-0 order-last lg:order-none ml-auto">
@@ -88,7 +88,7 @@
                     class="bg-purple-700 text-white inline-block text-sm px-4 py-2 leading-none border rounded dark:text-gray-200 border-purple-700 dark:border-gray-200 mr-4">Signup</a>
             </div>
         </div>
-        <div class="bg-gray-100 dark:bg-gray-700 py-2  text-center mx-auto max-w-lg">
+        <div class="bg-gray-100 dark:bg-gray-700 py-2  text-center mx-auto max-w-lg ">
             <div class="container flex flex-wrap justify-center lg:justify-around">
                 <a href="htm.html" class="block mt-4 lg:inline-block lg:mt-0 text-purple-400 mx-2">HTML</a>
                 <a href="css.html" class="block mt-4 lg:inline-block lg:mt-0 text-purple-400 mx-2">CSS</a>
@@ -105,18 +105,18 @@
 
     <!-- Hero Section -->
     <div class="bg-white dark:bg-gray-800 py-12 pt-32">
-        <div class="container mx-auto flex flex-col lg:flex-row items-center mt-24">
-            <div class="lg:w-1/2">
-                <h1 class="text-4xl font-bold ml-2 dark:text-white">Welcome to <span
+        <div class="container mx-auto flex flex-col lg:flex-row items-center ">
+            <div class="lg:w-1/2 lg:mt-0 mt-24">
+                <h1 class="text-4xl font-bold ml-2 dark:text-white ">Welcome to <span
                         class="text-purple-700 text-2xl lg:text-4xl">CodeWithBismiAllah</span></h1>
                 <h2 class="text-2xl text-gray-700 ml-2 dark:text-gray-300 mt-2">Learn <span class="text-purple-700"
-                        id="typing-effect">Java!</span></h2>
+                        id="typing-effect">JavaScript</span></h2>
                 <p class="text-gray-600 ml-3 dark:text-gray-400 mt-4">Confused on which course to take? I have got you
                     covered. Browse courses and find out the best course for you. It's free! Code With Harry is my
                     attempt to teach basics and those coding techniques to people in short time which took me ages to
                     learn.</p>
                 <div class="mt-6 ml-3">
-                    <a href="#" class="px-4 py-2 bg-purple-700 text-white rounded-lg shadow-lg font-bold mr-4">Free
+                    <a href="#courses" class="px-4 py-2 bg-purple-700 text-white rounded-lg shadow-lg font-bold mr-4">Free
                         Courses</a>
                     <a href="#"
                         class="px-4 py-2 bg-purple-700 dark:bg-gray-600 text-white dark:text-gray-200 font-bold rounded-lg shadow-lg">Explore
@@ -124,25 +124,30 @@
                 </div>
             </div>
             <div class="lg:w-1/2 mt-8 lg:mt-0 flex justify-center">
-                <img src="img/pro.jpg" alt="Hero Image" class="rounded-lg shadow-lg w-150 h-100">
+                <img src="img/pro - Copy.jpg" alt="Hero Image" class="rounded-lg shadow-lg ">
             </div>
         </div>
     </div>
 
     <!-- Recommended Courses Section -->
-    <section class="bg-gray-100 dark:bg-gray-900 py-12 mt-24 ">
+    <section class="bg-gray-100 dark:bg-gray-900 py-12 mt-24 " id="courses">
         <div class="container mx-auto ">
-            <h2 class="text-3xl font-extrabold text-center  dark:text-gray-200 lg:text-5xl bg-clip-text text-transparent bg-gradient-to-br from-purple-600 to-black uppercase">Free Courses</h2>
+            <h2
+                class="text-3xl font-extrabold text-center  dark:text-gray-200 lg:text-5xl bg-clip-text text-transparent bg-gradient-to-br from-purple-600 to-black uppercase">
+                Free Courses</h2>
             <div class="flex flex-wrap justify-center mt-8 ">
                 <!-- Course 1 -->
                 <div class="w-full md:w-1/3 lg:w-1/4 p-4">
                     <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6">
                         <img src="img/python.png" alt="Course 1" class="rounded-lg mb-4">
-                        <h3 class="text-lg font-bold text-gray-900 dark:text-gray-200 mb-2  lg:text-lg ">Python Tutorial for
+                        <h3 class="text-lg font-bold text-gray-900 dark:text-gray-200 mb-2  lg:text-lg ">Python Tutorial
+                            for
                             Beginners</h3>
                         <p class="text-gray-600 dark:text-gray-400 mb-4">Master Python with this comprehensive course
                             designed for beginners.</p>
-                        <a href="#" class="bg-purple-700 text-white py-2 px-4 rounded-lg font-bold mx-auto max-w-xl">View Course</a>
+                        <a href="#"
+                            class="bg-purple-700 text-white py-2 px-4 rounded-lg font-bold mx-auto max-w-xl">View
+                            Course</a>
                     </div>
                 </div>
 
@@ -155,7 +160,7 @@
                         <a href="#" class="bg-purple-700 text-white py-2 px-4 rounded-lg font-bold">View Course</a>
                     </div>
                 </div>
-                
+
                 <div class="w-full md:w-1/3 lg:w-1/4 p-4">
                     <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6">
                         <img src="img/html.png" alt="Course 2" class="rounded-xl mb-4 ">
@@ -166,8 +171,8 @@
                         <a href="#" class="bg-purple-700 text-white py-2 px-4 rounded-lg font-bold">View Course</a>
                     </div>
                 </div>
-                
-                
+
+
                 <!-- Course 4 -->
                 <div class="w-full md:w-1/3 lg:w-1/4 p-4">
                     <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6">
@@ -186,56 +191,65 @@
     <!-- Testimonials Section -->
     <section class="bg-white dark:bg-gray-800 py-12 mt-24">
         <div class="container mx-auto text-center">
-          <h2 class="text-3xl mb-24 font-extrabold text-center  dark:text-gray-200 lg:text-5xl bg-clip-text text-transparent bg-gradient-to-br from-purple-600  to-black  uppercase">Testimonials</h2>
-          <!-- <p class="text-gray-600 dark:text-gray-300 mb-12">Subscribe Easy Tutorials YouTube channel to watch more videos.</p> -->
-          <div class="flex flex-wrap justify-center gap-y-12">
-            <!-- Testimonial 1 -->
-            <div class="w-full md:w-1/3 lg:w-1/4 p-4">
-              <div class="bg-gray-100 dark:bg-gray-700 rounded-lg shadow-lg p-6 relative">
-                <div class="absolute inset-x-0 -top-10 flex justify-center">
-                  <img class="w-20 h-20 rounded-full border-4 border-white" src="img/pro.jpg" alt="John Doe">
+            <h2
+                class="text-3xl mb-24 font-extrabold text-center  dark:text-gray-200 lg:text-5xl bg-clip-text text-transparent bg-gradient-to-br from-purple-600  to-black  uppercase">
+                Testimonials</h2>
+            <!-- <p class="text-gray-600 dark:text-gray-300 mb-12">Subscribe Easy Tutorials YouTube channel to watch more videos.</p> -->
+            <div class="flex flex-wrap justify-center gap-y-12">
+                <!-- Testimonial 1 -->
+                <div class="w-full md:w-1/3 lg:w-1/4 p-4">
+                    <div class="bg-gray-100 dark:bg-gray-700 rounded-lg shadow-lg p-6 relative">
+                        <div class="absolute inset-x-0 -top-10 flex justify-center">
+                            <img class="w-20 h-20 rounded-full border-4 border-white" src="img/pro.jpg" alt="John Doe">
+                        </div>
+                        <p class="text-gray-600 dark:text-gray-300 mt-12 mb-4">"The best online courses I've ever taken!
+                            Comprehensive and easy to follow."</p>
+                        <p class="font-bold text-gray-900 dark:text-gray-200">John Doe</p>
+                        <p class="text-sm text-gray-500 dark:text-gray-400">Co-Founder at XYZ</p>
+                    </div>
                 </div>
-                <p class="text-gray-600 dark:text-gray-300 mt-12 mb-4">"The best online courses I've ever taken! Comprehensive and easy to follow."</p>
-                <p class="font-bold text-gray-900 dark:text-gray-200">John Doe</p>
-                <p class="text-sm text-gray-500 dark:text-gray-400">Co-Founder at XYZ</p>
-              </div>
-            </div>
-            <!-- Testimonial 2 -->
-            <div class="w-full md:w-1/3 lg:w-1/4 p-4">
-              <div class="bg-gray-100 dark:bg-gray-700 rounded-lg shadow-lg p-6 relative">
-                <div class="absolute inset-x-0 -top-10 flex justify-center">
-                  <img class="w-20 h-20 rounded-full border-4 border-white" src="img/pro.jpg" alt="Jane Smith">
+                <!-- Testimonial 2 -->
+                <div class="w-full md:w-1/3 lg:w-1/4 p-4">
+                    <div class="bg-gray-100 dark:bg-gray-700 rounded-lg shadow-lg p-6 relative">
+                        <div class="absolute inset-x-0 -top-10 flex justify-center">
+                            <img class="w-20 h-20 rounded-full border-4 border-white" src="img/pro.jpg"
+                                alt="Jane Smith">
+                        </div>
+                        <p class="text-gray-600 dark:text-gray-300 mt-12 mb-4">"Amazing content and great instructors.
+                            Highly recommend to anyone looking to learn coding."</p>
+                        <p class="font-bold text-gray-900 dark:text-gray-200">Jane Smith</p>
+                        <p class="text-sm text-gray-500 dark:text-gray-400">Manager at XYZ</p>
+                    </div>
                 </div>
-                <p class="text-gray-600 dark:text-gray-300 mt-12 mb-4">"Amazing content and great instructors. Highly recommend to anyone looking to learn coding."</p>
-                <p class="font-bold text-gray-900 dark:text-gray-200">Jane Smith</p>
-                <p class="text-sm text-gray-500 dark:text-gray-400">Manager at XYZ</p>
-              </div>
-            </div>
-            <!-- Testimonial 3 -->
-            <div class="w-full md:w-1/3 lg:w-1/4 p-4">
-              <div class="bg-gray-100 dark:bg-gray-700 rounded-lg shadow-lg p-6 relative">
-                <div class="absolute inset-x-0 -top-10 flex justify-center">
-                  <img class="w-20 h-20 rounded-full border-4 border-white" src="img/pro.jpg" alt="Michael Brown">
+                <!-- Testimonial 3 -->
+                <div class="w-full md:w-1/3 lg:w-1/4 p-4">
+                    <div class="bg-gray-100 dark:bg-gray-700 rounded-lg shadow-lg p-6 relative">
+                        <div class="absolute inset-x-0 -top-10 flex justify-center">
+                            <img class="w-20 h-20 rounded-full border-4 border-white" src="img/pro.jpg"
+                                alt="Michael Brown">
+                        </div>
+                        <p class="text-gray-600 dark:text-gray-300 mt-12 mb-4">"The courses are very well structured and
+                            cover all the important topics in depth."</p>
+                        <p class="font-bold text-gray-900 dark:text-gray-200">Michael Brown</p>
+                        <p class="text-sm text-gray-500 dark:text-gray-400">Developer at XYZ</p>
+                    </div>
                 </div>
-                <p class="text-gray-600 dark:text-gray-300 mt-12 mb-4">"The courses are very well structured and cover all the important topics in depth."</p>
-                <p class="font-bold text-gray-900 dark:text-gray-200">Michael Brown</p>
-                <p class="text-sm text-gray-500 dark:text-gray-400">Developer at XYZ</p>
-              </div>
-            </div>
-            <!-- Testimonial 4 -->
-            <div class="w-full md:w-1/3 lg:w-1/4 p-4">
-              <div class="bg-gray-100 dark:bg-gray-700 rounded-lg shadow-lg p-6 relative">
-                <div class="absolute inset-x-0 -top-10 flex justify-center">
-                  <img class="w-20 h-20 rounded-full border-4 border-white" src="img/pro.jpg" alt="Emily Johnson">
+                <!-- Testimonial 4 -->
+                <div class="w-full md:w-1/3 lg:w-1/4 p-4">
+                    <div class="bg-gray-100 dark:bg-gray-700 rounded-lg shadow-lg p-6 relative">
+                        <div class="absolute inset-x-0 -top-10 flex justify-center">
+                            <img class="w-20 h-20 rounded-full border-4 border-white" src="img/pro.jpg"
+                                alt="Emily Johnson">
+                        </div>
+                        <p class="text-gray-600 dark:text-gray-300 mt-12 mb-4">"I've learned so much in such a short
+                            time. Thank you for the great courses!"</p>
+                        <p class="font-bold text-gray-900 dark:text-gray-200">Emily Johnson</p>
+                        <p class="text-sm text-gray-500 dark:text-gray-400">Designer at XYZ</p>
+                    </div>
                 </div>
-                <p class="text-gray-600 dark:text-gray-300 mt-12 mb-4">"I've learned so much in such a short time. Thank you for the great courses!"</p>
-                <p class="font-bold text-gray-900 dark:text-gray-200">Emily Johnson</p>
-                <p class="text-sm text-gray-500 dark:text-gray-400">Designer at XYZ</p>
-              </div>
             </div>
-          </div>
         </div>
-      </section>
+    </section>
     <!-- Footer -->
     <footer class="bg-gray-800 dark:bg-gray-900 text-white py-4">
         <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">

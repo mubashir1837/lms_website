@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>W3Schools Clone</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <header class="bg-gray-900 text-white">
+        <nav class="flex justify-between items-center max-w-6xl mx-auto py-4 px-4">
+            <div class="logo">
+                <img src="logo.png" alt="W3Schools Logo" class="h-10">
+            </div>
+            <ul class="flex space-x-4">
+                <li class="relative dropdown">
+                    <a href="#" class="hover:text-gray-400">Tutorials</a>
+                    <div class="dropdown-content absolute bg-gray-900 shadow-lg hidden">
+                        <a href="#" class="block px-4 py-2 hover:bg-gray-700">HTML</a>
+                        <a href="#" class="block px-4 py-2 hover:bg-gray-700">CSS</a>
+                        <a href="#" class="block px-4 py-2 hover:bg-gray-700">JavaScript</a>
+                    </div>
+                </li>
+                <li class="relative dropdown">
+                    <a href="#" class="hover:text-gray-400">Exercises</a>
+                    <div class="dropdown-content absolute bg-gray-900 shadow-lg hidden">
+                        <a href="#" class="block px-4 py-2 hover:bg-gray-700">HTML Exercises</a>
+                        <a href="#" class="block px-4 py-2 hover:bg-gray-700">CSS Exercises</a>
+                    </div>
+                </li>
+                <li><a href="#" class="hover:text-gray-400">Certificates</a></li>
+                <li><a href="#" class="hover:text-gray-400">Services</a></li>
+                <li><a href="#" class="hover:text-gray-400">Sign Up</a></li>
+                <li><a href="#" class="hover:text-gray-400">Log In</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section class="py-16">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 px-4">
+            <div class="bg-white p-6 rounded shadow text-center">Free Tutorials</div>
+            <div class="bg-white p-6 rounded shadow text-center">References</div>
+            <div class="bg-white p-6 rounded shadow text-center">Create a Website</div>
+            <div class="bg-white p-6 rounded shadow text-center">Exercises</div>
+            <div class="bg-white p-6 rounded shadow text-center">Quizzes</div>
+            <div class="bg-white p-6 rounded shadow text-center">Get Certified</div>
+        </div>
+    </section>
+    
+    <section class="max-w-4xl mx-auto px-4">
+        <h2 class="text-2xl font-bold mb-4">Definition and Usage</h2>
+        <p class="mb-4">The <code class="bg-gray-200 px-2 py-1 rounded">src</code> attribute specifies the URL of an external script file...</p>
+        
+        <h3 class="text-xl font-semibold mb-2">Browser Support</h3>
+        <table class="w-full border-collapse mb-4">
+            <thead>
+                <tr class="bg-gray-200">
+                    <th class="border p-2">Attribute</th>
+                    <th class="border p-2">Chrome</th>
+                    <th class="border p-2">Edge</th>
+                    <th class="border p-2">Firefox</th>
+                    <th class="border p-2">Safari</th>
+                    <th class="border p-2">Opera</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="border p-2">src</td>
+                    <td class="border p-2">Yes</td>
+                    <td class="border p-2">Yes</td>
+                    <td class="border p-2">Yes</td>
+                    <td class="border p-2">Yes</td>
+                    <td class="border p-2">Yes</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <h3 class="text-xl font-semibold mb-2">Syntax</h3>
+        <pre class="bg-gray-200 p-4 rounded mb-4"><code>&lt;script src="URL"&gt;&lt;/script&gt;</code></pre>
+        
+        <h3 class="text-xl font-semibold mb-2">Attribute Values</h3>
+        <table class="w-full border-collapse">
+            <thead>
+                <tr class="bg-gray-200">
+                    <th class="border p-2">Value</th>
+                    <th class="border p-2">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="border p-2">URL</td>
+                    <td class="border p-2">The URL of the external script file...</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+    
+    <footer class="bg-gray-900 text-white py-8 mt-16">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 px-4">
+            <div>
+                <h4 class="font-semibold mb-4">Top Tutorials</h4>
+                <a href="#" class="block hover:underline">HTML Tutorial</a>
+                <a href="#" class="block hover:underline">CSS Tutorial</a>
+                <!-- More links -->
+            </div>
+            <div>
+                <h4 class="font-semibold mb-4">Top References</h4>
+                <a href="#" class="block hover:underline">HTML Reference</a>
+                <a href="#" class="block hover:underline">CSS Reference</a>
+                <!-- More links -->
+            </div>
+            <div>
+                <h4 class="font-semibold mb-4">Top Examples</h4>
+                <a href="#" class="block hover:underline">HTML Examples</a>
+                <a href="#" class="block hover:underline">CSS Examples</a>
+                <!-- More links -->
+            </div>
+            <div>
+                <h4 class="font-semibold mb-4">Get Certified</h4>
+                <a href="#" class="block hover:underline">HTML Certificate</a>
+                <a href="#" class="block hover:underline">CSS Certificate</a>
+                <!-- More links -->
+            </div>
+        </div>
+        <p class="text-center mt-8">W3Schools is Powered by W3.CSS</p>
+    </footer>
+</body>
+</html>

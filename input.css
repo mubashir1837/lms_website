@@ -3,6 +3,12 @@
 @tailwind utilities;
 
 
+.dropdown-content {
+    display: none;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
 
 .dark .dark\:bg-gray-800 {
     background-color: #2d3748;
