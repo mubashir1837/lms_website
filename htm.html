@@ -16,7 +16,7 @@
                 "HTML Page Structure",
                 "HTML Tags",
                 "HTML Elements",
-                "HTML Attributes",
+                "HTML Comments",
                 "Skeleton Tags",
                 "Heading Tags",
                 "Paragraph Tag",
@@ -795,8 +795,40 @@ h1 {
                         break;
                     case 7:
                         content = `
-                            <h2 class="text-3xl font-bold mb-4">HTML Attributes</h2>
-                            <p class="mb-4">HTML attributes content goes here...</p>
+                            <h2 class="text-2xl lg:text-3xl text-purple-400 font-extrabold font-sans">HTML Comments</h2>
+<p class="mb-4">HTML comments are used to insert notes or explanations in the HTML code that are not displayed in the browser. These comments help developers understand the code better, making it easier to maintain and update. HTML comments are ignored by the browser and do not affect how the page is displayed. In essence, they are a way to document the HTML code.</p>
+
+<h3 class="text-xl text-purple-500 font-semibold mt-6">How to Write HTML Comments</h3>
+
+<h4 class="text-lg text-purple-400 font-bold mt-4">1. Syntax</h4>
+<p class="mb-2">An HTML comment begins with <code>&lt;!--</code> and ends with <code>--&gt;</code>. Anything between these delimiters is considered a comment.</p>
+<pre class="bg-black text-blue-400 whitespace-pre-wrap overflow-x-auto mx-auto max-w-lg"><code>&lt;!-- This is an HTML comment --&gt;</code></pre>
+
+<h4 class="text-lg text-purple-400 font-bold mt-4">2. Commenting Out Code</h4>
+<p class="mb-2">HTML comments can also be used to hide code temporarily. This is useful when debugging or testing changes.</p>
+<pre class="bg-black text-blue-400 whitespace-pre-wrap overflow-x-auto mx-auto max-w-lg"><code>&lt;!--
+&lt;p&gt;This paragraph is commented out and will not be displayed.&lt;/p&gt;
+--&gt;</code></pre>
+
+<h4 class="text-lg text-purple-400 font-bold mt-4">3. Inline Comments</h4>
+<p class="mb-2">Comments can also be placed within lines of code to explain specific parts.</p>
+<pre class="bg-black text-blue-400 whitespace-pre-wrap overflow-x-auto mx-auto max-w-lg"><code>&lt;p&gt;This is a paragraph. &lt;!-- This is an inline comment --&gt;&lt;/p&gt;</code></pre>
+
+<h4 class="text-lg text-purple-400 font-bold mt-4">4. Multi-line Comments</h4>
+<p class="mb-2">Comments can span multiple lines, making it easier to include detailed explanations or notes.</p>
+<pre class="bg-black text-blue-400 whitespace-pre-wrap overflow-x-auto mx-auto max-w-lg"><code>&lt;!--
+This is a multi-line comment.
+It can span multiple lines and is useful for longer explanations.
+--&gt;</code></pre>
+
+<h4 class="text-lg text-purple-400 font-bold mt-4">5. Best Practices</h4>
+<p class="mb-2">Using comments effectively can make your HTML code more readable and maintainable. Here are some best practices:</p>
+<ul class="list-disc list-inside mb-4">
+    <li>Use comments to explain the purpose of complex sections of code.</li>
+    <li>Avoid overusing comments; write self-explanatory code whenever possible.</li>
+    <li>Remove unnecessary comments to keep the code clean.</li>
+</ul>
+
                         `;
                         break;
                     default:
@@ -852,7 +884,7 @@ h1 {
                 <li><a href="#" class="text-lg text-gray-300 hover:text-white">HTML Page Structure</a></li>
                 <li><a href="#" class="text-lg text-gray-300 hover:text-white">HTML Tags</a></li>
                 <li><a href="#" class="text-lg text-gray-300 hover:text-white">HTML Elements</a></li>
-                <li><a href="#" class="text-lg text-gray-300 hover:text-white">HTML Attributes</a></li>
+                <li><a href="#" class="text-lg text-gray-300 hover:text-white">HTML Comments</a></li>
                 <li><a href="#" class="text-lg text-gray-300 hover:text-white">Skeleton Tags</a></li>
                 <li><a href="#" class="text-lg text-gray-300 hover:text-white">Heading Tags</a></li>
                 <li><a href="#" class="text-lg text-gray-300 hover:text-white">Paragraph Tag</a></li>
