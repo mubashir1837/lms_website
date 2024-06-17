@@ -84,14 +84,69 @@
                         break;
                     case 1:
                         content = `
-                            <h2 class="text-2xl lg:text-3xl text-purple-400 font-extrabold font-sans">HTML Working</h2>
-                            <p class="mb-4">HTML (HyperText Markup Language) was created by Tim Berners-Lee in 1991 as a standard for creating web pages. It's a markup language used to structure content on the web, defining elements like headings, paragraphs, links, and images. HTML forms the backbone of web content. In layman's terms, HTML is like the skeleton of a website. It's a set of instructions that tells a web browser how to display text, images, videos, and other elements on a webpage. Think of it as the building blocks that create the structure and look of a website, similar to how bricks and mortar are used to build a house. In a nutshell:</p>
-                            <ul class="list-disc list-inside mb-4">
-                                <li>HTML is the language of the web, used to create websites.</li>
-                                <li>HTML defines the barebone structure or layout of web pages that we see on the Internet.</li>
-                                <li>HTML consists of a set of tags contained within an HTML document, and the associated files typically have either a ".html" or ".htm" extension.</li>
-                                <li>There are several versions of HTML, with HTML5 being the most recent version.</li>
-                            </ul>
+                           <h2 class="text-2xl lg:text-3xl text-purple-400 font-extrabold font-sans">HTML Working</h2>
+<p class="mb-4">HTML (HyperText Markup Language) was created by Tim Berners-Lee in 1991 as a standard for creating web pages. It's a markup language used to structure content on the web, defining elements like headings, paragraphs, links, and images. HTML forms the backbone of web content. In layman's terms, HTML is like the skeleton of a website. It's a set of instructions that tells a web browser how to display text, images, videos, and other elements on a webpage. Think of it as the building blocks that create the structure and look of a website, similar to how bricks and mortar are used to build a house. In a nutshell:</p>
+<ul class="list-disc list-inside mb-4">
+    <li>HTML is the language of the web, used to create websites.</li>
+    <li>HTML defines the barebone structure or layout of web pages that we see on the Internet.</li>
+    <li>HTML consists of a set of tags contained within an HTML document, and the associated files typically have either a ".html" or ".htm" extension.</li>
+    <li>There are several versions of HTML, with HTML5 being the most recent version.</li>
+</ul>
+
+<h3 class="text-xl text-purple-500 font-semibold mt-6">HTML Tags Overview</h3>
+
+<h4 class="text-lg text-purple-400 font-bold mt-4">1. &lt;body&gt; tag</h4>
+<p class="mb-2">The <code>&lt;body&gt;</code> tag contains the main content of the HTML document. Everything visible on a web page should be inside this tag.</p>
+<pre class=" bg-black text-blue-400 whitespace-pre-wrap overflow-x-auto mx-auto max-w-lg"><code>&lt;body&gt;
+  &lt;h1&gt;Welcome to my website&lt;/h1&gt;
+  &lt;p&gt;This is a paragraph.&lt;/p&gt;
+&lt;/body&gt;</code></pre>
+
+<h4 class="text-lg text-purple-400 font-bold mt-4">2. &lt;header&gt; tag</h4>
+<p class="mb-2">The <code>&lt;header&gt;</code> tag represents the introductory content or a set of navigational links.</p>
+<pre class=" bg-black text-blue-400 whitespace-pre-wrap overflow-x-auto mx-auto max-w-lg"><code>&lt;header&gt;
+  &lt;h1&gt;Website Title&lt;/h1&gt;
+  &lt;nav&gt;
+    &lt;a href="#home"&gt;Home&lt;/a&gt;
+    &lt;a href="#about"&gt;About&lt;/a&gt;
+  &lt;/nav&gt;
+&lt;/header&gt;</code></pre>
+
+<h4 class="text-lg text-purple-400 font-bold mt-4">3. &lt;nav&gt; tag</h4>
+<p class="mb-2">The <code>&lt;nav&gt;</code> tag defines a set of navigation links.</p>
+<pre class=" bg-black text-blue-400 whitespace-pre-wrap overflow-x-auto mx-auto max-w-lg"><code>&lt;nav&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href="#home"&gt;Home&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#services"&gt;Services&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;</code></pre>
+
+<h4 class="text-lg text-purple-400 font-bold mt-4">4. &lt;footer&gt; tag</h4>
+<p class="mb-2">The <code>&lt;footer&gt;</code> tag represents the footer of a document or section.</p>
+<pre class=" bg-black text-blue-400 whitespace-pre-wrap overflow-x-auto mx-auto max-w-lg"><code>&lt;footer&gt;
+  &lt;p&gt;&copy; 2024 My Website&lt;/p&gt;
+  &lt;a href="#privacy"&gt;Privacy Policy&lt;/a&gt;
+&lt;/footer&gt;</code></pre>
+
+<h4 class="text-lg text-purple-400 font-bold mt-4">5. &lt;main&gt; tag</h4>
+<p class="mb-2">The <code>&lt;main&gt;</code> tag represents the dominant content of the &lt;body&gt;.</p>
+<pre class=" bg-black text-blue-400 whitespace-pre-wrap overflow-x-auto mx-auto max-w-lg"><code>&lt;main&gt;
+  &lt;h2&gt;Main Content&lt;/h2&gt;
+  &lt;p&gt;This is the primary content of the webpage.&lt;/p&gt;
+&lt;/main&gt;</code></pre>
+
+<h4 class="text-lg text-purple-400 font-bold mt-4">6. &lt;link&gt; tag</h4>
+<p class="mb-2">The <code>&lt;link&gt;</code> tag defines the relationship between the current document and an external resource.</p>
+<pre class=" bg-black text-blue-400 whitespace-pre-wrap overflow-x-auto mx-auto max-w-lg"><code>&lt;head&gt;
+  &lt;link rel="stylesheet" href="styles.css"&gt;
+&lt;/head&gt;</code></pre>
+
+<h4 class="text-lg text-purple-400 font-bold mt-4">7. &lt;title&gt; tag</h4>
+<p class="mb-2">The <code>&lt;title&gt;</code> tag sets the title of the HTML document, displayed in the browser's title bar or tab.</p>
+<pre class=" bg-black text-blue-400 whitespace-pre-wrap overflow-x-auto mx-auto max-w-lg"><code>&lt;head&gt;
+  &lt;title&gt;My Website&lt;/title&gt;
+&lt;/head&gt;</code></pre>
+
                         `;
                         break;
                     case 2:
