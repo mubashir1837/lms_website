@@ -2,37 +2,37 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HTML Introduction - CodeWithHarry</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <script>
-        document.addEventListener('DOMContentLoaded', (event) => {
-            const topics = [
-                "HTML Introduction",
-                "HTML Working",
-                "HTML Attributes",
-                "HTML Quotations",
-                "HTML Editors",
-                "HTML Tags",
-                "HTML Elements",
-                "HTML Comments",
-                "Skeleton Tags",
-                "Heading Tags",
-                "Paragraph Tag",
-                "Horizontal Line Tag",
-                "Line Break Tag",
-                "Anchor Tag"
-            ];
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML Introduction - CodeWithHarry</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+      const topics = [
+        "HTML Introduction",
+        "HTML Working",
+        "HTML Attributes",
+        "HTML Quotations",
+        "HTML Editors",
+        "HTML Tags",
+        "HTML Elements",
+        "HTML Comments",
+        "HTML Formatting",
+        "HTML vs XHTML",
+        "HTML Colors",
+        "HTML Image",
+        "Line Break Tag",
+        "Anchor Tag"
+      ];
 
-            let currentTopicIndex = 0;
+      let currentTopicIndex = 0;
 
-            function loadTopic(index) {
-                let content = "";
-                switch (index) {
-                    case 0:
-                        content = `
-                           <h1 class="text-2xl lg:text-3xl text-purple-400 font-extrabold font-sans">Introduction to HTML</h1>
+      function loadTopic(index) {
+        let content = "";
+        switch (index) {
+          case 0:
+            content = `
+                      <h1 class="text-2xl lg:text-3xl text-purple-400 font-extrabold font-sans">Introduction to HTML</h1>
                          
                         <p>HTML (HyperText Markup Language) is the standard markup language used to create and design documents on the World Wide Web. It structures web content and tells the browser how to display various elements like text, images, links, and other multimedia.</p>
                         </br>
@@ -40,14 +40,14 @@
                          <h1 class="text-xl font-bold text-purple-400">Boilerplate in HTML:</h1>
                          </br>
                          <pre class=" bg-black text-blue-400 whitespace-pre-wrap lg:whitespace-0 lg:px-32 lg:overflow-x-none lg:max-w-5xl lg:text-left lg:mx-0 overflow-x-auto mx-auto max-w-lg"><code class="language-html">&lt;!DOCTYPE html&gt;
-  &lt;html lang="en"&gt;
+&lt;html lang="en"&gt;
 
   &lt;head&gt;
        &lt;meta charset="UTF-8"&gt;
        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
        &lt;title&gt;Documents&lt;/title&gt;
        &lt;link href="styles.css" rel="stylesheet"&gt;
-    &lt;/head&gt;
+  &lt;/head&gt;
 
   &lt;body&gt;
      &lt;header&gt;...&lt;/header&gt;
@@ -58,7 +58,15 @@
   &lt;/html&gt;
   </code></pre>
   </br>
-                     <p> The structure of a basic HTML document includes several essential elements:
+  <h4 class="text-lg text-purple-400 font-bold mt-4">Code with BismiAllah Work Space</h4>
+<p class="mb-2">If you want to practice further, click on work space</p>
+<button class="bg-blue-500 text-white font-bold py-2 px-4 rounded hover:bg-blue-700">
+    <a href="workspace.html" class="text-white">Work Space</a>
+</button >
+<a href="workspace.html" target="_blank">
+<img src="/img/my.PNG" alt="work Spaces" class="my-4 ">
+                </a>
+                  <p> The structure of a basic HTML document includes several essential elements:
 
                        <h1 class="text-purple-400 font-bold">&lt;!DOCTYPE html&gt;</h1>
 
@@ -82,9 +90,9 @@
                          <main>: Represents the main content of the document.
                           
                         `;
-                        break;
-                    case 1:
-                        content = `
+            break;
+          case 1:
+            content = `
                            <h2 class="text-2xl lg:text-3xl text-purple-400 font-extrabold font-sans">HTML Working</h2>
 <p class="mb-4">HTML (HyperText Markup Language) was created by Tim Berners-Lee in 1991 as a standard for creating web pages. It's a markup language used to structure content on the web, defining elements like headings, paragraphs, links, and images. HTML forms the backbone of web content. In layman's terms, HTML is like the skeleton of a website. It's a set of instructions that tells a web browser how to display text, images, videos, and other elements on a webpage. Think of it as the building blocks that create the structure and look of a website, similar to how bricks and mortar are used to build a house. In a nutshell:</p>
 <ul class="list-disc list-inside mb-4">
@@ -147,12 +155,18 @@
 <pre class=" bg-black text-blue-400 whitespace-pre-wrap overflow-x-auto mx-auto max-w-lg"><code>&lt;head&gt;
   &lt;title&gt;My Website&lt;/title&gt;
 &lt;/head&gt;</code></pre>
-
-                        `;
-                        break;
-                    case 2:
-                        content = `
-                            <h2 class="text-2xl lg:text-3xl text-purple-400 font-extrabold font-sans">HTML Attributes</h2>
+<h4 class="text-lg text-purple-400 font-bold mt-4">Code with Ali Work Space</h4>
+<p class="mb-2">If you want to practice further, click on work space</p>
+<button class="bg-blue-500 text-white font-bold py-2 px-4 rounded hover:bg-blue-700">
+    <a href="workspace.html" class="text-white">Work Space</a>
+</button >
+<a href="workspace.html" target="_blank">
+<img src="/img/my.PNG" alt="work Spaces" class="my-4 ">
+</a> `;
+            break;
+          case 2:
+            content = `
+    <h2 class="text-2xl lg:text-3xl text-purple-400 font-extrabold font-sans">HTML Attributes</h2>
     <p class="mb-4">All HTML elements can have attributes, which provide additional information about an element.</p>
 
     <h3 class="text-xl text-purple-500 font-semibold mt-6">HTML Attributes</h3>
@@ -235,12 +249,11 @@
       <li>Attributes provide additional information about an element</li>
       <li>Attributes are always specified in the opening tag</li>
       <li>Attributes usually come in name/value pairs like: name="value"</li>
-                  </ul>
-                       `;
-                        break;
-                    case 3:
-                        content = `
-                            <h2 class="text-2xl lg:text-3xl text-purple-400 font-extrabold font-sans">HTML Quotation and Citation Elements</h2>
+  </ul>`;
+            break;
+          case 3:
+            content = `
+  <h2 class="text-2xl lg:text-3xl text-purple-400 font-extrabold font-sans">HTML Quotation and Citation Elements</h2>
   <p class="mb-4">In this chapter, we will go through the <code>&lt;blockquote&gt;</code>, <code>&lt;q&gt;</code>, <code>&lt;abbr&gt;</code>, <code>&lt;address&gt;</code>, and <code>&lt;cite&gt;</code> HTML elements.</p>
 
   <h3 class="text-xl text-purple-500 font-semibold mt-6">HTML &lt;blockquote&gt; for Quotations</h3>
@@ -309,9 +322,9 @@
   <p class="mb-2">For a complete list of all available HTML elements, visit our HTML Tag Reference.
                     </p>
                         `;
-                        break;
-                    case 4:
-                        content = `
+            break;
+          case 4:
+            content = `
 <h2 class="text-2xl lg:text-3xl text-purple-400 font-extrabold font-sans">HTML Editors</h2>
 <p class="mb-4">A simple text editor is all you need to learn HTML.</p>
 
@@ -392,9 +405,9 @@
 <h4 class="text-lg text-purple-400 font-bold mt-4">Video: HTML Editors</h4>
 <p class="mb-2">Watch the video tutorial on YouTube for a more detailed guide.</p>
                        `;
-                        break;
-                    case 5:
-                        content = `
+            break;
+          case 5:
+            content = `
                             <h2 class="text-2xl lg:text-3xl text-purple-400 font-extrabold font-sans">HTML Tags<h4 class="text-lg text-purple-400 font-bold mt-4">1. &lt;header&gt; tag</h4>
 <p class="mb-2">The <code>&lt;header&gt;</code> tag defines a header for a document or a section.</p>
 <pre class="bg-black text-blue-400 whitespace-pre-wrap overflow-x-auto mx-auto max-w-lg"><code>&lt;header&gt;
@@ -999,9 +1012,9 @@ h1 {
 
 
                         `;
-                        break;
-                    case 6:
-                        content = `
+            break;
+          case 6:
+            content = `
                             <h2 class="text-2xl lg:text-3xl text-purple-400 font-extrabold font-sans">HTML Elements</h2>
     <p class="mb-4">An HTML element is defined by a start tag, some content, and an end tag.</p>
 
@@ -1046,9 +1059,9 @@ h1 {
     <p class="mb-2">HTML tags are not case sensitive: &lt;P&gt; means the same as &lt;p&gt;.</p>
 
                         `;
-                        break;
-                    case 7:
-                        content = `
+            break;
+          case 7:
+            content = `
                             <h2 class="text-2xl lg:text-3xl text-purple-400 font-extrabold font-sans">HTML Comments</h2>
 <p class="mb-4">HTML comments are used to insert notes or explanations in the HTML code that are not displayed in the browser. These comments help developers understand the code better, making it easier to maintain and update. HTML comments are ignored by the browser and do not affect how the page is displayed. In essence, they are a way to document the HTML code.</p>
 
@@ -1082,112 +1095,374 @@ It can span multiple lines and is useful for longer explanations.
     <li>Avoid overusing comments; write self-explanatory code whenever possible.</li>
     <li>Remove unnecessary comments to keep the code clean.</li>
                   </ul>`;
-                        break;
-                    case 8:
-                        content = `
-                            <h2 class="text-2xl lg:text-3xl text-purple-400 font-extrabold font-sans">DDDDDDDD</h2>
+            break;
+          case 8:
+            content = `
+                             <h2 class="text-2xl lg:text-3xl text-purple-400 font-extrabold font-sans">HTML Text Formatting</h2>
 
+    <p class="mb-4">HTML contains several elements for defining text with a special meaning.</p>
 
-                        `;
-                        break;
-                    case 9:
-                        content = `
-                            <h2 class="text-2xl lg:text-3xl text-purple-400 font-extrabold font-sans">CCCCCCCC</h2>
+    <h3 class="text-xl text-purple-500 font-semibold mt-6">HTML Formatting Elements</h3>
+    <p class="mb-2">HTML formatting elements are designed to display special types of text:</p>
+    <ul class="list-disc list-inside mb-4">
+        <li>&lt;b&gt; - Bold text</li>
+        <li>&lt;strong&gt; - Important text</li>
+        <li>&lt;i&gt; - Italic text</li>
+        <li>&lt;em&gt; - Emphasized text</li>
+        <li>&lt;mark&gt; - Marked text</li>
+        <li>&lt;small&gt; - Smaller text</li>
+        <li>&lt;del&gt; - Deleted text</li>
+        <li>&lt;ins&gt; - Inserted text</li>
+        <li>&lt;sub&gt; - Subscript text</li>
+        <li>&lt;sup&gt; - Superscript text</li>
+    </ul>
 
-                        `;
-                        break;
-                    case 10:
-                        content = `
-                            <h2 class="text-2xl lg:text-3xl text-purple-400 font-extrabold font-sans">ccccccccc</h2>
-e
+    <h4 class="text-lg text-purple-400 font-bold mt-4">HTML &lt;b&gt; and &lt;strong&gt; Elements</h4>
+    <p class="mb-2">The HTML &lt;b&gt; element defines bold text, without any extra importance.</p>
+    <pre class="bg-black text-blue-400 whitespace-pre-wrap overflow-x-auto mx-auto max-w-lg"><code>&lt;b&gt;This text is bold&lt;/b&gt;</code></pre>
+    <p class="mb-2">The HTML &lt;strong&gt; element defines text with strong importance. The content inside is typically displayed in bold.</p>
+    <pre class="bg-black text-blue-400 whitespace-pre-wrap overflow-x-auto mx-auto max-w-lg"><code>&lt;strong&gt;This text is important&lt;/strong&gt;</code></pre>
 
-                        `;
-                        break;
-                    case 10:
-                        content = `
-                            <h2 class="text-2xl lg:text-3xl text-purple-400 font-extrabold font-sans">Bbbbbbbbb</h2>
+    <h4 class="text-lg text-purple-400 font-bold mt-4">HTML &lt;i&gt; and &lt;em&gt; Elements</h4>
+    <p class="mb-2">The HTML &lt;i&gt; element defines a part of text in an alternate voice or mood. The content inside is typically displayed in italic.</p>
+    <pre class="bg-black text-blue-400 whitespace-pre-wrap overflow-x-auto mx-auto max-w-lg"><code>&lt;i&gt;This text is italic&lt;/i&gt;</code></pre>
+    <p class="mb-2">The HTML &lt;em&gt; element defines emphasized text. The content inside is typically displayed in italic.</p>
+    <pre class="bg-black text-blue-400 whitespace-pre-wrap overflow-x-auto mx-auto max-w-lg"><code>&lt;em&gt;This text is emphasized&lt;/em&gt;</code></pre>
 
+    <h4 class="text-lg text-purple-400 font-bold mt-4">HTML &lt;small&gt; Element</h4>
+    <p class="mb-2">The HTML &lt;small&gt; element defines smaller text.</p>
+    <pre class="bg-black text-blue-400 whitespace-pre-wrap overflow-x-auto mx-auto max-w-lg"><code>&lt;small&gt;This is some smaller text&lt;/small&gt;</code></pre>
 
-                        `;
-                        break;
-                    case 12:
-                        content = `
+    <h4 class="text-lg text-purple-400 font-bold mt-4">HTML &lt;mark&gt; Element</h4>
+    <p class="mb-2">The HTML &lt;mark&gt; element defines text that should be marked or highlighted.</p>
+    <pre class="bg-black text-blue-400 whitespace-pre-wrap overflow-x-auto mx-auto max-w-lg"><code>&lt;mark&gt;This text is highlighted in yellow&lt;/mark&gt;</code></pre>
+
+    <h4 class="text-lg text-purple-400 font-bold mt-4">HTML &lt;del&gt; Element</h4>
+    <p class="mb-2">The HTML &lt;del&gt; element defines text that has been deleted from a document. Browsers will usually strike a line through deleted text.</p>
+    <pre class="bg-black text-blue-400 whitespace-pre-wrap overflow-x-auto mx-auto max-w-lg"><code>&lt;del&gt;This text is deleted&lt;/del&gt;</code></pre>
+
+    <h4 class="text-lg text-purple-400 font-bold mt-4">HTML &lt;ins&gt; Element</h4>
+    <p class="mb-2">The HTML &lt;ins&gt; element defines text that has been inserted into a document. Browsers will usually underline inserted text.</p>
+    <pre class="bg-black text-blue-400 whitespace-pre-wrap overflow-x-auto mx-auto max-w-lg"><code>&lt;ins&gt;This text is inserted&lt;/ins&gt;</code></pre>
+
+    <h4 class="text-lg text-purple-400 font-bold mt-4">HTML &lt;sub&gt; Element</h4>
+    <p class="mb-2">The HTML &lt;sub&gt; element defines subscript text. Subscript text appears half a character below the normal line, and is sometimes rendered in a smaller font.</p>
+    <pre class="bg-black text-blue-400 whitespace-pre-wrap overflow-x-auto mx-auto max-w-lg"><code>&lt;p&gt;This is subscript text&lt;sub&gt;2&lt;/sub&gt;&lt;/p&gt;</code></pre>
+
+    <h4 class="text-lg text-purple-400 font-bold mt-4">HTML &lt;sup&gt; Element</h4>
+    <p class="mb-2">The HTML &lt;sup&gt; element defines superscript text. Superscript text appears half a character above the normal line, and is sometimes rendered in a smaller font. Superscript text is usually used for footnotes, like WWW&lt;sup&gt;1&lt;/sup&gt;.</p>
+    <pre class="bg-black text-blue-400 whitespace-pre-wrap overflow-x-auto mx-auto max-w-lg"><code>&lt;p&gt;This is superscript text&lt;sup&gt;1&lt;/sup&gt;&lt;/p&gt;</code></pre>
+
+    <h4 class="text-lg text-purple-400 font-bold mt-4">HTML Text Formatting Elements</h4>
+    <table class="table-auto w-full">
+        <thead>
+            <tr>
+                <th class="border px-4 py-2">Tag</th>
+                <th class="border px-4 py-2">Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="border px-4 py-2">&lt;b&gt;</td>
+                <td class="border px-4 py-2">Defines bold text</td>
+            </tr>
+            <tr>
+                <td class="border px-4 py-2">&lt;strong&gt;</td>
+                <td class="border px-4 py-2">Defines important text</td>
+            </tr>
+            <tr>
+                <td class="border px-4 py-2">&lt;i&gt;</td>
+                <td class="border px-4 py-2">Defines italic text</td>
+            </tr>
+            <tr>
+                <td class="border px-4 py-2">&lt;em&gt;</td>
+                <td class="border px-4 py-2">Defines emphasized text </td>
+            </tr>
+            <tr>
+                <td class="border px-4 py-2">&lt;mark&gt;</td>
+                <td class="border px-4 py-2">Defines marked/highlighted text</td>
+            </tr>
+            <tr>
+                <td class="border px-4 py-2">&lt;small&gt;</td>
+                <td class="border px-4 py-2">Defines smaller text</td>
+            </tr>
+            <tr>
+                <td class="border px-4 py-2">&lt;del&gt;</td>
+                <td class="border px-4 py-2">Defines deleted text</td>
+            </tr>
+            <tr>
+                <td class="border px-4 py-2">&lt;ins&gt;</td>
+                <td class="border px-4 py-2">Defines inserted text</td>
+            </tr>
+            <tr>
+                <td class="border px-4 py-2">&lt;sub&gt;</td>
+                <td class="border px-4 py-2">Defines subscript text</td>
+            </tr>
+            <tr>
+                <td class="border px-4 py-2">&lt;sup&gt;</td>
+                <td class="border px-4 py-2">Defines superscript text</td>
+            </tr>
+        </tbody>
+    </table> `;
+            break;
+          case 9:
+            content = `
+                        <h2 class="text-2xl lg:text-3xl text-purple-400 font-extrabold font-sans">HTML vs. XHTML</h2>
+
+    <p class="mb-4">HTML and XHTML are both markup languages used to create web pages, but they have some key differences.</p>
+
+    <h3 class="text-xl text-purple-500 font-semibold mt-6">Differences Between HTML and XHTML</h3>
+    <h4 class="text-lg text-purple-400 font-bold mt-4">1. Syntax</h4>
+    <p class="mb-2">HTML is more forgiving with syntax rules, while XHTML is stricter and follows XML rules. For example, in XHTML, all tags must be properly closed, nested, and in lowercase.</p>
+    <pre class="bg-black text-blue-400 whitespace-pre-wrap overflow-x-auto mx-auto max-w-lg"><code>&lt;!-- HTML example --&gt;
+&lt;br&gt;  &lt;!-- Line break --&gt;
+&lt;img src="image.jpg"&gt;
+
+&lt;!-- XHTML example --&gt;
+&lt;br /&gt;  &lt;!-- Line break --&gt;
+&lt;img src="image.jpg" /&gt;</code></pre>
+
+    <h4 class="text-lg text-purple-400 font-bold mt-4">2. Document Structure</h4>
+    <p class="mb-2">XHTML requires documents to be well-formed, which means they must adhere to XML structure rules. This includes having a DOCTYPE declaration and properly nested elements.</p>
+    <pre class="bg-black text-blue-400 whitespace-pre-wrap overflow-x-auto mx-auto max-w-lg"><code>&lt;!-- HTML example --&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;Page Title&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;p&gt;Content here.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+
+&lt;!-- XHTML example --&gt;
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.codewithbismiallah.com"&gt;
+&lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;
+&lt;head&gt;
+  &lt;title&gt;Page Title&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;p&gt;Content here.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+    <h4 class="text-lg text-purple-400 font-bold mt-4">3. Error Handling</h4>
+    <p class="mb-2">Browsers are lenient with HTML errors and will attempt to display the page even if the HTML is not well-formed. In contrast, XHTML documents must be well-formed, or they will not be rendered by the browser.</p>
+
+    <h4 class="text-lg text-purple-400 font-bold mt-4">4. Case Sensitivity</h4>
+    <p class="mb-2">HTML tags are not case-sensitive, meaning &lt;DIV&gt; and &lt;div&gt; are interpreted the same way. XHTML tags are case-sensitive, so &lt;div&gt; must be used instead of &lt;DIV&gt;.</p>
+
+    <h4 class="text-lg text-purple-400 font-bold mt-4">5. Attributes</h4>
+    <p class="mb-2">In HTML, attribute values can be written without quotes, but in XHTML, all attribute values must be enclosed in quotes.</p>
+    <pre class="bg-black text-blue-400 whitespace-pre-wrap overflow-x-auto mx-auto max-w-lg"><code>&lt;!-- HTML example --&gt;
+&lt;input type=text name=username&gt;
+
+&lt;!-- XHTML example --&gt;
+&lt;input type="text" name="username" /&gt;</code></pre>
+
+    <h4 class="text-lg text-purple-400 font-bold mt-4">Summary</h4>
+    <p class="mb-2">HTML is more flexible and forgiving with errors, making it easier for developers to write code quickly. XHTML is stricter and requires well-formed documents, promoting better coding practices and compatibility with XML parsers.</p>  
+          `;
+            break;
+          case 10:
+            content = `    
+<h2 class="text-2xl lg:text-3xl text-purple-400 font-extrabold font-sans">HTML Colors</h2>
+
+    <p class="mb-4">HTML colors are specified with predefined color names, or with RGB, HEX, HSL, RGBA, or HSLA values.</p>
+
+    <h3 class="text-xl text-purple-500 font-semibold mt-6">Color Names</h3>
+    <p class="mb-2">In HTML, a color can be specified by using a color name:</p>
+    <pre class="bg-black text-blue-400 whitespace-pre-wrap overflow-x-auto mx-auto max-w-lg"><code>&lt;p style="color:Tomato;"&gt;Tomato&lt;/p&gt;
+&lt;p style="color:Orange;"&gt;Orange&lt;/p&gt;
+&lt;p style="color:DodgerBlue;"&gt;DodgerBlue&lt;/p&gt;
+&lt;p style="color:MediumSeaGreen;"&gt;MediumSeaGreen&lt;/p&gt;
+&lt;p style="color:Gray;"&gt;Gray&lt;/p&gt;
+&lt;p style="color:SlateBlue;"&gt;SlateBlue&lt;/p&gt;
+&lt;p style="color:Violet;"&gt;Violet&lt;/p&gt;
+&lt;p style="color:LightGray;"&gt;LightGray&lt;/p&gt;</code></pre>
+
+    <h3 class="text-xl text-purple-500 font-semibold mt-6">Background Color</h3>
+    <p class="mb-2">You can set the background color for HTML elements:</p>
+    <pre class="bg-black text-blue-400 whitespace-pre-wrap overflow-x-auto mx-auto max-w-lg"><code>&lt;body style="background-color:powderblue;"&gt;
+&lt;h1&gt;Hello World&lt;/h1&gt;
+&lt;p&gt;This is a paragraph.&lt;/p&gt;
+&lt;/body&gt;</code></pre>
+
+    <h3 class="text-xl text-purple-500 font-semibold mt-6">Text Color</h3>
+    <p class="mb-2">You can set the color of text:</p>
+    <pre class="bg-black text-blue-400 whitespace-pre-wrap overflow-x-auto mx-auto max-w-lg"><code>&lt;h1 style="color:blue;"&gt;Hello World&lt;/h1&gt;
+&lt;p style="color:red;"&gt;This is a paragraph.&lt;/p&gt;</code></pre>
+
+    <h3 class="text-xl text-purple-500 font-semibold mt-6">Border Color</h3>
+    <p class="mb-2">You can set the color of borders:</p>
+    <pre class="bg-black text-blue-400 whitespace-pre-wrap overflow-x-auto mx-auto max-w-lg"><code>&lt;h1 style="border:2px solid Tomato;"&gt;Hello World&lt;/h1&gt;
+&lt;h1 style="border:2px solid DodgerBlue;"&gt;Hello World&lt;/h1&gt;
+&lt;h1 style="border:2px solid Violet;"&gt;Hello World&lt;/h1&gt;</code></pre>
+
+    <h3 class="text-xl text-purple-500 font-semibold mt-6">Color Values</h3>
+    <p class="mb-2">In HTML, colors can also be specified using RGB values, HEX values, HSL values, RGBA values, and HSLA values:</p>
+    <pre class="bg-black text-blue-400 whitespace-pre-wrap overflow-x-auto mx-auto max-w-lg"><code>&lt;p style="color:rgb(255, 99, 71);"&gt;rgb(255, 99, 71)&lt;/p&gt;
+&lt;p style="color:#ff6347;"&gt;#ff6347&lt;/p&gt;
+&lt;p style="color:hsl(9, 100%, 64%);"&gt;hsl(9, 100%, 64%)&lt;/p&gt;
+&lt;p style="color:rgba(255, 99, 71, 0.5);"&gt;rgba(255, 99, 71, 0.5)&lt;/p&gt;
+&lt;p style="color:hsla(9, 100%, 64%, 0.5);"&gt;hsla(9, 100%, 64%, 0.5)&lt;/p&gt;</code></pre>
+
+    <h4 class="text-lg text-purple-400 font-bold mt-4">RGB Values</h4>
+    <p class="mb-2">RGB value specifies the intensity of red, green, and blue in the color. Each parameter defines the intensity in the range 0 to 255.</p>
+
+    <h4 class="text-lg text-purple-400 font-bold mt-4">HEX Values</h4>
+    <p class="mb-2">A HEX color is specified with: #RRGGBB. RR (red), GG (green), and BB (blue) are hexadecimal integers between 00 and FF specifying the intensity of the color.</p>
+
+    <h4 class="text-lg text-purple-400 font-bold mt-4">HSL Values</h4>
+    <p class="mb-2">HSL stands for hue, saturation, and lightness. Hue is a degree on the color wheel from 0 to 360. Saturation is a percentage value; 0% means a shade of gray, and 100% is the full color. Lightness is also a percentage; 0% is black, and 100% is white.</p>
+
+    <h4 class="text-lg text-purple-400 font-bold mt-4">RGBA Values</h4>
+    <p class="mb-2">RGBA color values are an extension of RGB with an alpha channel (opacity). The alpha parameter is a number between 0.0 (fully transparent) and 1.0 (fully opaque).</p>
+
+    <h4 class="text-lg text-purple-400 font-bold mt-4">HSLA Values</h4>
+    <p class="mb-2">HSLA color values are an extension of HSL with an alpha channel (opacity). The alpha parameter is a number between 0.0 (fully transparent) and 1.0 (fully opaque).</p`;
+            break;
+          case 11:
+            content = `
+            <h2 class="text-2xl lg:text-3xl text-purple-400 font-extrabold font-sans">HTML Images</h2>
+
+    <p class="mb-4">HTML images are defined with the &lt;img&gt; tag.</p>
+
+    <h3 class="text-xl text-purple-500 font-semibold mt-6">Adding Images</h3>
+    <p class="mb-2">The &lt;img&gt; tag has two required attributes: src and alt.</p>
+    <pre class="bg-black text-blue-400 whitespace-pre-wrap overflow-x-auto mx-auto max-w-lg"><code>&lt;img src="facebook.jpg" alt="Facebook Logo"&gt;</code></pre>
+
+    <h3 class="text-xl text-purple-500 font-semibold mt-6">Image Size - Width and Height</h3>
+    <p class="mb-2">You can use the style attribute to specify the width and height of an image:</p>
+    <pre class="bg-black text-blue-400 whitespace-pre-wrap overflow-x-auto mx-auto max-w-lg"><code>&lt;img src="facebook.jpg" alt="Facebook" style="width:500px;height:600px;"&gt;</code></pre>
+
+    <h3 class="text-xl text-purple-500 font-semibold mt-6">Width and Height, or Style?</h3>
+    <p class="mb-2">The width and height attributes can also be used to specify the size of the image:</p>
+    <pre class="bg-black text-blue-400 whitespace-pre-wrap overflow-x-auto mx-auto max-w-lg"><code>&lt;img src="img_girl.jpg" alt="Girl in a jacket" width="50" height="60"&gt;</code></pre>
+
+    <h3 class="text-xl text-purple-500 font-semibold mt-6">Images in Another Folder</h3>
+    <p class="mb-2">If the image is in another folder, specify the path:</p>
+    <pre class="bg-black text-blue-400 whitespace-pre-wrap overflow-x-auto mx-auto max-w-lg"><code>&lt;img src="/images/facebook.jpg" alt="Facebook"&gt;</code></pre>
+
+    <h3 class="text-xl text-purple-500 font-semibold mt-6">Images on Another Server/Website</h3>
+    <p class="mb-2">If the image is on another server, you must specify the full URL:</p>
+    <pre class="bg-black text-blue-400 whitespace-pre-wrap overflow-x-auto mx-auto max-w-lg"><code>&lt;img src="https://www.example.com/images/facebook.jpg" alt="Facebook"&gt;</code></pre>
+
+    <h3 class="text-xl text-purple-500 font-semibold mt-6">Animated Images</h3>
+    <p class="mb-2">You can display animated images in HTML:</p>
+    <pre class="bg-black text-blue-400 whitespace-pre-wrap overflow-x-auto mx-auto max-w-lg"><code>&lt;img src="img_animation.gif" alt="Animation"&gt;</code></pre>
+
+    <h3 class="text-xl text-purple-500 font-semibold mt-6">Image as a Link</h3>
+    <p class="mb-2">To use an image as a link, put the &lt;img&gt; tag inside the &lt;a&gt; tag:</p>
+    <pre class="bg-black text-blue-400 whitespace-pre-wrap overflow-x-auto mx-auto max-w-lg"><code>&lt;a href="https://www.example.com"&gt;
+  &lt;img src="facebook" alt="Facebook"&gt;
+&lt;/a&gt;</code></pre>
+
+    <h3 class="text-xl text-purple-500 font-semibold mt-6">Image Floating</h3>
+    <p class="mb-2">Use CSS float property to let the image float to the right or to the left:</p>
+    <pre class="bg-black text-blue-400 whitespace-pre-wrap overflow-x-auto mx-auto max-w-lg"><code>&lt;img src="Facebook.jpg" alt="Facbook" style="float:right;"&gt;</code></pre>
+
+    <h3 class="text-xl text-purple-500 font-semibold mt-6">Image Maps</h3>
+    <p class="mb-2">An image map is an image with clickable areas:</p>
+    <pre class="bg-black text-blue-400 whitespace-pre-wrap overflow-x-auto mx-auto max-w-lg"><code>&lt;img src="workplace.jpg" alt="Workplace" usemap="#workmap"&gt;
+&lt;map name="workmap"&gt;
+  &lt;area shape="rect" coords="34,44,270,350" alt="Computer" href="computer.htm"&gt;
+  &lt;area shape="rect" coords="290,172,333,250" alt="Phone" href="phone.htm"&gt;
+&lt;/map&gt;</code></pre>
+
+    <h3 class="text-xl text-purple-500 font-semibold mt-6">Background Image</h3>
+    <p class="mb-2">The background-image property sets one or more background images for an element:</p>
+    <pre class="bg-black text-blue-400 whitespace-pre-wrap overflow-x-auto mx-auto max-w-lg"><code>&lt;style&gt;
+  body {
+    background-image: url('img_tree.png');
+  }
+&lt;/style&gt;</code></pre>
+
+    <h3 class="text-xl text-purple-500 font-semibold mt-6">The Picture Element</h3>
+    <p class="mb-2">The picture element allows you to define different images for different device sizes or screen resolutions:</p>
+    <pre class="bg-black text-blue-400 whitespace-pre-wrap overflow-x-auto mx-auto max-w-lg"><code>&lt;picture&gt;
+  &lt;source srcset="img_small.jpg" media="(max-width: 600px)"&gt;
+  &lt;source srcset="img_medium.jpg" media="(max-width: 1200px)"&gt;
+  &lt;img src="img_large.jpg" alt="Example Image"&gt;
+&lt;/picture&gt;</code></pre`;
+            break;
+          case 12:
+            content = `
                         <h2 class="text-2xl lg:text-3xl text-purple-400 font-extrabold font-sans">Aaaaaaa</h2>
                              `;
-                        break;
-                    default:
-                        content = `<h2 class="text-3xl font-bold mb-4">${topics[index]}</h2><p class="mb-4">Content for ${topics[index]} goes here...</p>`;
-                }
-                document.getElementById('main-content').innerHTML = content;
-            }
+            break;
+          default:
+            content = `<h2 class="text-3xl font-bold mb-4">${topics[index]}</h2><p class="mb-4">Content for ${topics[index]} goes here...</p>`;
+        }
+        document.getElementById('main-content').innerHTML = content;
+      }
 
-            function handleTopicClick(index) {
-                currentTopicIndex = index;
-                loadTopic(currentTopicIndex);
-            }
+      function handleTopicClick(index) {
+        currentTopicIndex = index;
+        loadTopic(currentTopicIndex);
+      }
 
-            document.getElementById('next').addEventListener('click', () => {
-                if (currentTopicIndex < topics.length - 1) {
-                    currentTopicIndex++;
-                    loadTopic(currentTopicIndex);
-                }
-            });
+      document.getElementById('next').addEventListener('click', () => {
+        if (currentTopicIndex < topics.length - 1) {
+          currentTopicIndex++;
+          loadTopic(currentTopicIndex);
+        }
+      });
 
-            document.getElementById('previous').addEventListener('click', () => {
-                if (currentTopicIndex > 0) {
-                    currentTopicIndex--;
-                    loadTopic(currentTopicIndex);
-                }
-            });
+      document.getElementById('previous').addEventListener('click', () => {
+        if (currentTopicIndex > 0) {
+          currentTopicIndex--;
+          loadTopic(currentTopicIndex);
+        }
+      });
 
-            document.querySelectorAll('aside ul li a').forEach((link, index) => {
-                link.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    handleTopicClick(index);
-                });
-            });
-
-            loadTopic(currentTopicIndex);
+      document.querySelectorAll('aside ul li a').forEach((link, index) => {
+        link.addEventListener('click', (e) => {
+          e.preventDefault();
+          handleTopicClick(index);
         });
-    </script>
+      });
+
+      loadTopic(currentTopicIndex);
+    });
+  </script>
 </head>
 
-<body class="bg-gray-900 text-gray-100">
-    <!-- Main Content Section -->
+<body class="bg-gradient-to-tr from-black via-slate-500 to-gray-500 text-gray-100">
+  <!-- Main Content Section -->
 
 
-    <main class="flex flex-col lg:flex-row min-h-screen">
-        <!-- Sidebar -->
-        <aside class="w-full lg:w-1/4 bg-gray-800 p-6 hidden lg:block">
-            <ul class="space-y-2">
-                <li class="text-3xl font-bold text-purple-500">Topics</li>
-                <li><a href="#" class="text-lg text-gray-300 hover:text-white">HTML Introduction</a></li>
-                <li><a href="#" class="text-lg text-gray-300 hover:text-white">HTML Working</a></li>
-                <li><a href="#" class="text-lg text-gray-300 hover:text-white">HTML Attributes</a></li>
-                <li><a href="#" class="text-lg text-gray-300 hover:text-white">HTML Quotations</a></li>
-                <li><a href="#" class="text-lg text-gray-300 hover:text-white">HTML Editors</a></li>
-                <li><a href="#" class="text-lg text-gray-300 hover:text-white">HTML Tags</a></li>
-                <li><a href="#" class="text-lg text-gray-300 hover:text-white">HTML Elements</a></li>
-                <li><a href="#" class="text-lg text-gray-300 hover:text-white">HTML Comments</a></li>
-                <li><a href="#" class="text-lg text-gray-300 hover:text-white">Skeleton Tags</a></li>
-                <li><a href="#" class="text-lg text-gray-300 hover:text-white">Heading Tags</a></li>
-                <li><a href="#" class="text-lg text-gray-300 hover:text-white">Paragraph Tag</a></li>
-                <li><a href="#" class="text-lg text-gray-300 hover:text-white">Horizontal Line Tag</a></li>
-                <li><a href="#" class="text-lg text-gray-300 hover:text-white">Line Break Tag</a></li>
-                <li><a href="#" class="text-lg text-gray-300 hover:text-white">Anchor Tag</a></li>
-            </ul>
-        </aside>
-        <!-- Main Content -->
-        <section class="flex-1 p-6">
-            <div id="main-content" class="prose lg:prose-xl"></div>
-            <div class="mt-8 flex justify-between">
-                <button id="previous"
-                    class="bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded">Previous</button>
-                <button id="next"
-                    class="bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded">Next</button>
-            </div>
-        </section>
-    </main>
+  <main class="flex flex-col lg:flex-row min-h-screen">
+    <!-- Sidebar -->
+    <aside class="w-full lg:w-1/4 bg-gray-800 p-6 hidden lg:block">
+      <ul class="space-y-2">
+        <li class="text-3xl font-bold text-purple-500">Topics</li>
+        <li><a href="#" class="text-lg text-gray-300 hover:text-white">HTML Introduction</a></li>
+        <li><a href="#" class="text-lg text-gray-300 hover:text-white">HTML Working</a></li>
+        <li><a href="#" class="text-lg text-gray-300 hover:text-white">HTML Attributes</a></li>
+        <li><a href="#" class="text-lg text-gray-300 hover:text-white">HTML Quotations</a></li>
+        <li><a href="#" class="text-lg text-gray-300 hover:text-white">HTML Editors</a></li>
+        <li><a href="#" class="text-lg text-gray-300 hover:text-white">HTML Tags</a></li>
+        <li><a href="#" class="text-lg text-gray-300 hover:text-white">HTML Elements</a></li>
+        <li><a href="#" class="text-lg text-gray-300 hover:text-white">HTML Comments</a></li>
+        <li><a href="#" class="text-lg text-gray-300 hover:text-white">HTML Fomatting</a></li>
+        <li><a href="#" class="text-lg text-gray-300 hover:text-white">HTML VS XHTML</a></li>
+        <li><a href="#" class="text-lg text-gray-300 hover:text-white">HTML Colors</a></li>
+        <li><a href="#" class="text-lg text-gray-300 hover:text-white">HTML Image</a></li>
+        <li><a href="#" class="text-lg text-gray-300 hover:text-white">Line Break Tag</a></li>
+        <li><a href="#" class="text-lg text-gray-300 hover:text-white">Anchor Tag</a></li>
+      </ul>
+    </aside>
+    <!-- Main Content -->
+    <section class="flex-1 p-6">
+      <div id="main-content" class="prose lg:prose-xl"></div>
+      <div class="mt-8 flex justify-between">
+        <button id="previous"
+          class="bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded">Previous</button>
+        <button id="next" class="bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded">Next</button>
+      </div>
+    </section>
+  </main>
 </body>
 
 </html>
