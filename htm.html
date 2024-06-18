@@ -21,8 +21,8 @@
         "HTML vs XHTML",
         "HTML Colors",
         "HTML Image",
-        "Line Break Tag",
-        "Anchor Tag"
+        "HTML Classes",
+        "HTML Id"
       ];
 
       let currentTopicIndex = 0;
@@ -394,7 +394,7 @@
     <a href="workspace.html" class="text-white">Try it Yourself</a>
 </button>
 
-<h4 class="text-lg text-purple-400 font-bold mt-4">Code with Ali Work Space</h4>
+<h4 class="text-lg text-purple-400 font-bold mt-4">Code with BismiAllah Work Space</h4>
 <p class="mb-2">If you want to practice further, click on work space</p>
 <button class="bg-blue-500 text-white font-bold py-2 px-4 rounded hover:bg-blue-700">
     <a href="workspace.html" class="text-white">Work Space</a>
@@ -1388,8 +1388,92 @@ It can span multiple lines and is useful for longer explanations.
             break;
           case 12:
             content = `
-                        <h2 class="text-2xl lg:text-3xl text-purple-400 font-extrabold font-sans">Aaaaaaa</h2>
-                             `;
+                    <h2 class="text-2xl lg:text-3xl text-purple-400 font-extrabold font-sans">HTML Class Attribute</h2>
+<p class="mb-4">The HTML class attribute is used to specify one or more class names for an HTML element. Class names can be used by CSS and JavaScript to apply styles and behavior to multiple elements simultaneously.</p>
+
+<h3 class="text-xl text-purple-500 font-semibold mt-6">Using The class Attribute</h3>
+<p class="mb-2">To use the class attribute, add it to an HTML element and assign it a class name. Multiple class names can be added by separating them with spaces.</p>
+<pre class="bg-black text-blue-400 whitespace-pre-wrap overflow-x-auto mx-auto max-w-lg"><code>&lt;div class="container main-content"&gt;
+  &lt;p class="text bold"&gt;This is a paragraph.&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+
+<h4 class="text-lg text-purple-400 font-bold mt-4">The Syntax For Class</h4>
+<pre class="bg-black text-blue-400 whitespace-pre-wrap overflow-x-auto mx-auto max-w-lg"><code>&lt;element class="classname"&gt;</code></pre>
+
+<h4 class="text-lg text-purple-400 font-bold mt-4">Multi-class Elements</h4>
+<p class="mb-2">Elements can have multiple classes for applying different styles and behaviors. Separate class names with a space.</p>
+<pre class="bg-black text-blue-400 whitespace-pre-wrap overflow-x-auto mx-auto max-w-lg"><code>&lt;element class="class1 class2 class3"&gt;</code></pre>
+
+<h4 class="text-lg text-purple-400 font-bold mt-4">Different Elements Can Share Same Classes</h4>
+<p class="mb-2">Multiple HTML elements can share the same class, allowing for consistent styling and behavior across different elements.</p>
+
+<h4 class="text-lg text-purple-400 font-bold mt-4">Use of The Class Attribute in JavaScript</h4>
+<p class="mb-2">JavaScript can interact with elements by their class name, making it easy to manipulate elements dynamically.</p>
+<pre class="bg-black text-blue-400 whitespace-pre-wrap overflow-x-auto mx-auto max-w-lg"><code>document.getElementsByClassName("example");</code></pre>
+
+<h4 class="text-lg text-purple-400 font-bold mt-4">Classes Summary</h4>
+<ul class="list-disc list-inside mb-4">
+    <li>Class names are case-sensitive.</li>
+    <li>Multiple classes can be specified, separated by spaces.</li>
+    <li>Classes can be used to apply the same style or behavior to multiple elements.</li>
+</ul>
+<h4 class="text-lg text-purple-400 font-bold mt-4">Code with Ali Work Space</h4>
+<p class="mb-2">If you want to practice further, click on work space</p>
+<button class="bg-purple-500 text-white font-bold py-2 px-4 rounded hover:bg-blue-700">
+    <a href="workspace.html" class="text-white">Work Space</a>
+</button >
+<a href="workspace.html" target="_blank">
+<img src="/img/my.PNG" alt="work Spaces" class="my-4 ">
+</a>
+`;
+            break;
+          case 13:
+            content = `
+            <h2 class="text-2xl lg:text-3xl text-purple-400 font-extrabold font-sans">HTML Id Attribute</h2>
+<p class="mb-4">The HTML id attribute is used to specify a unique id for an HTML element. You cannot have more than one element with the same id in an HTML document.</p>
+
+<h3 class="text-xl text-purple-500 font-semibold mt-6">Using The Id Attribute</h3>
+<p class="mb-2">The id attribute is used by CSS and JavaScript to apply styles or behaviors to specific elements. An id should be unique within a page, meaning it should only be used once.</p>
+<pre class="bg-black text-blue-400 whitespace-pre-wrap overflow-x-auto mx-auto max-w-lg"><code>&lt;div id="header"&gt;
+  &lt;h1&gt;Welcome to My Website&lt;/h1&gt;
+&lt;/div&gt;</code></pre>
+
+<h4 class="text-lg text-purple-400 font-bold mt-4">Difference Between Class and ID</h4>
+<p class="mb-2">Classes are meant to be reused on multiple elements. IDs should be unique and used only once per page.</p>
+<pre class="bg-black text-blue-400 whitespace-pre-wrap overflow-x-auto mx-auto max-w-lg"><code>&lt;!-- Example of class usage --&gt;
+&lt;div class="note"&gt;Note 1&lt;/div&gt;
+&lt;div class="note"&gt;Note 2&lt;/div&gt;
+
+&lt;!-- Example of id usage --&gt;
+&lt;div id="unique-element"&gt;This is unique&lt;/div&gt;</code></pre>
+
+<h4 class="text-lg text-purple-400 font-bold mt-4">HTML Bookmarks with ID and Links</h4>
+<p class="mb-2">HTML bookmarks are used to allow readers to jump to specific parts of a webpage. To create a bookmark, use the id attribute to create a target, then link to it using the href attribute with a hash symbol (#).</p>
+<pre class="bg-black text-blue-400 whitespace-pre-wrap overflow-x-auto mx-auto max-w-lg"><code>&lt;!-- Target for the bookmark --&gt;
+&lt;h2 id="section1"&gt;Section 1&lt;/h2&gt;
+
+&lt;!-- Link to the bookmark --&gt;
+&lt;a href="#section1"&gt;Go to Section 1&lt;/a&gt;</code></pre>
+
+<h4 class="text-lg text-purple-400 font-bold mt-4">Using The Id Attribute in JavaScript</h4>
+<p class="mb-2">The id attribute allows JavaScript to access and manipulate specific elements directly. This can be done using methods like getElementById.</p>
+<pre class="bg-black text-blue-400 whitespace-pre-wrap overflow-x-auto mx-auto max-w-lg"><code>document.getElementById("header").innerHTML = "Hello World!";</code></pre>
+
+<h4 class="text-lg text-purple-400 font-bold mt-4">Chapter Summary</h4>
+<ul class="list-disc list-inside mb-4">
+    <li>The id attribute is used to specify a unique id for an HTML element.</li>
+    <li>An id should be unique within a page.</li>
+    <li>IDs are used by CSS and JavaScript to apply styles and behaviors to specific elements.</li>
+    <li>HTML bookmarks use the id attribute to navigate to specific sections of a webpage.</li>
+    <li>JavaScript can manipulate elements with specific ids using getElementById.</li>
+</ul>
+
+<h4 class="text-lg text-purple-400 font-bold mt-4">Test Yourself With Exercises</h4>
+<p class="mb-2">Practice using the id attribute with interactive exercises to solidify your understanding.</p>
+<pre class="bg-black text-blue-400 whitespace-pre-wrap overflow-x-auto mx-auto max-w-lg"><code>&lt;!-- Example Exercise Code --&gt;
+&lt;div id="exercise"&gt;
+  &lt;h1 id="header"&gt;My Page Header&lt;/h1&gt;
+&lt;/div&gt;</code></pre>`;
             break;
           default:
             content = `<h2 class="text-3xl font-bold mb-4">${topics[index]}</h2><p class="mb-4">Content for ${topics[index]} goes here...</p>`;
@@ -1449,8 +1533,8 @@ It can span multiple lines and is useful for longer explanations.
         <li><a href="#" class="text-lg text-gray-300 hover:text-white">HTML VS XHTML</a></li>
         <li><a href="#" class="text-lg text-gray-300 hover:text-white">HTML Colors</a></li>
         <li><a href="#" class="text-lg text-gray-300 hover:text-white">HTML Image</a></li>
-        <li><a href="#" class="text-lg text-gray-300 hover:text-white">Line Break Tag</a></li>
-        <li><a href="#" class="text-lg text-gray-300 hover:text-white">Anchor Tag</a></li>
+        <li><a href="#" class="text-lg text-gray-300 hover:text-white">HTML Classes</a></li>
+        <li><a href="#" class="text-lg text-gray-300 hover:text-white">HTML Id</a></li>
       </ul>
     </aside>
     <!-- Main Content -->
