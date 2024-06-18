@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Code Editor</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
+   
+    <style>
+        .editor {
+            height: 400px;
+            display: none;
+        }
+        .output {
+            height: 400px;
+        }
+        
+    </style>
+</head>
+<body class="bg-gradient-to-r from-purple-900 to-gray-600">
+    <div class="container mx-auto p-4">
+        <h1 class="text-2xl font-bold mb-4 uppercase">My workspace</h1>
+        <div class="tabs mb-4">
+            <button class="px-4 py-2 bg-purple-500 text-white font-bold rounded" data-tab="html">HTML</button>
+            <button class="px-4 py-2 bg-purple-500 text-white font-bold rounded" data-tab="css">CSS</button>
+            <button class="px-4 py-2 bg-purple-500 text-white font-bold rounded" data-tab="js">JavaScript</button>
+        </div>
+        <div class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">
+            <textarea id="htmlEditor" class="editor p-2 w-full md:w-1/2 bg-black text-white border-8 border-yellow-600 rounded" placeholder="Write your HTML code here..."></textarea>
+            <textarea id="cssEditor" class="editor p-2 w-full md:w-1/2 bg-black text-blue-400 border-8 border-blue-500 rounded" placeholder="Write your CSS code here..."></textarea>
+            <textarea id="jsEditor" class="editor p-2 w-full md:w-1/2 bg-black border-8 border-purple-600 rounded" placeholder="Write your JavaScript code here..."></textarea>
+            <div id="output" class="output p-2 w-full md:w-1/2 bg-gray-700 h-[400px] text-white border-8 border-green-600 rounded overflow-auto" ></div>
+        </div>
+        <button id="runCode" class="mt-4 px-4 py-2 bg-purple-500 text-white font-bold rounded">Run Code</button>
+    </div>
+    <script>
+        document.querySelectorAll('.tabs button').forEach(button => {
+            button.addEventListener('click', function() {
+                const tab = this.getAttribute('data-tab');
+                document.querySelectorAll('.editor').forEach(editor => {
+                    editor.style.display = editor.id.includes(tab) ? 'block' : 'none';
+                });
+            });
+        });
+
+        document.getElementById('runCode').addEventListener('click', function() {
+            let htmlCode = document.getElementById('htmlEditor').value;
+            let cssCode = "<style>" + document.getElementById('cssEditor').value + "</style>";
+            let jsCode = "<script>" + document.getElementById('jsEditor').value + "<\/script>";
+            let output = document.getElementById('output');
+            output.innerHTML = htmlCode + cssCode + jsCode;
+        });
+
+        // Initialize first tab
+        document.querySelector('[data-tab="html"]').click();
+    </script>
+</body>
+</html>
