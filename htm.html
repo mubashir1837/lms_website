@@ -39,7 +39,7 @@
                            <h1 class=text-lg font-extrabold>Structure of an HTML Document</h1>
                          <h1 class="text-xl font-bold text-purple-400">Boilerplate in HTML:</h1>
                          </br>
-                         <pre class=" bg-black text-blue-400 whitespace-pre-wrap overflow-x-auto mx-auto max-w-lg"><code class="language-html">&lt;!DOCTYPE html&gt;
+                         <pre class=" bg-black text-blue-400 whitespace-pre-wrap lg:whitespace-0 lg:px-32 lg:overflow-x-none lg:max-w-5xl lg:text-left lg:mx-0 overflow-x-auto mx-auto max-w-lg"><code class="language-html">&lt;!DOCTYPE html&gt;
   &lt;html lang="en"&gt;
 
   &lt;head&gt;
@@ -57,6 +57,7 @@
 
   &lt;/html&gt;
   </code></pre>
+  </br>
                      <p> The structure of a basic HTML document includes several essential elements:
 
                        <h1 class="text-purple-400 font-bold">&lt;!DOCTYPE html&gt;</h1>
@@ -74,11 +75,12 @@
                         <p>Specifies the character encoding for the document, ensuring it can display a wide range of characters.</p>
                         <h1 class="text-purple-400 font-bold">&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</h1> 
                         <p>Ensures the webpage is responsive and renders well on different devices.</p>
-                         <title>: Sets the title of the document, which appears in the browser tab.
+                        <p><title>: Sets the title of the document, which appears in the browser tab.</p> 
                           <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">: Links to an external CSS file, in this case, Bootstrap, to style the document.
                         <body>: Contains the content of the document that is visible to users. The content typically includes text, images, links, and other elements that make up the webpage.
                         <header>: Typically contains introductory content or navigational links.
                          <main>: Represents the main content of the document.
+                          
                         `;
                         break;
                     case 1:
@@ -383,9 +385,10 @@
 <p class="mb-2">If you want to practice further, click on work space</p>
 <button class="bg-blue-500 text-white font-bold py-2 px-4 rounded hover:bg-blue-700">
     <a href="workspace.html" class="text-white">Work Space</a>
-</button>
-<img src="./img/my.PNG" alt="work Spaces" class="my-4">
-
+</button >
+<a href="workspace.html" target="_blank">
+<img src="/img/my.PNG" alt="work Spaces" class="my-4 ">
+</a>
 <h4 class="text-lg text-purple-400 font-bold mt-4">Video: HTML Editors</h4>
 <p class="mb-2">Watch the video tutorial on YouTube for a more detailed guide.</p>
                        `;
