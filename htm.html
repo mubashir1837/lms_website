@@ -11,9 +11,9 @@
             const topics = [
                 "HTML Introduction",
                 "HTML Working",
-                "HTML Installation",
-                "HTML Execution",
-                "HTML Page Structure",
+                "HTML Attributes",
+                "HTML Quotations",
+                "HTML Editors",
                 "HTML Tags",
                 "HTML Elements",
                 "HTML Comments",
@@ -57,8 +57,7 @@
 
   &lt;/html&gt;
   </code></pre>
-
-                        <p> The structure of a basic HTML document includes several essential elements:
+                     <p> The structure of a basic HTML document includes several essential elements:
 
                        <h1 class="text-purple-400 font-bold">&lt;!DOCTYPE html&gt;</h1>
 
@@ -151,38 +150,172 @@
                         break;
                     case 2:
                         content = `
-                            <h2 class="text-3xl font-bold mb-4">HTML Installation</h2>
-                            <p class="mb-4">Installing HTML is quite straightforward. You don't actually 'install' HTML, but you need a text editor to write HTML code and a web browser to view the HTML pages. Here are the steps to get started:</p>
-                            <ul class="list-disc list-inside mb-4">
-                                <li>Choose a Text Editor: You can use any text editor like Notepad, Sublime Text, or Visual Studio Code.</li>
-                                <li>Write HTML Code: Open your text editor and start writing HTML code.</li>
-                                <li>Save the File: Save your file with a .html extension.</li>
-                                <li>Open in Browser: Open the saved HTML file in any web browser to see the output.</li>
-                            </ul>
-                            <video controls class="mb-4">
-                                <source src="/img/vscode.mp4" type="video/mp4" class="w-1">
-                            </video>
-                        `;
+                            <h2 class="text-2xl lg:text-3xl text-purple-400 font-extrabold font-sans">HTML Attributes</h2>
+    <p class="mb-4">All HTML elements can have attributes, which provide additional information about an element.</p>
+
+    <h3 class="text-xl text-purple-500 font-semibold mt-6">HTML Attributes</h3>
+    <p class="mb-2">Attributes are always included in the opening tag and usually come in name/value pairs like: name="value".</p>
+
+    <h4 class="text-lg text-purple-400 font-bold mt-4">The href Attribute</h4>
+    <p class="mb-2">The <code>&lt;a&gt;</code> tag defines a hyperlink, and the <code>href</code> attribute specifies the URL of the page the link goes to.</p>
+    <pre class="bg-black text-blue-400 whitespace-pre-wrap overflow-x-auto mx-auto max-w-lg">
+      <code>&lt;a href="https://www.codewithAli.com"&gt;Visit Code with Ali&lt;/a&gt;</code>
+    </pre>
+
+    <h4 class="text-lg text-purple-400 font-bold mt-4">The src Attribute</h4>
+    <p class="mb-2">The <code>&lt;img&gt;</code> tag is used to embed an image, and the <code>src</code> attribute specifies the path to the image to be displayed.</p>
+    <pre class="bg-black text-blue-400 whitespace-pre-wrap overflow-x-auto mx-auto max-w-lg">
+      <code>&lt;img src="img_girl.jpg" alt="Girl with a jacket"&gt;</code>
+    </pre>
+
+    <h4 class="text-lg text-purple-400 font-bold mt-4">The width and height Attributes</h4>
+    <p class="mb-2">The <code>&lt;img&gt;</code> tag also has <code>width</code> and <code>height</code> attributes, which define the size of the image.</p>
+    <pre class="bg-black text-blue-400 whitespace-pre-wrap overflow-x-auto mx-auto max-w-lg">
+      <code>&lt;img src="img_girl.jpg" alt="Girl with a jacket" width="500" height="600"&gt;</code>
+    </pre>
+
+    <h4 class="text-lg text-purple-400 font-bold mt-4">The alt Attribute</h4>
+    <p class="mb-2">The <code>alt</code> attribute provides alternative text for an image, if the image cannot be displayed.</p>
+    <pre class="bg-black text-blue-400 whitespace-pre-wrap overflow-x-auto mx-auto max-w-lg">
+      <code>&lt;img src="img_girl.jpg" alt="Girl with a jacket"&gt;</code>
+    </pre>
+
+    <h4 class="text-lg text-purple-400 font-bold mt-4">The style Attribute</h4>
+    <p class="mb-2">The <code>style</code> attribute is used to add styles to an element, such as color, font, size, and more.</p>
+    <pre class="bg-black text-blue-400 whitespace-pre-wrap overflow-x-auto mx-auto max-w-lg">
+      <code>&lt;p style="color:red;"&gt;This is a red paragraph.&lt;/p&gt;</code>
+    </pre>
+
+    <h4 class="text-lg text-purple-400 font-bold mt-4">The lang Attribute</h4>
+    <p class="mb-2">The <code>lang</code> attribute declares the language of the HTML document.</p>
+    <pre class="bg-black text-blue-400 whitespace-pre-wrap overflow-x-auto mx-auto max-w-lg">
+      <code>&lt;html lang="en"&gt;</code>
+    </pre>
+
+    <h4 class="text-lg text-purple-400 font-bold mt-4">The title Attribute</h4>
+    <p class="mb-2">The <code>title</code> attribute provides additional information about an element, displayed as a tooltip.</p>
+    <pre class="bg-black text-blue-400 whitespace-pre-wrap overflow-x-auto mx-auto max-w-lg">
+      <code>&lt;p title="I'm a tooltip"&gt;This is a paragraph.&lt;/p&gt;</code>
+    </pre>
+
+    <h4 class="text-lg text-purple-400 font-bold mt-4">We Suggest: Always Use Lowercase Attributes</h4>
+    <p class="mb-2">HTML5 standard does not require lowercase attribute names, but using lowercase is recommended.</p>
+    <pre class="bg-black text-blue-400 whitespace-pre-wrap overflow-x-auto mx-auto max-w-lg">
+      <code>
+      &lt;!DOCTYPE html&gt;
+      &lt;html&gt;
+      &lt;body&gt;
+      &lt;p style="color:red;"&gt;This is a red paragraph.&lt;/p&gt;
+      &lt;/body&gt;
+      &lt;/html&gt;
+      </code>
+    </pre>
+
+    <h4 class="text-lg text-purple-400 font-bold mt-4">Always Quote Attribute Values</h4>
+    <p class="mb-2">HTML5 does not require quotes around attribute values, but it's a good practice to use quotes.</p>
+    <pre class="bg-black text-blue-400 whitespace-pre-wrap overflow-x-auto mx-auto max-w-lg">
+      <code>
+      &lt;a href="https://www.codewithali.com"&gt;Visit Code with Ali&lt;/a&gt;
+      </code>
+    </pre>
+
+    <h4 class="text-lg text-purple-400 font-bold mt-4">Single or Double Quotes?</h4>
+    <p class="mb-2">You can use either single or double quotes around attribute values. Just be consistent.</p>
+    <pre class="bg-black text-blue-400 whitespace-pre-wrap overflow-x-auto mx-auto max-w-lg">
+      <code>
+      &lt;a href='https://www.codewithali.com'&gt;Visit Code Wth Ali&lt;/a&gt;
+      </code>
+    </pre>
+
+    <h4 class="text-lg text-purple-400 font-bold mt-4">Summary</h4>
+    <ul class="list-disc list-inside mb-4">
+      <li>All HTML elements can have attributes</li>
+      <li>Attributes provide additional information about an element</li>
+      <li>Attributes are always specified in the opening tag</li>
+      <li>Attributes usually come in name/value pairs like: name="value"</li>
+                  </ul>
+                       `;
                         break;
                     case 3:
                         content = `
-                            <h2 class="text-3xl font-bold mb-4">HTML Execution</h2>
-                            <p class="mb-4">Executing HTML code is simple. You just need to write your HTML code in a text editor, save the file with a .html extension, and open it in a web browser. Here's a video to help you understand:</p>
-                            <video controls class="mb-4 w-[50%] h-[50%]">
-                                <source src="/img/vscode.mp4" type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video>
+                            <h2 class="text-2xl lg:text-3xl text-purple-400 font-extrabold font-sans">HTML Quotation and Citation Elements</h2>
+  <p class="mb-4">In this chapter, we will go through the <code>&lt;blockquote&gt;</code>, <code>&lt;q&gt;</code>, <code>&lt;abbr&gt;</code>, <code>&lt;address&gt;</code>, and <code>&lt;cite&gt;</code> HTML elements.</p>
+
+  <h3 class="text-xl text-purple-500 font-semibold mt-6">HTML &lt;blockquote&gt; for Quotations</h3>
+  <p class="mb-2">The HTML <code>&lt;blockquote&gt;</code> element defines a section that is quoted from another source. Browsers usually indent <code>&lt;blockquote&gt;</code> elements.</p>
+  <pre class="bg-black text-blue-400 whitespace-pre-wrap overflow-x-auto mx-auto max-w-lg">
+    <code>
+    &lt;blockquote cite="https://www.unicef.org/who-we-are"&gt;
+      For over 70 years, UNICEF has been working to improve the lives of children and their families. Operating in more than 190 countries and territories, UNICEF's mission is to advocate for the protection of children's rights, to help meet their basic needs, and to expand their opportunities to reach their full potential.
+    &lt;/blockquote&gt;
+    </code>
+  </pre>
+
+  <h4 class="text-lg text-purple-400 font-bold mt-4">HTML &lt;q&gt; for Short Quotations</h4>
+  <p class="mb-2">The HTML <code>&lt;q&gt;</code> tag defines a short quotation. Browsers normally insert quotation marks around the <code>&lt;q&gt;</code> element.</p>
+  <pre class="bg-black text-blue-400 whitespace-pre-wrap overflow-x-auto mx-auto max-w-lg">
+    <code>
+    &lt;p&gt;UNICEF's mission is: &lt;q&gt;to advocate for the protection of children's rights.&lt;/q&gt;&lt;/p&gt;
+    </code>
+  </pre>
+
+  <h4 class="text-lg text-purple-400 font-bold mt-4">HTML &lt;abbr&gt; for Abbreviations</h4>
+  <p class="mb-2">The HTML <code>&lt;abbr&gt;</code> tag defines an abbreviation or an acronym, like "HTML", "CSS", "Mr.", "Dr.", "ASAP", "ATM". Marking abbreviations can give useful information to browsers, translation systems, and search engines.</p>
+  <p class="mb-2">Tip: Use the global <code>title</code> attribute to show the description for the abbreviation/acronym when you mouse over the element.</p>
+  <pre class="bg-black text-blue-400 whitespace-pre-wrap overflow-x-auto mx-auto max-w-lg">
+    <code>
+    &lt;abbr title="United Nations International Children's Emergency Fund"&gt;UNICEF&lt;/abbr&gt; was founded in 1946.
+    </code>
+  </pre>
+
+  <h4 class="text-lg text-purple-400 font-bold mt-4">HTML &lt;address&gt; for Contact Information</h4>
+  <p class="mb-2">The HTML <code>&lt;address&gt;</code> tag defines the contact information for the author/owner of a document or an article. The contact information can be an email address, URL, physical address, phone number, social media handle, etc.</p>
+  <p class="mb-2">The text in the <code>&lt;address&gt;</code> element usually renders in italic, and browsers will always add a line break before and after the <code>&lt;address&gt;</code> element.</p>
+  <pre class="bg-black text-blue-400 whitespace-pre-wrap overflow-x-auto mx-auto max-w-lg">
+    <code>
+    &lt;address&gt;
+      Written by Jane Doe.&lt;br&gt; 
+      Visit us at:&lt;br&gt;
+      Example.com&lt;br&gt;
+      Box 123, New York&lt;br&gt;
+      USA&lt;br&gt;
+      &lt;a href="mailto:someone@example.com"&gt;someone@example.com&lt;/a&gt;
+    &lt;/address&gt;
+    </code>
+  </pre>
+
+  <h4 class="text-lg text-purple-400 font-bold mt-4">HTML &lt;cite&gt; for Work Title</h4>
+  <p class="mb-2">The HTML <code>&lt;cite&gt;</code> tag defines the title of a creative work, such as a book, a poem, a song, a movie, a painting, a sculpture, etc. A person's name is not the title of a work.</p>
+  <pre class="bg-black text-blue-400 whitespace-pre-wrap overflow-x-auto mx-auto max-w-lg">
+    <code>
+    &lt;p&gt;&lt;cite&gt;The Scream&lt;/cite&gt; by Edvard Munch. Painted in 1893.&lt;/p&gt;
+    </code>
+  </pre>
+
+  <h4 class="text-lg text-purple-400 font-bold mt-4">HTML &lt;bdo&gt; for Bi-Directional Override</h4>
+  <p class="mb-2">BDO stands for Bi-Directional Override. The HTML <code>&lt;bdo&gt;</code> tag is used to override the current text direction.</p>
+  <pre class="bg-black text-blue-400 whitespace-pre-wrap overflow-x-auto mx-auto max-w-lg">
+    <code>
+    &lt;bdo dir="rtl"&gt;This text will be written from right to left&lt;/bdo&gt;
+    </code>
+  </pre>
+
+  <h4 class="text-lg text-purple-400 font-bold mt-4">HTML Exercises</h4>
+  <p class="mb-2">Test yourself with exercises to reinforce your understanding of HTML quotation and citation elements.</p>
+
+  <h4 class="text-lg text-purple-400 font-bold mt-4">HTML Quotation and Citation Elements</h4>
+  <p class="mb-2">For a complete list of all available HTML elements, visit our HTML Tag Reference.
+                    </p>
                         `;
                         break;
                     case 4:
                         content = `
-                            <h2 class="text-3xl font-bold mb-4">HTML Page Structure</h2>
-                            <p class="mb-4">HTML page structure content goes here...</p>
+                              <h2 class="text-2xl lg:text-3xl text-purple-400 font-extrabold font-sans">HTML Tags<h4 class="text-lg text-purple-400 font-bold mt-4">1. &lt;header&gt; tag</h4>
                         `;
                         break;
                     case 5:
                         content = `
-                            <h2 class="text-3xl font-bold mb-4">HTML Tags<<h4 class="text-lg text-purple-400 font-bold mt-4">1. &lt;header&gt; tag</h4>
+                            <h2 class="text-2xl lg:text-3xl text-purple-400 font-extrabold font-sans">HTML Tags<h4 class="text-lg text-purple-400 font-bold mt-4">1. &lt;header&gt; tag</h4>
 <p class="mb-2">The <code>&lt;header&gt;</code> tag defines a header for a document or a section.</p>
 <pre class="bg-black text-blue-400 whitespace-pre-wrap overflow-x-auto mx-auto max-w-lg"><code>&lt;header&gt;
   &lt;h1&gt;Welcome to my website&lt;/h1&gt;
@@ -789,8 +922,49 @@ h1 {
                         break;
                     case 6:
                         content = `
-                            <h2 class="text-3xl font-bold mb-4">HTML Elements</h2>
-                            <p class="mb-4">HTML elements content goes here...</p>
+                            <h2 class="text-2xl lg:text-3xl text-purple-400 font-extrabold font-sans">HTML Elements</h2>
+    <p class="mb-4">An HTML element is defined by a start tag, some content, and an end tag.</p>
+
+    <h3 class="text-xl text-purple-500 font-semibold mt-6">HTML Elements</h3>
+    <p class="mb-2">There are different elements including those for defining headings, paragraphs, and more.</p>
+    <pre class="bg-black text-blue-400 whitespace-pre-wrap overflow-x-auto mx-auto max-w-lg">
+      <code>&lt;tagname&gt;Content&lt;/tagname&gt;</code>
+    </pre>
+    <pre class="bg-black text-blue-400 whitespace-pre-wrap overflow-x-auto mx-auto max-w-lg">
+      <code>
+      &lt;h1&gt;My First Heading&lt;/h1&gt;
+      &lt;p&gt;My first paragraph.&lt;/p&gt;
+      </code>
+    </pre>
+
+    <h3 class="text-xl text-purple-500 font-semibold mt-6">Nested HTML Elements</h3>
+    <p class="mb-2">HTML elements can be nested (elements can contain other elements).</p>
+    <pre class="bg-black text-blue-400 whitespace-pre-wrap overflow-x-auto mx-auto max-w-lg">
+      <code>
+      &lt;html&gt;
+        &lt;body&gt;
+          &lt;h1&gt;My First Heading&lt;/h1&gt;
+          &lt;p&gt;My first paragraph.&lt;/p&gt;
+        &lt;/body&gt;
+      &lt;/html&gt;
+      </code>
+    </pre>
+
+    <h3 class="text-xl text-purple-500 font-semibold mt-6">HTML Elements Explained</h3>
+    <p class="mb-2">The &lt;html&gt; element defines the whole document.</p>
+    <p class="mb-2">The &lt;body&gt; element contains the visible page content.</p>
+    <p class="mb-2">The &lt;h1&gt; element defines a heading.</p>
+    <p class="mb-2">The &lt;p&gt; element defines a paragraph.</p>
+
+    <h3 class="text-xl text-purple-500 font-semibold mt-6">Empty HTML Elements</h3>
+    <p class="mb-2">Empty elements do not have any content. The &lt;br&gt; element is an empty element without a closing tag.</p>
+    <pre class="bg-black text-blue-400 whitespace-pre-wrap overflow-x-auto mx-auto max-w-lg">
+      <code>&lt;br&gt;</code>
+    </pre>
+
+    <h3 class="text-xl text-purple-500 font-semibold mt-6">HTML is Not Case Sensitive</h3>
+    <p class="mb-2">HTML tags are not case sensitive: &lt;P&gt; means the same as &lt;p&gt;.</p>
+
                         `;
                         break;
                     case 7:
@@ -827,9 +1001,39 @@ It can span multiple lines and is useful for longer explanations.
     <li>Use comments to explain the purpose of complex sections of code.</li>
     <li>Avoid overusing comments; write self-explanatory code whenever possible.</li>
     <li>Remove unnecessary comments to keep the code clean.</li>
-</ul>
+                  </ul>`;
+                        break;
+                    case 8:
+                        content = `
+                            <h2 class="text-2xl lg:text-3xl text-purple-400 font-extrabold font-sans">DDDDDDDD</h2>
+
 
                         `;
+                        break;
+                    case 9:
+                        content = `
+                            <h2 class="text-2xl lg:text-3xl text-purple-400 font-extrabold font-sans">CCCCCCCC</h2>
+
+                        `;
+                        break;
+                    case 10:
+                        content = `
+                            <h2 class="text-2xl lg:text-3xl text-purple-400 font-extrabold font-sans">ccccccccc</h2>
+e
+
+                        `;
+                        break;
+                    case 10:
+                        content = `
+                            <h2 class="text-2xl lg:text-3xl text-purple-400 font-extrabold font-sans">Bbbbbbbbb</h2>
+
+
+                        `;
+                        break;
+                    case 12:
+                        content = `
+                        <h2 class="text-2xl lg:text-3xl text-purple-400 font-extrabold font-sans">Aaaaaaa</h2>
+                             `;
                         break;
                     default:
                         content = `<h2 class="text-3xl font-bold mb-4">${topics[index]}</h2><p class="mb-4">Content for ${topics[index]} goes here...</p>`;
@@ -871,7 +1075,7 @@ It can span multiple lines and is useful for longer explanations.
 <body class="bg-gray-900 text-gray-100">
     <!-- Main Content Section -->
 
-    
+
     <main class="flex flex-col lg:flex-row min-h-screen">
         <!-- Sidebar -->
         <aside class="w-full lg:w-1/4 bg-gray-800 p-6 hidden lg:block">
@@ -879,9 +1083,9 @@ It can span multiple lines and is useful for longer explanations.
                 <li class="text-3xl font-bold text-purple-500">Topics</li>
                 <li><a href="#" class="text-lg text-gray-300 hover:text-white">HTML Introduction</a></li>
                 <li><a href="#" class="text-lg text-gray-300 hover:text-white">HTML Working</a></li>
-                <li><a href="#" class="text-lg text-gray-300 hover:text-white">HTML Installation</a></li>
-                <li><a href="#" class="text-lg text-gray-300 hover:text-white">HTML Execution</a></li>
-                <li><a href="#" class="text-lg text-gray-300 hover:text-white">HTML Page Structure</a></li>
+                <li><a href="#" class="text-lg text-gray-300 hover:text-white">HTML Attributes</a></li>
+                <li><a href="#" class="text-lg text-gray-300 hover:text-white">HTML Quotations</a></li>
+                <li><a href="#" class="text-lg text-gray-300 hover:text-white">HTML Editors</a></li>
                 <li><a href="#" class="text-lg text-gray-300 hover:text-white">HTML Tags</a></li>
                 <li><a href="#" class="text-lg text-gray-300 hover:text-white">HTML Elements</a></li>
                 <li><a href="#" class="text-lg text-gray-300 hover:text-white">HTML Comments</a></li>
