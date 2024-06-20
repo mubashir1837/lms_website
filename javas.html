@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code With BismiAllah JavaScript</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+        const topics = [
+            "Javascript Introduction",
+            "JavaScript Placement",
+            "JavaScript Output",
+        ];
+
+        let currentTopicIndex = 0;
+
+        function loadTopic(index) {
+            let content = "";
+            switch (index) {
+                case 0:
+                    content = `<h2 class="text-2xl lg:text-3xl text-purple-400 font-extrabold font-sans">JavaScript Introduction</h2>
+
+<p class="mb-4">This page contains some examples of what JavaScript can do.</p>
+
+<h3 class="text-xl text-purple-500 font-semibold mt-6">JavaScript Can Change HTML Content</h3>
+<p class="mb-2">One of many JavaScript HTML methods is <code>getElementById()</code>.</p>
+<p class="mb-2">The example below "finds" an HTML element (with id="demo"), and changes the element content (innerHTML) to "Hello JavaScript":</p>
+<pre class="bg-black text-blue-400 whitespace-pre-wrap overflow-x-auto mx-auto max-w-lg"><code>document.getElementById("demo").innerHTML = "Hello JavaScript";</code></pre>
+
+<h3 class="text-xl text-purple-500 font-semibold mt-6">JavaScript Can Change HTML Attribute Values</h3>
+<p class="mb-2">In this example JavaScript changes the value of the src (source) attribute of an &lt;img&gt; tag:</p>
+<pre class="bg-black text-blue-400 whitespace-pre-wrap overflow-x-auto mx-auto max-w-lg"><code>document.getElementById("myImage").src = "pic_bulbon.gif";</code></pre>
+
+<h3 class="text-xl text-purple-500 font-semibold mt-6">JavaScript Can Change HTML Styles (CSS)</h3>
+<p class="mb-2">Changing the style of an HTML element, is a variant of changing an HTML attribute:</p>
+<pre class="bg-black text-blue-400 whitespace-pre-wrap overflow-x-auto mx-auto max-w-lg"><code>document.getElementById("demo").style.fontSize = "35px";</code></pre>
+
+<h3 class="text-xl text-purple-500 font-semibold mt-6">JavaScript Can Hide HTML Elements</h3>
+<p class="mb-2">Hiding HTML elements can be done by changing the display style:</p>
+<pre class="bg-black text-blue-400 whitespace-pre-wrap overflow-x-auto mx-auto max-w-lg"><code>document.getElementById("demo").style.display = "none";</code></pre>
+
+<h3 class="text-xl text-purple-500 font-semibold mt-6">JavaScript Can Show HTML Elements</h3>
+<p class="mb-2">Showing hidden HTML elements can also be done by changing the display style:</p>
+<pre class="bg-black text-blue-400 whitespace-pre-wrap overflow-x-auto mx-auto max-w-lg"><code>document.getElementById("demo").style.display = "block";</code></pre>
+
+<p class="mb-4">JavaScript and Java are completely different languages, both in concept and design. JavaScript was invented by Brendan Eich in 1995, and became an ECMA standard in 1997. ECMAScript 6 is the official name of the language standard. ECMAScript is the official name of the language.</p>
+<h4 class="text-lg text-purple-500 font-bold mt-4">Code with BismiAllah Work Space</h4>
+<p class="mb-2">If you want to practice further, click on work space</p>
+<button class="flex justify-center bg-purple-500 text-white font-bold py-2 px-4 rounded hover:bg-purple-700">
+    <a href="workspace.html" class="text-white">Work Space</a>
+</button >
+<a href="workspace.html" target="_blank">
+<img src="/img/my.PNG" alt="work Spaces" class="my-4 "></a>`;
+                    break;
+                case 1:
+                    content = `<h2 class="text-2xl lg:text-3xl text-purple-400 font-extrabold font-sans">JavaScript Placement</h2>
+
+<p class="mb-4">This page explains where to place JavaScript code in an HTML document.</p>
+
+<h3 class="text-xl text-purple-500 font-semibold mt-6">The <code>&lt;script&gt;</code> Tag</h3>
+<p class="mb-2">In HTML, JavaScript code is inserted between <code>&lt;script&gt;</code> and <code>&lt;/script&gt;</code> tags.</p>
+<pre class="bg-black text-blue-400 whitespace-pre-wrap overflow-x-auto mx-auto max-w-lg"><code>&lt;script&gt;
+document.getElementById("demo").innerHTML = "This is JavaScript";
+&lt;/script&gt;</code></pre>
+
+<p class="mb-2">Old JavaScript examples may also use a type attribute:</p>
+<pre class="bg-black text-blue-400 whitespace-pre-wrap overflow-x-auto mx-auto max-w-lg"><code>&lt;script type="text/javascript"&gt;
+document.getElementById("demo").innerHTML = "This is JavaScript";
+&lt;/script&gt;</code></pre>
+
+<h3 class="text-xl text-purple-500 font-semibold mt-6">JavaScript Functions and Events</h3>
+<p class="mb-2">A JavaScript function is a block of JavaScript code, that can be executed when "called" for. For example, a function can be called when an event occurs, like when the user clicks a button.</p>
+
+<h3 class="text-xl text-purple-500 font-semibold mt-6">JavaScript in <code>&lt;head&gt;</code> or <code>&lt;body&gt;</code></h3>
+<p class="mb-2">You can place any number of scripts in an HTML document. Scripts can be placed in the <code>&lt;body&gt;</code>, or in the <code>&lt;head&gt;</code> section of an HTML page, or in both.</p>
+
+<h3 class="text-xl text-purple-500 font-semibold mt-6">JavaScript in <code>&lt;head&gt;</code></h3>
+<p class="mb-2">In this example, a JavaScript function is placed in the <code>&lt;head&gt;</code> section of an HTML page:</p>
+<pre class="bg-black text-blue-400 whitespace-pre-wrap overflow-x-auto mx-auto max-w-lg"><code>&lt;head&gt;
+&lt;script&gt;
+function myFunction() {
+    document.getElementById("demo").innerHTML = "Hello JavaScript!";
+}
+&lt;/script&gt;
+&lt;/head&gt;</code></pre>
+
+<h3 class="text-xl text-purple-500 font-semibold mt-6">JavaScript in <code>&lt;body&gt;</code></h3>
+<p class="mb-2">In this example, a JavaScript function is placed in the <code>&lt;body&gt;</code> section of an HTML page:</p>
+<pre class="bg-black text-blue-400 whitespace-pre-wrap overflow-x-auto mx-auto max-w-lg"><code>&lt;body&gt;
+&lt;h2&gt;JavaScript in Body&lt;/h2&gt;
+&lt;p id="demo"&gt;A Paragraph&lt;/p&gt;
+&lt;button type="button" onclick="document.getElementById('demo').innerHTML = 'Hello JavaScript!'&gt;Click Me!&lt;/button&gt;
+&lt;/body&gt;</code></pre>
+
+<p class="mb-2">Placing scripts at the bottom of the <code>&lt;body&gt;</code> element improves the display speed, because HTML display is not blocked by script execution.</p>
+
+<h3 class="text-xl text-purple-500 font-semibold mt-6">External JavaScript</h3>
+<p class="mb-2">Scripts can also be placed in external files.</p>
+<pre class="bg-black text-blue-400 whitespace-pre-wrap overflow-x-auto mx-auto max-w-lg"><code>&lt;script src="myScript.js"&gt;&lt;/script&gt;</code></pre>
+
+<p class="mb-2">External scripts are practical when the same code is used in many different web pages. JavaScript files have the file extension .js. To use an external script, put the name of the script file in the src (source) attribute of a <code>&lt;script&gt;</code> tag.</p>
+
+<h3 class="text-xl text-purple-500 font-semibold mt-6">External JavaScript Advantages</h3>
+<p class="mb-2">Placing scripts in external files has some advantages:</p>
+<ul class="list-disc list-inside mb-4">
+    <li>It separates HTML and code</li>
+    <li>It makes HTML and JavaScript easier to read and maintain</li>
+    <li>Cached JavaScript files can speed up page loads</li>
+</ul>
+<pre class="bg-black text-blue-400 whitespace-pre-wrap overflow-x-auto mx-auto max-w-lg"><code>&lt;script src="https://www.example.com/myscript.js"&gt;&lt;/script&gt;</code></pre>
+
+<h3 class="text-xl text-purple-500 font-semibold mt-6">External References</h3>
+<p class="mb-2">An external script can be referenced in three different ways:</p>
+<pre class="bg-black text-blue-400 whitespace-pre-wrap overflow-x-auto mx-auto max-w-lg"><code>&lt;script src="https://codewithbismiAllah.com/js/myScript.js"&gt;&lt;/script&gt;</code></pre>
+<pre class="bg-black text-blue-400 whitespace-pre-wrap overflow-x-auto mx-auto max-w-lg"><code>&lt;script src="/js/myScript.js"&gt;&lt;/script&gt;</code></pre>
+<pre class="bg-black text-blue-400 whitespace-pre-wrap overflow-x-auto mx-auto max-w-lg"><code>&lt;script src="myScript.js"&gt;&lt;/script&gt;</code></pre>
+
+<p class="mb-4">You can read more about the <code>&lt;script&gt;</code> tag in the chapter HTML Script Tag.</p>
+<h4 class="text-lg text-purple-500 font-bold mt-4">Code with BismiAllah Work Space</h4>
+<p class="mb-2">If you want to practice further, click on work space</p>
+<button class="flex justify-center bg-purple-500 text-white font-bold py-2 px-4 rounded hover:bg-purple-700">
+    <a href="workspace.html" class="text-white">Work Space</a>
+</button >`;
+                    break;
+                case 2:
+                    content = `<h2 class="text-2xl lg:text-3xl text-purple-400 font-extrabold font-sans">JavaScript Output</h2>
+<p class="mb-4">JavaScript Display Possibilities</p>
+<p class="mb-2">JavaScript can "display" data in different ways:</p>
+<ul class="list-disc list-inside mb-4">
+    <li>Writing into an HTML element, using <code>innerHTML</code>.</li>
+    <li>Writing into the HTML output using <code>document.write()</code>.</li>
+    <li>Writing into an alert box, using <code>window.alert()</code>.</li>
+    <li>Writing into the browser console, using <code>console.log()</code>.</li>
+</ul>
+
+<h3 class="text-xl text-purple-500 font-semibold mt-6">Using <code>innerHTML</code></h3>
+<p class="mb-2">To access an HTML element, JavaScript can use the <code>document.getElementById(id)</code> method.</p>
+<p class="mb-2">The <code>id</code> attribute defines the HTML element. The JavaScript <code>innerHTML</code> property defines the HTML content:</p>
+
+<h4 class="text-lg text-purple-500 font-semibold mt-4">Example</h4>
+<pre class="bg-black text-blue-400 whitespace-pre-wrap overflow-x-auto mx-auto max-w-lg"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+
+&lt;h2&gt;My First Web Page&lt;/h2&gt;
+&lt;p&gt;My first paragraph.&lt;/p&gt;
+
+&lt;script&gt;
+document.getElementById("demo").innerHTML = "Hello JavaScript";
+&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+<p class="mb-2">Change the innerHTML property of an HTML element is a common way to display data in HTML.</p>
+
+<h3 class="text-xl text-purple-500 font-semibold mt-6">Using <code>document.write()</code></h3>
+<p class="mb-2">For testing purposes, it is convenient to use <code>document.write()</code>:</p>
+
+<h4 class="text-lg text-purple-500 font-semibold mt-4">Example</h4>
+<pre class="bg-black text-blue-400 whitespace-pre-wrap overflow-x-auto mx-auto max-w-lg"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+
+&lt;h2&gt;My First Web Page&lt;/h2&gt;
+&lt;p&gt;My first paragraph.&lt;/p&gt;
+
+&lt;script&gt;
+document.write("Hello World");
+&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+<p class="mb-2"><code>document.write()</code> can be used for testing purposes, but it deletes all existing HTML.</p>
+
+<h3 class="text-xl text-purple-500 font-semibold mt-6">Using <code>window.alert()</code></h3>
+<p class="mb-2">You can use an alert box to display data:</p>
+
+<h4 class="text-lg text-purple-500 font-semibold mt-4">Example</h4>
+<pre class="bg-black text-blue-400 whitespace-pre-wrap overflow-x-auto mx-auto max-w-lg"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+
+&lt;h2&gt;My First Web Page&lt;/h2&gt;
+&lt;p&gt;My first paragraph.&lt;/p&gt;
+
+&lt;script&gt;
+window.alert("Hello World");
+&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+<h3 class="text-xl text-purple-500 font-semibold mt-6">Using <code>console.log()</code></h3>
+<p class="mb-2">For debugging purposes, you can use the <code>console.log()</code> method to display data in the browser console:</p>
+
+<h4 class="text-lg text-purple-500 font-semibold mt-4">Example</h4>
+<pre class="bg-black text-blue-400 whitespace-pre-wrap overflow-x-auto mx-auto max-w-lg"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+
+&lt;h2&gt;My First Web Page&lt;/h2&gt;
+&lt;p&gt;My first paragraph.&lt;/p&gt;
+
+&lt;script&gt;
+console.log("Hello World");
+&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+<p class="mb-2">You will learn more about debugging in a later chapter.</p>
+
+<h3 class="text-xl text-purple-500 font-semibold mt-6">JavaScript Print</h3>
+<p class="mb-2">JavaScript does not have any print object or print method.</p>
+<p class="mb-2">You cannot access output devices from JavaScript. The only exception is that you can call the <code>window.print()</code> method in the browser to print the content of the current window.</p>
+
+<h4 class="text-lg text-purple-500 font-semibold mt-4">Example</h4>
+<pre class="bg-black text-blue-400 whitespace-pre-wrap overflow-x-auto mx-auto max-w-lg"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+
+&lt;h2&gt;My First Web Page&lt;/h2&gt;
+&lt;p&gt;My first paragraph.&lt;/p&gt;
+
+&lt;button onclick="window.print()">Print this page</button>
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+<h4 class="text-lg text-purple-500 font-bold mt-4">Code with BismiAllah Work Space</h4>
+<p class="mb-2">If you want to practice further, click on work space</p>
+<button class="flex justify-center bg-purple-500 text-white font-bold py-2 px-4 rounded hover:bg-purple-700">
+    <a href="workspace.html" class="text-white">Work Space</a>
+</button >`;
+                    break;
+
+                default:
+                    content = `<h2 class="text-3xl font-bold mb-4">${topics[index]}</h2><p class="mb-4">Content for ${topics[index]} goes here...</p>`;
+            }
+            document.getElementById('main-content').innerHTML = content;
+        }
+
+        function handleTopicClick(index) {
+            currentTopicIndex = index;
+            loadTopic(currentTopicIndex);
+        }
+
+        document.getElementById('next').addEventListener('click', () => {
+            if (currentTopicIndex < topics.length - 1) {
+                currentTopicIndex++;
+                loadTopic(currentTopicIndex);
+            }
+        });
+
+        document.getElementById('previous').addEventListener('click', () => {
+            if (currentTopicIndex > 0) {
+                currentTopicIndex--;
+                loadTopic(currentTopicIndex);
+            }
+        });
+
+        document.querySelectorAll('aside ul li a').forEach((link, index) => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                handleTopicClick(index);
+            });
+        });
+
+        loadTopic(currentTopicIndex);
+    });
+</script>
+
+<body class="bg-gradient-to-t from-gray-100 via-gray-200 to-gray-100  text-black">
+    <!-- Main Content Section -->
+    <main class="flex flex-col lg:flex-row min-h-screen">
+        <!-- Sidebar -->
+        <aside
+            class="w-full lg:w-1/4 bg-gray-200 border-8 border-gray-900 p-6 hidden lg:block font-serif overflow-x-hidden ">
+            <ul class="space-y-2">
+                <li class="text-3xl font-bold text-purple-500 uppercase">Topics</li>
+                <li><a href="#" class="text-lg  text-black hover:text-gray-800">👉🏻JavaScript Introduction</a></li>
+                <li><a href="#" class="text-lg  text-black hover:text-gray-800">👉🏻JavaScript Placement</a></li>
+                <li><a href="#" class="text-lg  text-black hover:text-gray-800">👉🏻JavaScript Output</a></li>
+            </ul>
+        </aside>
+        <!-- Main Content -->
+        <section class="flex-1 p-6">
+            <div id="main-content" class="prose lg:prose-xl"></div>
+            <div class="mt-8 flex justify-between">
+                <button id="previous"
+                    class="bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded">Previous</button>
+                <button id="next"
+                    class="bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded">Next</button>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
