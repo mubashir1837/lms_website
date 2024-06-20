@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const bcrypt = require('bcrypt');
+const jwt = require('jsonwebtoken');
 const User = require('../models/user');
 
 // Signup Route
@@ -16,7 +17,7 @@ router.post('/signup', async (req, res) => {
         // Check for existing user
         const existingUser = await User.findOne({ $or: [{ email }, { username }] });
         if (existingUser) {
-            return res.status(400).json({ message: 'User created successfully' });
+            return res.status(400).json({ message: 'User already exists' });
         }
 
         // Hash the password
@@ -32,7 +33,6 @@ router.post('/signup', async (req, res) => {
         res.status(500).json({ message: 'Internal server error' });
     }
 });
-
 
 // Login Route
 router.post('/login', async (req, res) => {
@@ -54,7 +54,8 @@ router.post('/login', async (req, res) => {
 
         res.json({ token, user: { id: user._id, username: user.username, email: user.email } });
     } catch (err) {
-        res.status(500).json({ message: err.message });
+        console.error(err);
+        res.status(500).json({ message: 'Internal server error' });
     }
 });
 
