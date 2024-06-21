@@ -13,7 +13,7 @@ const port = process.env.PORT || 5000;
 // Middleware
 app.use(bodyParser.json());
 app.use(cors({
-    origin: 'https://codewithmubashir.vercel.app' // Replace with your frontend domain
+    origin: 'http://codewithmubashir.vercel.app' // Replace with your frontend domain
 }));
 
 // MongoDB Connection

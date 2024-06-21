@@ -34,29 +34,35 @@
         </div>
     </div>
     <script>
-       async function login(email, password) {
-    const response = await fetch('http://codewithmubashir.vercel.app/auth/login', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({ email, password })
-    });
+        document.getElementById('loginForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            login(email, password);
+        });
 
-    const data = await response.json();
-    const loginMessage = document.getElementById('loginMessage');
-    
-    if (response.ok) {
-        loginMessage.textContent = 'Login successful';
-        localStorage.setItem('token', data.token);
-        setTimeout(() => {
-            window.location.href = 'index.html';  // Redirect to home page
-        }, 1000); // Delay for showing the success message
-    } else {
-        loginMessage.textContent = 'Login failed: ' + data.message;
-    }
-}
+        async function login(email, password) {
+            const response = await fetch('http://codewithmubashir.vercel.app/auth/login', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ email, password })
+            });
 
+            const data = await response.json();
+            const loginMessage = document.getElementById('loginMessage');
+            
+            if (response.ok) {
+                loginMessage.textContent = 'Login successful';
+                localStorage.setItem('token', data.token);
+                setTimeout(() => {
+                    window.location.href = 'index.html';  // Redirect to home page
+                }, 1000); // Delay for showing the success message
+            } else {
+                loginMessage.textContent = 'Login failed: ' + data.message;
+            }
+        }
     </script>
 </body>
 
