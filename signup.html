@@ -55,13 +55,21 @@
                 body: JSON.stringify({ name, username, email, password })
             });
 
-            const data = await response.json();
+            const contentType = response.headers.get('content-type');
+            let data;
+            
+            if (contentType && contentType.includes('application/json')) {
+                data = await response.json();
+            } else {
+                throw new Error('Non-JSON response');
+            }
+
             if (response.ok) {
                 console.log('Signup successful:', data);
                 alert('Signup successful!');
             } else {
                 console.error('Signup failed:', data);
-                document.getElementById('signupError').innerText = data.message;
+                document.getElementById('signupError').innerText = data.message || 'Signup failed';
                 document.getElementById('signupError').classList.remove('hidden');
             }
         } catch (error) {
