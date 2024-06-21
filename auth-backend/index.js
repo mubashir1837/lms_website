@@ -1,7 +1,7 @@
 const express = require('express');
+const cors = require('cors');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
-const cors = require('cors');
 const dotenv = require('dotenv');
 const authRoutes = require('./routes/auth');
 
@@ -12,10 +12,15 @@ const port = process.env.PORT || 5000;
 
 // Middleware
 app.use(bodyParser.json());
-app.use(cors());
+app.use(cors({
+    origin: 'https://codewithmubashir.vercel.app' // Replace with your frontend domain
+}));
 
 // MongoDB Connection
-mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect(process.env.MONGODB_URI, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+})
     .then(() => console.log('MongoDB connected'))
     .catch(err => console.log('MongoDB connection error:', err));
 
@@ -24,6 +29,7 @@ app.get('/', (req, res) => {
     res.send('Authentication API');
 });
 
+// Use routes
 app.use('/auth', authRoutes);
 
 app.listen(port, () => {
