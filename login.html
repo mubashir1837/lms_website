@@ -34,14 +34,15 @@
         </div>
     </div>
     <script>
-        document.getElementById('loginForm').addEventListener('submit', function (e) {
-            e.preventDefault();
-            const email = document.getElementById('email').value;
-            const password = document.getElementById('password').value;
-            login(email, password);
-        });
+          document.getElementById('loginForm').addEventListener('submit', function (e) {
+        e.preventDefault();
+        const email = document.getElementById('email').value;
+        const password = document.getElementById('password').value;
+        login(email, password);
+    });
 
-        async function login(email, password) {
+    async function login(email, password) {
+        try {
             const response = await fetch('http://codewithmubashir.vercel.app/auth/login', {
                 method: 'POST',
                 headers: {
@@ -58,11 +59,15 @@
                 localStorage.setItem('token', data.token);
                 setTimeout(() => {
                     window.location.href = 'index.html';  // Redirect to home page
-                }, 1000); // Delay for showing the success message
+                }, 1000);
             } else {
                 loginMessage.textContent = 'Login failed: ' + data.message;
             }
+        } catch (error) {
+            console.error('Error:', error);
+            document.getElementById('loginMessage').textContent = 'An unexpected error occurred. Please try again.';
         }
+    }
     </script>
 </body>
 
