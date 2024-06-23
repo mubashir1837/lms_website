@@ -69,3 +69,18 @@
   .testimonial {
     min-width: 100%;
   }
+
+
+  .dropdown-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+  .dropdown {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+ 

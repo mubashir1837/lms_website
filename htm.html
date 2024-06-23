@@ -4,8 +4,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>HTML - CodeWithBismiAllah</title>
+  <title>Code With BismiAllah</title>
+  <link rel="stylesheet" href="input.css">
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <script>
     document.addEventListener('DOMContentLoaded', (event) => {
       const topics = [
@@ -1507,13 +1510,75 @@ It can span multiple lines and is useful for longer explanations.
   </script>
 </head>
 
-<body class="bg-gradient-to-t from-gray-100 via-gray-200 to-gray-100  text-black">
-  <!-- Main Content Section -->
+<body class="bg-gradient-to-t from-gray-100 via-gray-200 to-gray-100 text-black">
+  <!-- Centered Dropdown Button -->
+  <nav><h1></h1>
+  <div class="dropdown-container py-4 mt-0 bg-gray-700">
+    <div class="navbar mx-4 ">
+      <ul class="flex gap-2">
+        <a href="index.html"><li class="bg-blue-600 py-1  px-4 hover:bg-blue-500 text-white font-medium focus:ring-2 focus:outline-none rounded-full focus:ring-blue-300 dark:focus:ring-blue-800">Home</li></a> 
+      </ul>
+    </div>
+    <button id="dropdownDividerButton" data-dropdown-toggle="dropdownDivider"
+      class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-2 focus:outline-none rounded-full focus:ring-blue-300 font-medium  text-sm px-3 py-1 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+      type="button">
+      Courses
+      <svg class="w-2.5 h-2.5 ms-3 mx-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+        viewBox="0 0 10 6">
+        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4" />
+      </svg>
+    </button>
+    <!-- Dropdown menu -->
+    <div id="dropdownDivider"
+      class="dropdown z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
+      <ul class="py-2 text-sm  text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDividerButton">
+        <li>
+          <a href="htm.html"
+            class="block px-4 py-2 font-serif font-bold hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">HTML</a>
+        </li>
+        <li>
+          <a href="css.html"
+            class="block px-4 py-2 font-serif font-bold hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">CSS</a>
+        </li>
+        <li>
+          <a href="javas.html"
+            class="block px-4 py-2 font-serif font-bold hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">JavaScript</a>
+        </li>
+        <li>
+          <a href="jav.html"
+            class="block px-4 py-2 font-serif font-bold hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Java</a>
+        </li>
+        <li>
+          <a href="python.html"
+            class="block px-4 py-2 font-serif font-bold hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Python</a>
+        </li>
+        <li>
+          <a href="react.html" class="block px-4 py-2 font-serif font-bold hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">React</a>
+        </li>
+        <li>
+          <a href="cplusp.html"
+            class="block px-4 py-2 font-serif font-bold hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">C++</a>
+        </li>
+        <li>
+          <a href="cplusp.html"
+            class="block px-4 py-2 font-serif font-bold hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">C</a>
+        </li>
+        <li>
+          <a href="cplusp.html"
+            class="block px-4 py-2 font-serif font-bold hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Php</a>
+        </li>
+      </ul>
+      <div class="py-2">
+        <a href="contact.html"
+          class="block px-4 py-2 font-serif font-bold text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Contact</a>
+      </div>
+    </div>
+  </div>
+  
 
-
-  <main class="flex flex-col lg:flex-row min-h-screen">
+  <main class="flex flex-col lg:flex-row min-h-screen mt-0">
     <!-- Sidebar -->
-    <aside class="w-full lg:w-1/4 bg-gray-200 border-8 border-gray-500 p-6 hidden lg:block font-serif  ">
+    <aside class="w-full lg:w-1/4 bg-gray-200  p-6 hidden lg:block font-serif">
       <ul class="space-y-2">
         <li class="text-3xl font-bold text-purple-500">Topics</li>
         <li><a href="#" class="text-lg text-black hover:text-gray-700">👉🏻HTML Introduction</a></li>
@@ -1542,6 +1607,13 @@ It can span multiple lines and is useful for longer explanations.
       </div>
     </section>
   </main>
+
+  <script>
+    document.getElementById('dropdownDividerButton').addEventListener('click', function () {
+      let dropdown = document.getElementById('dropdownDivider');
+      dropdown.classList.toggle('hidden');
+    });
+  </script>
 </body>
 
 </html>
