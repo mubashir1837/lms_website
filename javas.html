@@ -13,6 +13,7 @@
             "Javascript Introduction",
             "JavaScript Placement",
             "JavaScript Output",
+            "JavaScript Statements",
         ];
 
         let currentTopicIndex = 0;
@@ -234,6 +235,161 @@ console.log("Hello World");
     <a href="workspace.html" class="text-white">Work Space</a>
 </button >`;
                     break;
+                    case 3:
+                    content = `
+
+
+<h2 class="text-2xl lg:text-3xl text-purple-400 font-extrabold font-sans">JavaScript Statements</h2>
+
+<h3 class="text-xl text-purple-500 font-semibold mt-6">Example</h3>
+<pre class="bg-black text-blue-400 whitespace-pre-wrap overflow-x-auto mx-auto max-w-lg"><code>let x, y, z; // Statement 1
+x = 5;        // Statement 2
+y = 6;        // Statement 3
+z = x + y;    // Statement 4</code></pre>
+<a href="workspace.html" target=_blank>
+<button class="flex justify-center bg-purple-500 text-white font-bold py-2 px-4 rounded hover:bg-purple-700">
+    Try it Yourself
+</button>
+</a>
+
+<h3 class="text-xl text-purple-500 font-semibold mt-6">JavaScript Programs</h3>
+<p class="mb-2">A computer program is a list of "instructions" to be "executed" by a computer.</p>
+<p class="mb-2">In a programming language, these programming instructions are called <strong>statements</strong>.</p>
+<p class="mb-2">A JavaScript program is a list of programming statements.</p>
+<p class="mb-2">In HTML, JavaScript programs are executed by the web browser.</p>
+
+<h3 class="text-xl text-purple-500 font-semibold mt-6">JavaScript Statements</h3>
+<p class="mb-2">JavaScript statements are composed of:</p>
+<ul class="list-disc list-inside mb-4">
+    <li>Values, Operators, Expressions, Keywords, and Comments.</li>
+</ul>
+<p class="mb-2">Each statement is executed by the browser when the user clicks "Try it Yourself":</p>
+<pre class="bg-black text-blue-400 whitespace-pre-wrap overflow-x-auto mx-auto max-w-lg"><code>let x, y, z; // Declare 3 variables
+x = 5;        // Assign the value 5 to x
+y = 6;        // Assign the value 6 to y
+z = x + y;    // Assign the sum of x and y to z</code></pre>
+<button class="flex justify-center bg-purple-500 text-white font-bold py-2 px-4 rounded hover:bg-purple-700">
+    Try it Yourself
+</button>
+<p class="mb-2">Most JavaScript programs contain many JavaScript statements.</p>
+<p class="mb-2">The statements are executed, one by one, in the same order as they are written.</p>
+
+<h3 class="text-xl text-purple-500 font-semibold mt-6">Semicolons ;</h3>
+<p class="mb-2">Semicolons separate JavaScript statements.</p>
+<p class="mb-2">Add a semicolon at the end of each executable statement:</p>
+<pre class="bg-black text-blue-400 whitespace-pre-wrap overflow-x-auto mx-auto max-w-lg"><code>let a, b, c; // Declare 3 variables
+a = 5;        // Assign the value 5 to a
+b = 6;        // Assign the value 6 to b
+c = a + b;    // Assign the sum of a and b to c</code></pre>
+<a href="workspace.html">
+<button class="flex justify-center bg-purple-500 text-white font-bold py-2 px-4 rounded hover:bg-purple-700">
+    Try it Yourself
+</button>
+</a>
+<p class="mb-2">When separated by semicolons, multiple statements on one line are allowed:</p>
+<pre class="bg-black text-blue-400 whitespace-pre-wrap overflow-x-auto mx-auto max-w-lg"><code>a = 5; b = 6; c = a + b;</code></pre>
+<a href="workspace.html">
+<button class="flex justify-center bg-purple-500 text-white font-bold py-2 px-4 rounded hover:bg-purple-700">
+    Try it Yourself
+</button>
+</a>
+<p class="mb-2">On this web, you might see examples without semicolons.</p>
+<p class="mb-2">Ending statements with semicolons is not required, but highly recommended.</p>
+
+<h3 class="text-xl text-purple-500 font-semibold mt-6">JavaScript White Space</h3>
+<p class="mb-2">JavaScript ignores multiple spaces. You can add white space to your script to make it more readable.</p>
+<p class="mb-2">The following lines are equivalent:</p>
+<pre class="bg-black text-blue-400 whitespace-pre-wrap overflow-x-auto mx-auto max-w-lg"><code>let person = "Hege";</code></pre>
+<pre class="bg-black text-blue-400 whitespace-pre-wrap overflow-x-auto mx-auto max-w-lg"><code>let person="Hege";</code></pre>
+<p class="mb-2">A good practice is to put spaces around operators ( = + - * / ):</p>
+<pre class="bg-black text-blue-400 whitespace-pre-wrap overflow-x-auto mx-auto max-w-lg"><code>let x = y + z;</code></pre>
+<a href="workspace.html">
+<button class="flex justify-center bg-purple-500 text-white font-bold py-2 px-4 rounded hover:bg-purple-700">
+    Try it Yourself
+</button>
+</a>
+
+<h3 class="text-xl text-purple-500 font-semibold mt-6">JavaScript Line Length and Line Breaks</h3>
+<p class="mb-2">For best readability, programmers often like to avoid code lines longer than 80 characters.</p>
+<p class="mb-2">If a JavaScript statement does not fit on one line, the best place to break it is after an operator:</p>
+
+<h3 class="text-xl text-purple-500 font-semibold mt-6">JavaScript Code Blocks</h3>
+<p class="mb-2">JavaScript statements can be grouped together in code blocks, inside curly brackets {...}.</p>
+<p class="mb-2">The purpose of code blocks is to define statements to be executed together.</p>
+<p class="mb-2">One place you will find statements grouped together in blocks, is in JavaScript functions:</p>
+<pre class="bg-black text-blue-400 whitespace-pre-wrap overflow-x-auto mx-auto max-w-lg"><code>function myFunction() {
+  document.getElementById("demo").innerHTML = "Hello Dolly";
+  document.getElementById("myDIV").innerHTML = "How are you?";
+}</code></pre>
+<a href="workspace.html">
+<button class="flex justify-center bg-purple-500 text-white font-bold py-2 px-4 rounded hover:bg-purple-700">
+    Try it Yourself
+</button>
+</a>
+</b>
+<p class="mb-2">In this tutorial you will learn complete JavaScript.</p>
+<a href="js_video.html" target="_blank">
+<button class="flex justify-center bg-purple-500 text-white font-bold py-2 px-4 rounded hover:bg-purple-700">
+    JavaScript Tutorial
+</button>
+
+<h3 class="text-xl text-purple-500 font-semibold mt-6">JavaScript Keywords</h3>
+<p class="mb-2">JavaScript statements often start with a keyword to identify the JavaScript action to be performed.</p>
+
+<p class="mb-2">Here is a list of some of the keywords:</p>
+<table class="table-auto border-collapse">
+  <thead>
+    <tr>
+      <th class="border px-4 py-2">Keyword</th>
+      <th class="border px-4 py-2">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="border px-4 py-2">var</td>
+      <td class="border px-4 py-2">Declares a variable</td>
+    </tr>
+    <tr>
+      <td class="border px-4 py-2">let</td>
+      <td class="border px-4 py-2">Declares a block variable</td>
+    </tr>
+    <tr>
+      <td class="border px-4 py-2">const</td>
+      <td class="border px-4 py-2">Declares a block constant</td>
+    </tr>
+    <tr>
+      <td class="border px-4 py-2">if</td>
+      <td class="border px-4 py-2">Marks a block of statements to be executed on a condition</td>
+    </tr>
+    <tr>
+      <td class="border px-4 py-2">switch</td>
+      <td class="border px-4 py-2">Marks a block of statements to be executed in different cases</td>
+    </tr>
+    <tr>
+      <td class="border px-4 py-2">for</td>
+      <td class="border px-4 py-2">Marks a block of statements to be executed in a loop</td>
+    </tr>
+    <tr>
+      <td class="border px-4 py-2">function</td>
+      <td class="border px-4 py-2">Declares a function</td>
+    </tr>
+    <tr>
+      <td class="border px-4 py-2">return</td>
+      <td class="border px-4 py-2">Exits a function</td>
+    </tr>
+    <tr>
+      <td class="border px-4
+
+ py-2">try</td>
+      <td class="border px-4 py-2">Implements error handling to a block of statements</td>
+    </tr>
+  </tbody>
+</table>
+<p class="mb-2">JavaScript keywords are reserved words. Reserved words cannot be used as names for variables.</p>
+
+
+                    `;
+                    break;
 
                 default:
                     content = `<h2 class="text-3xl font-bold mb-4">${topics[index]}</h2><p class="mb-4">Content for ${topics[index]} goes here...</p>`;
@@ -319,6 +475,7 @@ console.log("Hello World");
                 <li><a href="#" class="text-lg  text-black hover:text-gray-800">👉🏻JavaScript Introduction</a></li>
                 <li><a href="#" class="text-lg  text-black hover:text-gray-800">👉🏻JavaScript Placement</a></li>
                 <li><a href="#" class="text-lg  text-black hover:text-gray-800">👉🏻JavaScript Output</a></li>
+                <li><a href="#" class="text-lg  text-black hover:text-gray-800">👉🏻JavaScript Statements</a></li>
             </ul>
         </aside>
         <!-- Main Content -->
