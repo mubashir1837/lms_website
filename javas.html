@@ -272,11 +272,48 @@ console.log("Hello World");
 </script>
 
 <body class="bg-gradient-to-t from-gray-100 via-gray-200 to-gray-100  text-black">
+    <nav class="bg-white  shadow fixed w-full z-10 top-0">
+        <div class="container mx-auto px-6 py-3 flex flex-wrap items-center justify-between">
+            <div class="flex items-center justify-between w-full lg:w-auto">
+                <div class="text-purple-700 text-sm lg:text-xl font-bold">
+                    <a href="html_video.html" class="mr-10">&lt;/&gt; CodeWithBismiAllah</a>
+                </div>
+                <button id="nav-toggle"
+                    class="flex items-center px-3 py-2 border rounded text-gray-800 d border-gray-600  lg:hidden">
+                    <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <title>Menu</title>
+                        <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+                    </svg>
+                </button>
+            </div>
+
+            <div class="w-full flex-grow lg:flex lg:items-center lg:mr-56 lg:w-auto hidden" id="nav-content">
+                <div class="text-sm lg:flex-grow text-center font-bold">
+                    <a href="index.html"
+                        class="block mt-4 lg:inline-block lg:mt-0 text-gray-800 dark:text-gray-200 mr-4">Home</a>
+                    <a href="#courses"
+                        class="block mt-4 lg:inline-block lg:mt-0 text-gray-800 dark:text-gray-200 mr-4">HTML</a>
+                    <a href="docs.html"
+                        class="block mt-4 lg:inline-block lg:mt-0 text-gray-800 dark:text-gray-200 mr-4">CSS</a>
+                    <a href="excercise.html"
+                        class="block mt-4 lg:inline-block lg:mt-0 text-gray-800 dark:text-gray-200 mr-4">React</a>
+                    <a href="contact.html" target="_blank"
+                        class="block mt-4 lg:inline-block lg:mt-0 text-gray-800 dark:text-gray-200 mr-4">JavaScript</a>
+                    <a href="docs.html"
+                        class="block mt-4 lg:inline-block lg:mt-0 text-gray-800 dark:text-gray-200 mr-4">Python</a>
+                    <a href="excercise.html"
+                        class="block mt-4 lg:inline-block lg:mt-0 text-gray-800 dark:text-gray-200 mr-4">Java</a>
+                    <a href="contact.html" target="_blank"
+                        class="block mt-4 lg:inline-block lg:mt-0 text-gray-800 dark:text-gray-200 mr-4">C++</a>
+                </div>
+            </div> 
+        </div>
+       </nav>
     <!-- Main Content Section -->
-    <main class="flex flex-col lg:flex-row min-h-screen">
+    <main class="flex flex-col lg:flex-row min-h-screen pt-12">
         <!-- Sidebar -->
         <aside
-            class="w-full lg:w-1/4 bg-gray-200 border-8 border-gray-900 p-6 hidden lg:block font-serif overflow-x-hidden ">
+            class="w-full lg:w-1/4 bg-gray-200  p-6 hidden lg:block font-serif overflow-x-hidden ">
             <ul class="space-y-2">
                 <li class="text-3xl font-bold text-purple-500 uppercase">Topics</li>
                 <li><a href="#" class="text-lg  text-black hover:text-gray-800">👉🏻JavaScript Introduction</a></li>
@@ -295,6 +332,11 @@ console.log("Hello World");
             </div>
         </section>
     </main>
+    <script>
+        document.getElementById('nav-toggle').addEventListener('click', function () {
+            document.getElementById('nav-content').classList.toggle('hidden');
+        });
+    </script>
 </body>
 
 </html>
