@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video</title>
+    <!-- TailwindCSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+</head>
+
+<body class="bg-gray-300  ">
+    <nav class="bg-white  shadow fixed w-full z-10 top-0">
+        <div class="container mx-auto px-6 py-3 flex flex-wrap items-center justify-between">
+            <div class="flex items-center justify-between w-full lg:w-auto">
+                <div class="text-purple-700 text-sm lg:text-xl font-bold">
+                    <a href="html_video.html" class="mr-10">&lt;/&gt; CodeWithBismiAllah</a>
+                </div>
+                <button id="nav-toggle"
+                    class="flex items-center px-3 py-2 border rounded text-gray-800 d border-gray-600  lg:hidden">
+                    <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <title>Menu</title>
+                        <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+                    </svg>
+                </button>
+            </div>
+
+            <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden" id="nav-content">
+                <div class="text-sm lg:flex-grow text-center font-bold">
+                    <a href="index.html"
+                        class="block mt-4 lg:inline-block lg:mt-0 text-gray-800 dark:text-gray-200 mr-4">Home</a>
+                    <a href="#courses"
+                        class="block mt-4 lg:inline-block lg:mt-0 text-gray-800 dark:text-gray-200 mr-4">Tutorial</a>
+                    <a href="docs.html"
+                        class="block mt-4 lg:inline-block lg:mt-0 text-gray-800 dark:text-gray-200 mr-4">Docs</a>
+                    <a href="excercise.html"
+                        class="block mt-4 lg:inline-block lg:mt-0 text-gray-800 dark:text-gray-200 mr-4">Exercise</a>
+                    <a href="contact.html" target="_blank"
+                        class="block mt-4 lg:inline-block lg:mt-0 text-gray-800 dark:text-gray-200 mr-4">Contact</a>
+                </div>
+            </div>
+            <div class="flex items-end mt-4 lg:mt-0 order-last lg:order-none ml-auto">
+                <a href="login.html" target="_blank"
+                    class="bg-purple-700 text-white inline-block text-sm px-4 py-2 leading-none border rounded dark:text-gray-200 border-purple-700 dark:border-gray-200 mr-4">Login</a>
+                <a href="signup.html" target="_blank"
+                    class="bg-purple-700 text-white inline-block text-sm px-4 py-2 leading-none border rounded dark:text-gray-200 border-purple-700 dark:border-gray-200 mr-4">Signup</a>
+            </div>
+        </div>
+        <div class="bg-gray-100 dark:bg-gray-700 py-2 text-center mx-auto max-w-lg">
+            <div class="container flex flex-wrap justify-center lg:justify-around">
+                <a href="htm.html" class="block mt-4 lg:inline-block lg:mt-0 text-purple-400 mx-2">HTML</a>
+                <a href="css.html" class="block mt-4 lg:inline-block lg:mt-0 text-purple-400 mx-2">CSS</a>
+                <a href="javas.html" class="block mt-4 lg:inline-block lg:mt-0 text-purple-400 mx-2">JS</a>
+                <a href="c.html" class="block mt-4 lg:inline-block lg:mt-0 text-purple-400 mx-2">C</a>
+                <a href="cplusp.html" class="block mt-4 lg:inline-block lg:mt-0 text-purple-400 mx-2">C++</a>
+                <a href="jav.html" class="block mt-4 lg:inline-block lg:mt-0 text-purple-400 mx-2">JAVA</a>
+                <a href="python.html" class="block mt-4 lg:inline-block lg:mt-0 text-purple-400 mx-2">PYTHON</a>
+                <a href="python.html" class="block mt-4 lg:inline-block lg:mt-0 text-purple-400 mx-2">Php</a>
+                <a href="react.html" class="block mt-4 lg:inline-block lg:mt-0 text-purple-400 mx-2">REACT JS</a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="courses" class="mt-36 pt-24 lg:pt-0">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl  text-center font-extrabold font-serif text-purple-600  mb-12 uppercase">html full
+                course</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <a href="https://www.youtube.com/watch?v=fHJrBGr8X9Q" target="_blank">
+                        <img class="w-full h-48 object-cover" src="img/111.png" alt="youtube">
+                        <div class="p-4">
+                            <h3 class="text-lg font-bold text-gray-800 dark:text-gray-200">Portfolio website | Part-I
+                            </h3>
+                            <p class=" font-semibold text-gray-800 dark:text-gray-200">Build your own Portfolio website
+                            </p>
+                        </div>
+                    </a>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <a href="https://www.youtube.com/watch?v=nroWZKxRJyc&t=34s" target="_blank">
+                        <img class="w-full h-48 object-cover" src="img/1(1).png" alt="Video 2">
+                        <div class="p-4">
+                            <h3 class="text-lg font-bold text-gray-800 dark:text-gray-200">Portfolio website |
+                                Part-II</h3>
+                            <p class=" font-semibold text-gray-800 dark:text-gray-200">Build your own Portfolio website
+                            </p>
+                        </div>
+                    </a>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <a href="https://www.youtube.com/watch?v=CxXqJAgvqb4&t=301s" target="_blank">
+                        <img class="w-full h-48 object-cover" src="img/33.png" alt="Video 3">
+                        <div class="p-4">
+                            <h3 class="text-lg font-bold text-gray-800 dark:text-gray-200">Portfolio website |
+                                Part-III</h3>
+                            <p class=" font-semibold text-gray-800 dark:text-gray-200">Build your own Portfolio website
+                            </p>
+                        </div>
+                    </a>
+                </div>
+                <!-- Add more video items as needed -->
+            </div>
+        </div>
+    </section>
+    <script>
+        document.getElementById('nav-toggle').addEventListener('click', function () {
+            document.getElementById('nav-content').classList.toggle('hidden');
+        });
+    </script>
+</body>
+
+</html>
