@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code With BismiAllah JavaScript</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+        const topics = [
+            "CSS Introduction",
+            "CSS Syntax",
+            "CSS Selector",
+            "CSS Integration",
+            "CSS Comments"
+        ];
+
+        let currentTopicIndex = 0;
+
+        function loadTopic(index) {
+            let content = "";
+            switch (index) {
+                case 0:
+                    content = `<h2 class="text-2xl lg:text-3xl text-purple-400 font-extrabold font-sans">Introduction to CSS</h2>
+
+<p class="mb-4">CSS (Cascading Style Sheets) is a language used to style the HTML elements on a web page.</p>
+
+<h3 class="text-xl text-purple-500 font-semibold mt-6">What is CSS?</h3>
+<p class="mb-2">CSS is used to control the presentation of web pages, including layout, colors, and fonts.</p>
+
+<h3 class="text-xl text-purple-500 font-semibold mt-6">Benefits of CSS</h3>
+<p class="mb-2">CSS allows for separation of content from design, making it easier to maintain and update web pages.</p>
+
+<h3 class="text-xl text-purple-500 font-semibold mt-6">CSS Syntax</h3>
+<p class="mb-2">CSS is composed of selectors and declarations. A selector targets an HTML element, and a declaration specifies the style properties for that element.</p>
+<pre class="bg-black text-blue-400 whitespace-pre-wrap overflow-x-auto mx-auto max-w-lg"><code>h1 {
+    color: blue;
+    font-size: 20px;
+}</code></pre>
+
+<h3 class="text-xl text-purple-500 font-semibold mt-6">Responsive Design</h3>
+<p class="mb-2">CSS is essential for responsive web design, allowing web pages to adapt to different screen sizes and devices.</p>
+
+<h3 class="text-xl text-purple-500 font-semibold mt-6">CSS Frameworks</h3>
+<p class="mb-2">There are several CSS frameworks, like Bootstrap and Tailwind CSS, that provide pre-designed components and styles to speed up development.</p>
+
+<p class="mb-4">CSS is a powerful tool for web developers, enabling them to create visually appealing and user-friendly websites. It works alongside HTML and JavaScript to build modern, interactive, and accessible web pages.</p>
+<h4 class="text-lg text-purple-500 font-bold mt-4">Code with BismiAllah Work Space</h4>
+<p class="mb-2">If you want to practice further, click on work space</p>
+<button class="flex justify-center bg-purple-500 text-white font-bold py-2 px-4 rounded hover:bg-purple-700">
+    <a href="workspace.html" class="text-white">Work Space</a>
+</button>
+<a href="workspace.html" target="_blank">
+<img src="/img/my.PNG" alt="work Spaces" class="my-4"></a>`;
+                    break;
+                case 1:
+                    content = `<h2 class="text-2xl lg:text-3xl text-purple-400 font-extrabold font-sans">CSS Syntax</h2>
+
+<p class="mb-4">A CSS rule consists of a selector and a declaration block.</p>
+
+<h3 class="text-xl text-purple-500 font-semibold mt-6">CSS Selector</h3>
+<p class="mb-2">The selector points to the HTML element you want to style.</p>
+
+<h3 class="text-xl text-purple-500 font-semibold mt-6">Declaration Block</h3>
+<p class="mb-2">The declaration block contains one or more declarations separated by semicolons.</p>
+<p class="mb-2">Each declaration includes a CSS property name and a value, separated by a colon.</p>
+<p class="mb-2">Multiple CSS declarations are separated with semicolons, and declaration blocks are surrounded by curly braces.</p>
+
+<h3 class="text-xl text-purple-500 font-semibold mt-6">Example</h3>
+<p class="mb-2">In this example all <code>&lt;p&gt;</code> elements will be center-aligned, with a red text color:</p>
+<pre class="bg-black text-blue-400 whitespace-pre-wrap overflow-x-auto mx-auto max-w-lg"><code>p {
+    color: red;
+    text-align: center;
+}</code></pre>
+
+<h3 class="text-xl text-purple-500 font-semibold mt-6">Example Explained</h3>
+<p class="mb-2"><code>p</code> is a selector in CSS (it points to the HTML element you want to style: <code>&lt;p&gt;</code>).</p>
+<p class="mb-2"><code>color</code> is a property, and <code>red</code> is the property value.</p>
+<p class="mb-2"><code>text-align</code> is a property, and <code>center</code> is the property value.</p>
+
+<p class="mb-4">You will learn much more about CSS selectors and CSS properties in the next chapters!</p>
+
+<h4 class="text-lg text-purple-500 font-bold mt-4">Code with BismiAllah Work Space</h4>
+<p class="mb-2">If you want to practice further, click on work space</p>
+<button class="flex justify-center bg-purple-500 text-white font-bold py-2 px-4 rounded hover:bg-purple-700">
+    <a href="workspace.html" class="text-white">Work Space</a>
+</button>
+<a href="workspace.html" target="_blank">
+<img src="/img/my.PNG" alt="work Spaces" class="my-4"></a>`;
+                    break;
+                case 2:
+                    content = `<h2 class="text-2xl lg:text-3xl text-purple-400 font-extrabold font-sans">CSS Selectors</h2>
+
+<p class="mb-4">CSS selectors are used to "find" (or select) the HTML elements you want to style.</p>
+
+<h3 class="text-xl text-purple-500 font-semibold mt-6">CSS Selectors</h3>
+<p class="mb-2">CSS selectors are used to "find" (or select) HTML elements based on their id, class, type, attribute, and more.</p>
+<ul class="list-disc list-inside mb-4">
+    <li>The CSS element selector selects HTML elements based on the element name.</li>
+    <li>The CSS id selector selects an element based on the id attribute.</li>
+    <li>The CSS class selector selects elements with a specific class attribute.</li>
+</ul>
+
+<h4 class="text-lg text-purple-500 font-bold mt-4">The CSS Element Selector</h4>
+<p class="mb-2">The element selector selects HTML elements based on the element name.</p>
+<p class="mb-2">Example:</p>
+<pre class="bg-black text-blue-400 whitespace-pre-wrap overflow-x-auto mx-auto max-w-lg"><code>p {
+  text-align: center;
+  color: red;
+}</code></pre>
+<a href="workspace.html">
+<button class="flex justify-center bg-purple-500 text-white font-bold py-2 px-4 rounded hover:bg-purple-700">
+    Try it Yourself
+</button>
+</a>
+
+<h4 class="text-lg text-purple-500 font-bold mt-4">The CSS Id Selector</h4>
+<p class="mb-2">The id selector uses the id attribute of an HTML element to select a specific element.</p>
+<p class="mb-2">The id of an element should be unique within a page, so the id selector is used to select one unique element!</p>
+<p class="mb-2">To select an element with a specific id, write a hash (#) character, followed by the id of the element.</p>
+<p class="mb-2">Example:</p>
+<pre class="bg-black text-blue-400 whitespace-pre-wrap overflow-x-auto mx-auto max-w-lg"><code>#para1 {
+  text-align: center;
+  color: blue;
+}</code></pre>
+<a href="workspace.html">
+<button class="flex justify-center bg-purple-500 text-white font-bold py-2 px-4 rounded hover:bg-purple-700">
+    Try it Yourself
+</button>
+</a>
+
+<h4 class="text-lg text-purple-500 font-bold mt-4">The CSS Class Selector</h4>
+<p class="mb-2">The class selector selects HTML elements with a specific class attribute.</p>
+<p class="mb-2">To select elements with a specific class, write a period (.) character, followed by the name of the class.</p>
+<p class="mb-2">Example:</p>
+<pre class="bg-black text-blue-400 whitespace-pre-wrap overflow-x-auto mx-auto max-w-lg"><code>.center {
+  text-align: center;
+  color: red;
+}</code></pre>
+<a href="workspace.html">
+<button class="flex justify-center bg-purple-500 text-white font-bold py-2 px-4 rounded hover:bg-purple-700">
+    Try it Yourself
+</button>
+</a>
+
+<h4 class="text-lg text-purple-500 font-bold mt-4">The CSS Universal Selector</h4>
+<p class="mb-2">The universal selector (*) selects all HTML elements on the page.</p>
+<p class="mb-2">Example:</p>
+<pre class="bg-black text-blue-400 whitespace-pre-wrap overflow-x-auto mx-auto max-w-lg"><code>* {
+  text-align: center;
+  color: blue;
+}</code></pre>
+<a href="workspace.html">
+<button class="flex justify-center bg-purple-500 text-white font-bold py-2 px-4 rounded hover:bg-purple-700">
+    Try it Yourself
+</button>
+</a>
+
+<h4 class="text-lg text-purple-500 font-bold mt-4">The CSS Grouping Selector</h4>
+<p class="mb-2">The grouping selector selects all the HTML elements with the same style definitions.</p>
+<p class="mb-2">To group selectors, separate each selector with a comma.</p>
+<p class="mb-2">Example:</p>
+<pre class="bg-black text-blue-400 whitespace-pre-wrap overflow-x-auto mx-auto max-w-lg"><code>h1, h2, p {
+  text-align: center;
+  color: red;
+}</code></pre>
+<a href="workspace.html">
+<button class="flex justify-center bg-purple-500 text-white font-bold py-2 px-4 rounded hover:bg-purple-700">
+    Try it Yourself
+</button>
+</a>
+<pre class="bg-black text-blue-400 whitespace-pre-wrap overflow-x-auto mx-auto max-w-lg"><code>#test {
+  color: red;
+}</code></pre>
+<button class="flex justify-center bg-purple-500 text-white font-bold py-2 px-4 rounded hover:bg-purple-700">
+    Start the Exercise
+</button>
+
+<h4 class="text-lg text-purple-500 font-bold mt-4">All CSS Simple Selectors</h4>
+<p class="mb-2">Here is a table listing all the simple selectors:</p>
+<table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+  <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+    <tr>
+      <th scope="col" class="px-6 py-3">Selector</th>
+      <th scope="col" class="px-6 py-3">Example</th>
+      <th scope="col" class="px-6 py-3">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+      <td class="px-6 py-4">element</td>
+      <td class="px-6 py-4">p</td>
+      <td class="px-6 py-4">Selects all <code>&lt;p&gt;</code> elements</td>
+    </tr>
+    <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+      <td class="px-6 py-4">id</td>
+      <td class="px-6 py-4">#para1</td>
+      <td class="px-6 py-4">Selects the element with id="para1"</td>
+    </tr>
+    <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+      <td class="px-6 py-4">class</td>
+      <td class="px-6 py-4">.center</td>
+      <td class="px-6 py-4">Selects all elements with class="center"</td>
+    </tr>
+  </tbody>
+</table>`;
+                    break;
+                case 3:
+                    content = `<h2 class="text-2xl lg:text-3xl text-purple-400 font-extrabold font-sans">How to Add CSS</h2>
+
+<p class="mb-4">When a browser reads a style sheet, it will format the HTML document according to the information in the style sheet.</p>
+
+<h3 class="text-xl text-purple-500 font-semibold mt-6">Three Ways to Insert CSS</h3>
+<p class="mb-2">There are three ways of inserting a style sheet:</p>
+<ul class="list-disc list-inside mb-4">
+    <li>External CSS</li>
+    <li>Internal CSS</li>
+    <li>Inline CSS</li>
+</ul>
+
+<h4 class="text-lg text-purple-500 font-bold mt-4">External CSS</h4>
+<p class="mb-2">With an external style sheet, you can change the look of an entire website by changing just one file!</p>
+<p class="mb-2">Each HTML page must include a reference to the external style sheet file inside the <code>&lt;link&gt;</code> element, inside the <code>&lt;head&gt;</code> section.</p>
+<pre class="bg-black text-blue-400 whitespace-pre-wrap overflow-x-auto mx-auto max-w-lg"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;link rel="stylesheet" href="mystyle.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h1&gt;This is a heading&lt;/h1&gt;
+&lt;p&gt;This is a paragraph.&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+<p class="mb-2">An external style sheet can be written in any text editor, and must be saved with a .css extension.</p>
+<p class="mb-2">The external .css file should not contain any HTML tags.</p>
+<p class="mb-2">Here is how the "mystyle.css" file looks:</p>
+<pre class="bg-black text-blue-400 whitespace-pre-wrap overflow-x-auto mx-auto max-w-lg"><code>body {
+  background-color: lightblue;
+}
+
+h1 {
+  color: navy;
+  margin-left: 20px;
+}</code></pre>
+
+<h4 class="text-lg text-purple-500 font-bold mt-4">Internal CSS</h4>
+<p class="mb-2">An internal style sheet may be used if one single HTML page has a unique style.</p>
+<p class="mb-2">The internal style is defined inside the <code>&lt;style&gt;</code> element, inside the <code>&lt;head&gt;</code> section.</p>
+<pre class="bg-black text-blue-400 whitespace-pre-wrap overflow-x-auto mx-auto max-w-lg"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+body {
+  background-color: linen;
+}
+
+h1 {
+  color: maroon;
+  margin-left: 40px;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h1&gt;This is a heading&lt;/h1&gt;
+&lt;p&gt;This is a paragraph.&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+<h4 class="text-lg text-purple-500 font-bold mt-4">Inline CSS</h4>
+<p class="mb-2">An inline style may be used to apply a unique style for a single element.</p>
+<p class="mb-2">To use inline styles, add the <code>style</code> attribute to the relevant element. The <code>style</code> attribute can contain any CSS property.</p>
+<pre class="bg-black text-blue-400 whitespace-pre-wrap overflow-x-auto mx-auto max-w-lg"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+
+&lt;h1 style="color:blue;text-align:center;"&gt;This is a heading&lt;/h1&gt;
+&lt;p style="color:red;"&gt;This is a paragraph.&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+<p class="mb-2">Tip: An inline style loses many of the advantages of a style sheet (by mixing content with presentation). Use this method sparingly.</p>
+
+<h4 class="text-lg text-purple-500 font-bold mt-4">Multiple Style Sheets</h4>
+<p class="mb-2">If some properties have been defined for the same selector (element) in different style sheets, the value from the last read style sheet will be used.</p>
+<p class="mb-2">Assume that an external style sheet has the following style for the <code>&lt;h1&gt;</code> element:</p>
+<pre class="bg-black text-blue-400 whitespace-pre-wrap overflow-x-auto mx-auto max-w-lg"><code>h1 {
+  color: navy;
+}</code></pre>
+<p class="mb-2">Then, assume that an internal style sheet also has the following style for the <code>&lt;h1&gt;</code> element:</p>
+<pre class="bg-black text-blue-400 whitespace-pre-wrap overflow-x-auto mx-auto max-w-lg"><code>h1 {
+  color: orange;
+}</code></pre>
+
+<h4 class="text-lg text-purple-500 font-bold mt-4">Example</h4>
+<p class="mb-2">If the internal style is defined after the link to the external style sheet, the <code>&lt;h1&gt;</code> elements will be "orange":</p>
+<pre class="bg-black text-blue-400 whitespace-pre-wrap overflow-x-auto mx-auto max-w-lg"><code>&lt;head&gt;
+&lt;link rel="stylesheet" type="text/css" href="mystyle.css"&gt;
+&lt;style&gt;
+h1 {
+  color: orange;
+}
+&lt;/style&gt;
+&lt;/head&gt;</code></pre>
+<p class="mb-2">However, if the internal style is defined before the link to the external style sheet, the <code>&lt;h1&gt;</code> elements will be "navy":</p>
+<pre class="bg-black text-blue-400 whitespace-pre-wrap overflow-x-auto mx-auto max-w-lg"><code>&lt;head&gt;
+&lt;style&gt;
+h1 {
+  color: orange;
+}
+&lt;/style&gt;
+&lt;link rel="stylesheet" type="text/css" href="mystyle.css"&gt;
+&lt;/head&gt;</code></pre>
+
+<h4 class="text-lg text-purple-500 font-bold mt-4">Cascading Order</h4>
+<p class="mb-2">What style will be used when there is more than one style specified for an HTML element?</p>
+<p class="mb-2">All the styles in a page will "cascade" into a new "virtual" style sheet by the following rules, where number one has the highest priority:</p>
+<ol class="list-decimal list-inside mb-4">
+    <li>Inline style (inside an HTML element)</li>
+    <li>External and internal style sheets (in the <code>&lt;head&gt;</code> section)</li>
+    <li>Browser default</li>
+</ol>
+<p class="mb-2">So, an inline style has the highest priority, and will override external and internal styles and browser defaults.</p>
+
+<h4 class="text-lg text-purple-500 font-bold mt-4">Code with BismiAllah Work Space</h4>
+<p class="mb-2">If you want to practice further, click on work space</p>
+<button class="flex justify-center bg-purple-500 text-white font-bold py-2 px-4 rounded hover:bg-purple-700">
+    <a href="workspace.html" class="text-white">Work Space</a>
+</button>
+<a href="workspace.html" target="_blank">
+<img src="/img/my.PNG" alt="work Spaces" class="my-4"></a>`;
+                    break;
+                case 4:
+                    content = `<h2 class="text-2xl lg:text-3xl text-purple-400 font-extrabold font-sans">CSS Comments</h2>
+<p class="mb-2">CSS comments are not displayed in the browser, but they can help document your source code.</p>
+
+<h4 class="text-lg text-purple-500 font-bold mt-4">CSS Comments</h4>
+<p class="mb-2">Comments are used to explain the code and may help when you edit the source code at a later date. Comments are ignored by browsers.</p>
+<p class="mb-2">A CSS comment is placed inside the <code>&lt;style&gt;</code> element and starts with <code>/*</code> and ends with <code>*/</code>:</p>
+<pre class="bg-black text-blue-400 whitespace-pre-wrap overflow-x-auto mx-auto max-w-lg"><code>/* This is a single-line comment */
+p {
+  color: red;
+}</code></pre>
+<p class="mb-2">You can add comments wherever you want in the code:</p>
+<pre class="bg-black text-blue-400 whitespace-pre-wrap overflow-x-auto mx-auto max-w-lg"><code>p {
+  color: red;  /* Set text color to red */
+}</code></pre>
+<p class="mb-2">Even in the middle of a code line:</p>
+<pre class="bg-black text-blue-400 whitespace-pre-wrap overflow-x-auto mx-auto max-w-lg"><code>p {
+  color: /*red*/blue; 
+}</code></pre>
+<p class="mb-2">Comments can also span multiple lines:</p>
+<pre class="bg-black text-blue-400 whitespace-pre-wrap overflow-x-auto mx-auto max-w-lg"><code>/* This is
+a multi-line
+comment */
+
+p {
+  color: red;
+}</code></pre>
+
+<h4 class="text-lg text-purple-500 font-bold mt-4">HTML and CSS Comments</h4>
+<p class="mb-2">From the HTML tutorial, you learned that you can add comments to your HTML source by using the <code>&lt;!--...--&gt;</code> syntax.</p>
+<p class="mb-2">In the following example, we use a combination of HTML and CSS comments:</p>
+<pre class="bg-black text-blue-400 whitespace-pre-wrap overflow-x-auto mx-auto max-w-lg"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+p {
+  color: red; /* Set text color to red */
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h2&gt;My Heading&lt;/h2&gt;
+
+&lt;!-- These paragraphs will be red --&gt;
+&lt;p&gt;Hello World!&lt;/p&gt;
+&lt;p&gt;This paragraph is styled with CSS.&lt;/p&gt;
+&lt;p&gt;CSS comments are not shown in the output.&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+<p class="mb-2">If you want to practice further, click on work space</p>
+<button class="flex justify-center bg-purple-500 text-white font-bold py-2 px-4 rounded hover:bg-purple-700">
+    <a href="workspace.html" class="text-white">Work Space</a>
+</button>
+<a href="workspace.html" target="_blank">
+<img src="/img/my.PNG" alt="work Spaces" class="my-4"></a>`;
+                    break;
+                case 5:
+                    content = ``;
+                    break;
+                case 6:
+                    content = ``;
+                    break;
+                case 7:
+                    content = ``;
+                    break;
+                case 8:
+                    content = ``;
+                    break;
+                case 9:
+                    content = ``;
+                    break;
+                case 10:
+                    content = ``;
+                    break;
+                default:
+                    content = `<h2 class="text-3xl font-bold mb-4">${topics[index]}</h2><p class="mb-4">Content for ${topics[index]} goes here...</p>`;
+            }
+            document.getElementById('main-content').innerHTML = content;
+        }
+
+        function handleTopicClick(index) {
+            currentTopicIndex = index;
+            loadTopic(currentTopicIndex);
+        }
+
+        document.getElementById('next').addEventListener('click', () => {
+            if (currentTopicIndex < topics.length - 1) {
+                currentTopicIndex++;
+                loadTopic(currentTopicIndex);
+            }
+        });
+
+        document.getElementById('previous').addEventListener('click', () => {
+            if (currentTopicIndex > 0) {
+                currentTopicIndex--;
+                loadTopic(currentTopicIndex);
+            }
+        });
+
+        document.querySelectorAll('aside ul li a').forEach((link, index) => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                handleTopicClick(index);
+            });
+        });
+
+        loadTopic(currentTopicIndex);
+    });
+</script>
+
+<body class="bg-gradient-to-t from-gray-100 via-gray-200 to-gray-100  text-black">
+    <nav class="bg-white  shadow fixed w-full z-10 top-0">
+        <div class="container mx-auto px-6 py-3 flex flex-wrap items-center justify-between">
+            <div class="flex items-center justify-between w-full lg:w-auto">
+                <div class="text-purple-700 text-sm lg:text-xl font-bold">
+                    <a href="html_video.html" class="mr-10">&lt;/&gt; CodeWithBismiAllah</a>
+                </div>
+                <button id="nav-toggle"
+                    class="flex items-center px-3 py-2 border rounded text-gray-800 d border-gray-600  lg:hidden">
+                    <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <title>Menu</title>
+                        <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+                    </svg>
+                </button>
+            </div>
+
+            <div class="w-full flex-grow lg:flex lg:items-center lg:mr-56 lg:w-auto hidden" id="nav-content">
+                <div class="text-sm lg:flex-grow text-center font-bold">
+                    <a href="index.html"
+                        class="block mt-4 lg:inline-block lg:mt-0 text-gray-800 dark:text-gray-200 mr-4">Home</a>
+                    <a href="htm.html"
+                        class="block mt-4 lg:inline-block lg:mt-0 text-gray-800 dark:text-gray-200 mr-4">HTML</a>
+                    <a href="css.html"
+                        class="block mt-4 lg:inline-block lg:mt-0 text-gray-800 dark:text-gray-200 mr-4">CSS</a>
+                    <a href="excercise.html"
+                        class="block mt-4 lg:inline-block lg:mt-0 text-gray-800 dark:text-gray-200 mr-4">React</a>
+                    <a href="javas.html" target="_blank"
+                        class="block mt-4 lg:inline-block lg:mt-0 text-gray-800 dark:text-gray-200 mr-4">JavaScript</a>
+                    <a href="python.html"
+                        class="block mt-4 lg:inline-block lg:mt-0 text-gray-800 dark:text-gray-200 mr-4">Python</a>
+                    <a href="jav.html"
+                        class="block mt-4 lg:inline-block lg:mt-0 text-gray-800 dark:text-gray-200 mr-4">Java</a>
+                    <a href="c.html" target="_blank"
+                        class="block mt-4 lg:inline-block lg:mt-0 text-gray-800 dark:text-gray-200 mr-4">C</a>
+                    <a href="cplusp.html" target="_blank"
+                        class="block mt-4 lg:inline-block lg:mt-0 text-gray-800 dark:text-gray-200 mr-4">C++</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Main Content Section -->
+    <main class="flex flex-col lg:flex-row min-h-screen pt-12">
+        <!-- Sidebar -->
+        <aside class="w-full lg:w-1/4 bg-gray-200  p-6 hidden lg:block font-serif overflow-x-hidden ">
+            <ul class="space-y-2">
+                <li class="text-3xl font-bold text-purple-500 uppercase">Topics</li>
+                <li><a href="#" class="text-lg  text-black hover:text-gray-800">👉🏻CSS Introduction</a></li>
+                <li><a href="#" class="text-lg  text-black hover:text-gray-800">👉🏻CSS Syntax</a></li>
+                <li><a href="#" class="text-lg  text-black hover:text-gray-800">👉🏻CSS Selector</a></li>
+                <li><a href="#" class="text-lg  text-black hover:text-gray-800">👉🏻CSS Integration</a></li>
+                <li><a href="#" class="text-lg  text-black hover:text-gray-800">👉🏻CSS Comments</a></li>
+            </ul>
+        </aside>
+        <!-- Main Content -->
+        <section class="flex-1 p-6">
+            <div id="main-content" class="prose lg:prose-xl"></div>
+            <div class="mt-8 flex justify-between">
+                <button id="previous"
+                    class="bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded">Previous</button>
+                <button id="next"
+                    class="bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded">Next</button>
+            </div>
+        </section>
+    </main>
+    <script>
+        document.getElementById('nav-toggle').addEventListener('click', function () {
+            document.getElementById('nav-content').classList.toggle('hidden');
+        });
+    </script>
+</body>
+
+</html>
