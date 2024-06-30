@@ -36,49 +36,50 @@
         </div>
     </div>
     <script>
-    document.getElementById('signupForm').addEventListener('submit', function (e) {
-        e.preventDefault();
-        const name = document.getElementById('name').value;
-        const username = document.getElementById('username').value;
-        const email = document.getElementById('email').value;
-        const password = document.getElementById('password').value;
-        signup(name, username, email, password);
-    });
+   document.getElementById('signupForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+    const name = document.getElementById('name').value;
+    const username = document.getElementById('username').value;
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
+    signup(name, username, email, password);
+});
 
-    async function signup(name, username, email, password) {
-        try {
-            const response = await fetch('https://codewithmubashir.vercel.app/auth/signup', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({ name, username, email, password })
-            });
+async function signup(name, username, email, password) {
+    try {
+        const response = await fetch('https://codewithmubashir.vercel.app/auth/signup', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ name, username, email, password })
+        });
 
-            const contentType = response.headers.get('content-type');
-            let data;
-            
-            if (contentType && contentType.includes('application/json')) {
-                data = await response.json();
-            } else {
-                const text = await response.text();
-                throw new Error(`Non-JSON response: ${text}`);
-            }
+        const contentType = response.headers.get('content-type');
+        let data;
 
-            if (response.ok) {
-                console.log('Signup successful:', data);
-                alert('Signup successful!');
-            } else {
-                console.error('Signup failed:', data);
-                document.getElementById('signupError').innerText = data.message || 'Signup failed';
-                document.getElementById('signupError').classList.remove('hidden');
-            }
-        } catch (error) {
-            console.error('Error during signup:', error);
-            document.getElementById('signupError').innerText = 'An unexpected error occurred. Please try again.';
+        if (contentType && contentType.includes('application/json')) {
+            data = await response.json();
+        } else {
+            const text = await response.text();
+            throw new Error(`Non-JSON response: ${text}`);
+        }
+
+        if (response.ok) {
+            console.log('Signup successful:', data);
+            alert('Signup successful!');
+        } else {
+            console.error('Signup failed:', data);
+            document.getElementById('signupError').innerText = data.message || 'Signup failed';
             document.getElementById('signupError').classList.remove('hidden');
         }
+    } catch (error) {
+        console.error('Error during signup:', error);
+        document.getElementById('signupError').innerText = 'An unexpected error occurred. Please try again.';
+        document.getElementById('signupError').classList.remove('hidden');
     }
+}
+
     </script>
 </body>
 </html>

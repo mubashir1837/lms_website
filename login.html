@@ -16,58 +16,64 @@
             <form id="loginForm" method="POST">
                 <div class="mb-4">
                     <label for="email" class="block text-sm font-medium text-white">Email</label>
-                    <input type="email" id="email" name="email" class="mt-1 py-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-purple-400 focus:ring focus:ring-purple-400 focus:ring-opacity-50" required>
+                    <input type="email" id="email" name="email"
+                        class="mt-1 py-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-purple-400 focus:ring focus:ring-purple-400 focus:ring-opacity-50"
+                        required>
                 </div>
                 <div class="mb-6">
                     <label for="password" class="block text-sm font-medium text-white">Password</label>
-                    <input type="password" id="password" name="password" class="mt-1 py-1 block w-full rounded-md shadow-sm focus:border-purple-400 focus:ring focus:ring-purple-400 focus:ring-opacity-50" required>
+                    <input type="password" id="password" name="password"
+                        class="mt-1 py-1 block w-full rounded-md shadow-sm focus:border-purple-400 focus:ring focus:ring-purple-400 focus:ring-opacity-50"
+                        required>
                 </div>
                 <div class="flex items-center justify-between mb-4">
                     <a href="#" class="text-sm text-gray-200 hover:underline">Forgot Password?</a>
                     <a href="/signup.html" class="text-sm text-gray-200 hover:underline">Not registered yet?</a>
                 </div>
-                <button type="submit" class="w-full bg-purple-700 text-white py-2 px-4 rounded-md hover:bg-purple-800 focus:outline-none focus:bg-purple-800">Login</button>
+                <button type="submit"
+                    class="w-full bg-purple-700 text-white py-2 px-4 rounded-md hover:bg-purple-800 focus:outline-none focus:bg-purple-800">Login</button>
                 <div id="loginMessage" class="mt-4 text-center text-white"></div>
             </form>
             <p class="mt-4 text-center text-gray-700 dark:text-gray-400">Don't have an account? <a href="signup.html"
-                class="text-purple-700">Sign Up</a></p>
+                    class="text-purple-700">Sign Up</a></p>
         </div>
     </div>
     <script>
-          document.getElementById('loginForm').addEventListener('submit', function (e) {
-        e.preventDefault();
-        const email = document.getElementById('email').value;
-        const password = document.getElementById('password').value;
-        login(email, password);
-    });
+        document.getElementById('loginForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            login(email, password);
+        });
 
-    async function login(email, password) {
-        try {
-            const response = await fetch('https://codewithmubashir.vercel.app/auth/login', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({ email, password })
-            });
+        async function login(email, password) {
+            try {
+                const response = await fetch('https://codewithmubashir.vercel.app/auth/login', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ email, password })
+                });
 
-            const data = await response.json();
-            const loginMessage = document.getElementById('loginMessage');
-            
-            if (response.ok) {
-                loginMessage.textContent = 'Login successful';
-                localStorage.setItem('token', data.token);
-                setTimeout(() => {
-                    window.location.href = 'index.html';  // Redirect to home page
-                }, 1000);
-            } else {
-                loginMessage.textContent = 'Login failed: ' + data.message;
+                const data = await response.json();
+                const loginMessage = document.getElementById('loginMessage');
+
+                if (response.ok) {
+                    loginMessage.textContent = 'Login successful';
+                    localStorage.setItem('token', data.token);
+                    setTimeout(() => {
+                        window.location.href = 'index.html';  // Redirect to home page
+                    }, 1000);
+                } else {
+                    loginMessage.textContent = 'Login failed: ' + data.message;
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                document.getElementById('loginMessage').textContent = 'An unexpected error occurred. Please try again.';
             }
-        } catch (error) {
-            console.error('Error:', error);
-            document.getElementById('loginMessage').textContent = 'An unexpected error occurred. Please try again.';
         }
-    }
+
     </script>
 </body>
 

@@ -1,3 +1,4 @@
+// auth-Backend
 const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
@@ -13,7 +14,16 @@ const port = process.env.PORT || 5000;
 // Middleware
 app.use(bodyParser.json());
 app.use(cors({
-    origin: 'https://codewithmubashir.vercel.app' // Replace with your frontend domain
+    origin: ['http://127.0.0.1:5500', 'https://codewithmubashir.vercel.app'],
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', 'Authorization']
+}));
+
+// Handle preflight requests
+app.options('*', cors({
+    origin: ['http://127.0.0.1:5500', 'https://codewithmubashir.vercel.app'],
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', 'Authorization']
 }));
 
 // MongoDB Connection
