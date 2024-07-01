@@ -23,6 +23,10 @@
             "Arithmatic Operators",
             "Assignment Operators",
             "JS Data Types",
+            "JavaScript Functions",
+            "JavaScript Objects",
+            "JS Objects Properties",
+            "JS Objects Methods",
         ];
 
         let currentTopicIndex = 0;
@@ -1009,6 +1013,292 @@ c = a + b;    // Assign the sum of a and b to c</code></pre>
             <img src="/img/my.PNG" alt="work Spaces" class="my-4">
         </a>`;
                     break;
+                case 13:
+                    content = ` 
+        <h1 class="text-2xl lg:text-3xl text-purple-400 font-extrabold font-sans">JavaScript Functions</h1>
+        <p>Functions are one of the fundamental building blocks in JavaScript. A function is a reusable block of code designed to perform a particular task. A JavaScript function is defined with the function keyword, followed by a name, followed by parentheses ().</p>
+        <h1 class="text-xl font-bold text-purple-400">Defining a Function:</h1>
+        <p>Functions are defined using the function keyword followed by the function name and parentheses ().</p>
+        <pre class="bg-black text-blue-400 whitespace-pre-wrap lg:whitespace-0 lg:px-32 lg:overflow-x-none lg:max-w-5xl lg:text-left lg:mx-0 overflow-x-auto mx-auto max-w-lg">
+            <code class="language-js">
+                function myFunction() {
+                    // code to be executed
+                }
+            </code>
+        </pre>
+        <h1 class="text-xl font-bold text-red-400">Function Parameters:</h1>
+        <p>Functions can take parameters, which are like placeholders for the values that will be passed to the function. These parameters act as variables within the function.</p>
+        <pre class="bg-black text-blue-400 whitespace-pre-wrap lg:whitespace-0 lg:px-32 lg:overflow-x-none lg:max-w-5xl lg:text-left lg:mx-0 overflow-x-auto mx-auto max-w-lg">
+            <code class="language-js">
+                function myFunction(param1, param2) {
+                    // code to be executed
+                }
+            </code>
+        </pre>
+        <h1 class="text-xl font-bold text-purple-400">Function Invocation:</h1>
+        <p>Functions need to be invoked to execute the code within them. This is done by calling the function name followed by parentheses ().</p>
+        <pre class="bg-black text-blue-400 whitespace-pre-wrap lg:whitespace-0 lg:px-32 lg:overflow-x-none lg:max-w-5xl lg:text-left lg:mx-0 overflow-x-auto mx-auto max-w-lg">
+            <code class="language-js">
+                myFunction();
+            </code>
+        </pre>
+        <h1 class="text-xl font-bold text-red-400">Returning Values:</h1>
+        <p>Functions can return a value back to the caller using the return statement.</p>
+        <pre class="bg-black text-blue-400 whitespace-pre-wrap lg:whitespace-0 lg:px-32 lg:overflow-x-none lg:max-w-5xl lg:text-left lg:mx-0 overflow-x-auto mx-auto max-w-lg">
+            <code class="language-js">
+                function myFunction(a, b) {
+                    return a * b; // Function returns the product of a and b
+                }
+            </code>
+        </pre>
+        <h1 class="text-xl font-bold text-purple-400">Anonymous Functions:</h1>
+        <p>Functions can also be defined without names. These are called anonymous functions and are often used as arguments to other functions or as immediately invoked function expressions (IIFE).</p>
+        <pre class="bg-black text-blue-400 whitespace-pre-wrap lg:whitespace-0 lg:px-32 lg:overflow-x-none lg:max-w-5xl lg:text-left lg:mx-0 overflow-x-auto mx-auto max-w-lg">
+            <code class="language-js">
+                let myFunction = function(a, b) {
+                    return a * b;
+                };
+            </code>
+        </pre>
+        <h1 class="text-xl font-bold text-red-400">Arrow Functions:</h1>
+        <p>ES6 introduced a new way of defining functions using the arrow (=>) syntax. Arrow functions are more concise and lexically bind the context.</p>
+        <pre class="bg-black text-blue-400 whitespace-pre-wrap lg:whitespace-0 lg:px-32 lg:overflow-x-none lg:max-w-5xl lg:text-left lg:mx-0 overflow-x-auto mx-auto max-w-lg">
+            <code class="language-js">
+                const myFunction = (a, b) => a * b;
+            </code>
+        </pre>
+        <h1 class="text-xl font-bold text-purple-400">Conclusion:</h1>
+        <p>JavaScript functions are versatile and essential tools for creating reusable code blocks. They help in making code more modular, maintainable, and easier to understand.</p>
+        <h4 class="text-lg text-purple-400 font-bold mt-4">Code with BismiAllah Work Space</h4>
+        <p class="mb-2">If you want to practice further, click on work space</p>
+        <button class="bg-purple-500 text-white font-bold py-2 px-4 rounded hover:bg-purple-700">
+            <a href="workspace.html" class="text-white">Work Space</a>
+        </button>
+        <a href="workspace.html" target="_blank">
+            <img src="/img/my.PNG" alt="work Spaces" class="my-4">
+        </a>`;
+                    break;
+                case 14:
+                    content = ` 
+        <h1 class="text-2xl lg:text-3xl text-purple-400 font-extrabold font-sans">JavaScript Objects</h1>
+        <p>JavaScript objects are collections of properties, where each property is defined as a key-value pair. They are fundamental to the JavaScript language and are used to store, manipulate, and send data.</p>
+        <h1 class="text-xl font-bold text-purple-400">Creating Objects:</h1>
+        <p>Objects can be created using the object literal syntax or the <code>new Object()</code> syntax.</p>
+        <pre class="bg-black text-blue-400 whitespace-pre-wrap lg:whitespace-0 lg:px-32 lg:overflow-x-none lg:max-w-5xl lg:text-left lg:mx-0 overflow-x-auto mx-auto max-w-lg">
+            <code class="language-js">
+                // Using object literal
+                let person = {
+                    firstName: "John",
+                    lastName: "Doe",
+                    age: 30,
+                    job: "Developer"
+                };
+
+                // Using new Object()
+                let person = new Object();
+                person.firstName = "John";
+                person.lastName = "Doe";
+                person.age = 30;
+                person.job = "Developer";
+            </code>
+        </pre>
+        <h1 class="text-xl font-bold text-red-400">Accessing Object Properties:</h1>
+        <p>Object properties can be accessed using dot notation or bracket notation.</p>
+        <pre class="bg-black text-blue-400 whitespace-pre-wrap lg:whitespace-0 lg:px-32 lg:overflow-x-none lg:max-w-5xl lg:text-left lg:mx-0 overflow-x-auto mx-auto max-w-lg">
+            <code class="language-js">
+                // Using dot notation
+                console.log(person.firstName);
+
+                // Using bracket notation
+                console.log(person["lastName"]);
+            </code>
+        </pre>
+        <h1 class="text-xl font-bold text-purple-400">Modifying Object Properties:</h1>
+        <p>Object properties can be modified by assigning a new value to them using dot or bracket notation.</p>
+        <pre class="bg-black text-blue-400 whitespace-pre-wrap lg:whitespace-0 lg:px-32 lg:overflow-x-none lg:max-w-5xl lg:text-left lg:mx-0 overflow-x-auto mx-auto max-w-lg">
+            <code class="language-js">
+                // Modifying using dot notation
+                person.age = 31;
+
+                // Modifying using bracket notation
+                person["job"] = "Senior Developer";
+            </code>
+        </pre>
+        <h1 class="text-xl font-bold text-red-400">Adding New Properties:</h1>
+        <p>New properties can be added to an object using dot or bracket notation.</p>
+        <pre class="bg-black text-blue-400 whitespace-pre-wrap lg:whitespace-0 lg:px-32 lg:overflow-x-none lg:max-w-5xl lg:text-left lg:mx-0 overflow-x-auto mx-auto max-w-lg">
+            <code class="language-js">
+                // Adding a new property using dot notation
+                person.country = "USA";
+
+                // Adding a new property using bracket notation
+                person["married"] = true;
+            </code>
+        </pre>
+        <h1 class="text-xl font-bold text-purple-400">Deleting Properties:</h1>
+        <p>Properties can be deleted from an object using the <code>delete</code> keyword.</p>
+        <pre class="bg-black text-blue-400 whitespace-pre-wrap lg:whitespace-0 lg:px-32 lg:overflow-x-none lg:max-w-5xl lg:text-left lg:mx-0 overflow-x-auto mx-auto max-w-lg">
+            <code class="language-js">
+                // Deleting a property
+                delete person.job;
+            </code>
+        </pre>
+        <h1 class="text-xl font-bold text-red-400">Best Practices:</h1>
+        <p>Using objects effectively can improve the structure and readability of your code. Here are some best practices:</p>
+        <ul>
+            <li>Use meaningful property names</li>
+            <li>Avoid using reserved keywords as property names</li>
+            <li>Keep the object structure consistent</li>
+        </ul>
+        <h1 class="text-xl font-bold text-purple-400">Conclusion:</h1>
+        <p>Objects are a cornerstone of JavaScript programming. By understanding how to create, modify, and use objects, you can write more efficient and readable code.</p>
+        <h4 class="text-lg text-purple-400 font-bold mt-4">Code with BismiAllah Work Space</h4>
+        <p class="mb-2">If you want to practice further, click on work space</p>
+        <button class="bg-purple-500 text-white font-bold py-2 px-4 rounded hover:bg-purple-700">
+            <a href="workspace.html" class="text-white">Work Space</a>
+        </button>
+        <a href="workspace.html" target="_blank">
+            <img src="/img/my.PNG" alt="work Spaces" class="my-4">
+        </a>`;
+                    break;
+                case 15:
+                    content = `
+        <h1 class="text-2xl lg:text-3xl text-purple-400 font-extrabold font-sans">JavaScript Object Properties</h1>
+        <p>JavaScript objects are collections of properties, and a property is an association between a name (or key) and a value. Properties can hold values of any data type, and they define the characteristics of the object.</p>
+        
+        <h1 class="text-xl font-bold text-purple-400">Defining Object Properties:</h1>
+        <p>Object properties are defined using key-value pairs, where the key is a string (or Symbol) and the value can be any valid JavaScript expression.</p>
+        
+        <pre class="bg-black text-blue-400 whitespace-pre-wrap lg:whitespace-0 lg:px-32 lg:overflow-x-none lg:max-w-5xl lg:text-left lg:mx-0 overflow-x-auto mx-auto max-w-lg">
+            <code class="language-js">
+                const person = {
+                    firstName: "John",
+                    lastName: "Doe",
+                    age: 30,
+                    isEmployed: true
+                };
+            </code>
+        </pre>
+        
+        <h1 class="text-xl font-bold text-red-400">Accessing Object Properties:</h1>
+        <p>Object properties can be accessed using dot notation or bracket notation.</p>
+        
+        <h2 class="text-lg font-bold text-purple-400">Dot Notation:</h2>
+        <pre class="bg-black text-blue-400 whitespace-pre-wrap lg:whitespace-0 lg:px-32 lg:overflow-x-none lg:max-w-5xl lg:text-left lg:mx-0 overflow-x-auto mx-auto max-w-lg">
+            <code class="language-js">
+                console.log(person.firstName); // Output: John
+            </code>
+        </pre>
+        
+        <h2 class="text-lg font-bold text-purple-400">Bracket Notation:</h2>
+        <pre class="bg-black text-blue-400 whitespace-pre-wrap lg:whitespace-0 lg:px-32 lg:overflow-x-none lg:max-w-5xl lg:text-left lg:mx-0 overflow-x-auto mx-auto max-w-lg">
+            <code class="language-js">
+                console.log(person["lastName"]); // Output: Doe
+            </code>
+        </pre>
+        
+        <h1 class="text-xl font-bold text-red-400">Modifying Object Properties:</h1>
+        <p>Object properties can be modified using dot notation or bracket notation.</p>
+        
+        <pre class="bg-black text-blue-400 whitespace-pre-wrap lg:whitespace-0 lg:px-32 lg:overflow-x-none lg:max-w-5xl lg:text-left lg:mx-0 overflow-x-auto mx-auto max-w-lg">
+            <code class="language-js">
+                person.age = 31;
+                person["isEmployed"] = false;
+            </code>
+        </pre>
+        
+        <h1 class="text-xl font-bold text-red-400">Adding New Properties:</h1>
+        <p>New properties can be added to an object using dot notation or bracket notation.</p>
+        
+        <pre class="bg-black text-blue-400 whitespace-pre-wrap lg:whitespace-0 lg:px-32 lg:overflow-x-none lg:max-w-5xl lg:text-left lg:mx-0 overflow-x-auto mx-auto max-w-lg">
+            <code class="language-js">
+                person.nationality = "American";
+                person["occupation"] = "Engineer";
+            </code>
+        </pre>
+        
+        <h1 class="text-xl font-bold text-red-400">Deleting Properties:</h1>
+        <p>Properties can be removed from an object using the delete operator.</p>
+        
+        <pre class="bg-black text-blue-400 whitespace-pre-wrap lg:whitespace-0 lg:px-32 lg:overflow-x-none lg:max-w-5xl lg:text-left lg:mx-0 overflow-x-auto mx-auto max-w-lg">
+            <code class="language-js">
+                delete person.age;
+                delete person["isEmployed"];
+            </code>
+        </pre>
+        
+        <h4 class="text-lg text-purple-400 font-bold mt-4">Code with BismiAllah Work Space</h4>
+        <p class="mb-2">If you want to practice further, click on work space</p>
+        <button class="bg-purple-500 text-white font-bold py-2 px-4 rounded hover:bg-purple-700">
+            <a href="workspace.html" class="text-white">Work Space</a>
+        </button>
+        <a href="workspace.html" target="_blank">
+            <img src="/img/my.PNG" alt="work Spaces" class="my-4">
+        </a>`;
+                    break;
+                case 5:
+                    content = `
+        <h1 class="text-2xl lg:text-3xl text-purple-400 font-extrabold font-sans">JavaScript Object Methods</h1>
+        <p>JavaScript objects can have methods, which are actions that can be performed on the objects. Methods are stored as properties in objects.</p>
+        <h1 class="text-xl font-bold text-purple-400">Defining Methods:</h1>
+        <p>Methods are defined inside the object using function expressions. Here's an example of an object with a method:</p>
+        <pre class="bg-black text-blue-400 whitespace-pre-wrap lg:whitespace-0 lg:px-32 lg:overflow-x-none lg:max-w-5xl lg:text-left lg:mx-0 overflow-x-auto mx-auto max-w-lg">
+            <code class="language-js">
+                const person = {
+                    firstName: "John",
+                    lastName: "Doe",
+                    fullName: function() {
+                        return this.firstName + " " + this.lastName;
+                    }
+                };
+            </code>
+        </pre>
+        <p>In the above example, <code class="language-js">fullName</code> is a method of the <code class="language-js">person</code> object.</p>
+        <h1 class="text-xl font-bold text-red-400">Calling Methods:</h1>
+        <p>Methods are called using the object's name followed by the method's name with parentheses:</p>
+        <pre class="bg-black text-blue-400 whitespace-pre-wrap lg:whitespace-0 lg:px-32 lg:overflow-x-none lg:max-w-5xl lg:text-left lg:mx-0 overflow-x-auto mx-auto max-w-lg">
+            <code class="language-js">
+                person.fullName(); // Returns "John Doe"
+            </code>
+        </pre>
+        <h1 class="text-xl font-bold text-purple-400">Using 'this' Keyword:</h1>
+        <p>The <code class="language-js">this</code> keyword in a method refers to the owner object. In the example above, <code class="language-js">this</code> refers to the <code class="language-js">person</code> object.</p>
+        <h1 class="text-xl font-bold text-red-400">Adding Methods:</h1>
+        <p>Methods can also be added to an object outside its definition:</p>
+        <pre class="bg-black text-blue-400 whitespace-pre-wrap lg:whitespace-0 lg:px-32 lg:overflow-x-none lg:max-w-5xl lg:text-left lg:mx-0 overflow-x-auto mx-auto max-w-lg">
+            <code class="language-js">
+                person.greet = function() {
+                    return "Hello, " + this.firstName;
+                };
+            </code>
+        </pre>
+        <p>Now the <code class="language-js">person</code> object has a <code class="language-js">greet</code> method that returns a greeting message:</p>
+        <pre class="bg-black text-blue-400 whitespace-pre-wrap lg:whitespace-0 lg:px-32 lg:overflow-x-none lg:max-w-5xl lg:text-left lg:mx-0 overflow-x-auto mx-auto max-w-lg">
+            <code class="language-js">
+                person.greet(); // Returns "Hello, John"
+            </code>
+        </pre>
+        <h1 class="text-xl font-bold text-purple-400">Common Methods:</h1>
+        <p>Here are some commonly used methods in JavaScript objects:</p>
+        <ul>
+            <li><code class="language-js">toString()</code>: Returns a string representing the object.</li>
+            <li><code class="language-js">valueOf()</code>: Returns the primitive value of the object.</li>
+            <li><code class="language-js">hasOwnProperty()</code>: Returns a boolean indicating whether the object has the specified property as its own property.</li>
+        </ul>
+        <h1 class="text-xl font-bold text-red-400">Conclusion:</h1>
+        <p>Object methods are a powerful feature in JavaScript that allow you to define and invoke actions on objects. Understanding how to create and use methods is essential for effective JavaScript programming.</p>
+        <h4 class="text-lg text-purple-400 font-bold mt-4">Code with BismiAllah Work Space</h4>
+        <p class="mb-2">If you want to practice further, click on work space</p>
+        <button class="bg-purple-500 text-white font-bold py-2 px-4 rounded hover:bg-purple-700">
+            <a href="workspace.html" class="text-white">Work Space</a>
+        </button>
+        <a href="workspace.html" target="_blank">
+            <img src="/img/my.PNG" alt="work Spaces" class="my-4">
+        </a>`;
+                    break;
+
+
+
 
                 default:
                     content = `<h2 class="text-3xl font-bold mb-4">${topics[index]}</h2><p class="mb-4">Content for ${topics[index]} goes here...</p>`;
@@ -1070,10 +1360,10 @@ c = a + b;    // Assign the sum of a and b to c</code></pre>
                         class="block mt-4 lg:inline-block lg:mt-0 text-gray-800 dark:text-gray-200 mr-4">HTML</a>
                     <a href="css.html"
                         class="block mt-4 lg:inline-block lg:mt-0 text-gray-800 dark:text-gray-200 mr-4">CSS</a>
-                    <a href="excercise.html"
-                        class="block mt-4 lg:inline-block lg:mt-0 text-gray-800 dark:text-gray-200 mr-4">React</a>
                     <a href="javas.html" target="_blank"
                         class="block mt-4 lg:inline-block lg:mt-0 text-gray-800 dark:text-gray-200 mr-4">JavaScript</a>
+                    <a href="excercise.html"
+                        class="block mt-4 lg:inline-block lg:mt-0 text-gray-800 dark:text-gray-200 mr-4">React</a>
                     <a href="python.html"
                         class="block mt-4 lg:inline-block lg:mt-0 text-gray-800 dark:text-gray-200 mr-4">Python</a>
                     <a href="jav.html"
@@ -1105,6 +1395,10 @@ c = a + b;    // Assign the sum of a and b to c</code></pre>
                 <li><a href="#" class="text-lg  text-black hover:text-gray-800">👉🏻Arithematic Operators</a></li>
                 <li><a href="#" class="text-lg  text-black hover:text-gray-800">👉🏻Assignment Operators</a></li>
                 <li><a href="#" class="text-lg  text-black hover:text-gray-800">👉🏻JS Data Types</a></li>
+                <li><a href="#" class="text-lg  text-black hover:text-gray-800">👉🏻JS Functions</a></li>
+                <li><a href="#" class="text-lg  text-black hover:text-gray-800">👉🏻JS Objects</a></li>
+                <li><a href="#" class="text-lg  text-black hover:text-gray-800">👉🏻JS Object Properties</a></li>
+                <li><a href="#" class="text-lg  text-black hover:text-gray-800">👉🏻JS Object Method</a></li>
             </ul>
         </aside>
         <!-- Main Content -->
